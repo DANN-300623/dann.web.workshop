@@ -90,6 +90,7 @@
       fd.append('projectType', document.getElementById('tip').value);
       fd.append('message', document.getElementById('poruka').value);
       fd.append('website', honeypotEl ? honeypotEl.value : '');
+      fd.append('lang', document.documentElement.lang || 'sr');
 
       fetch(SCRIPT_URL, { method: 'POST', body: fd })
         .then(function(){
