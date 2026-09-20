@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt forma na Vašem sajtu — šta treba da znate | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1C1A; --sub:#63615c; --line:#e6e2d8; --bg:#faf8f3;
+    --card:#ffffff; --accent:#C1361E; --accent-soft:#FBEAE5;
+    --warn-bg:#fdf3ea; --warn-line:#e0c9a6;
+    --legal-bg:#fbeaea; --legal-line:#e5b3b3;
+    --ok-bg:#eaf3ec; --ok-line:#bfdcc8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.7; font-size:16.5px;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .wrap{max-width:720px;margin:0 auto;padding:52px 24px 100px;}
+
+  header.top{margin-bottom:44px;}
+  header.top .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:14px;display:block;}
+  h1{font-size:30px;margin:0 0 16px;line-height:1.25;}
+  .lead{color:var(--sub);font-size:17px;max-width:56ch;}
+
+  h2{font-size:21px;margin:0 0 18px;padding-bottom:14px;border-bottom:2px solid var(--ink);}
+  section.blok{margin-bottom:52px;}
+  h3{font-size:16.5px;margin:22px 0 8px;}
+  p{color:#333;margin:0 0 14px;}
+  ul{margin:0 0 14px;padding-left:22px;color:#333;}
+  li{margin-bottom:7px;}
+  strong{color:var(--ink);}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:18px 0;}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;padding:16px 20px;margin:18px 0;font-size:15px;}
+  .warn strong{display:block;margin-bottom:5px;}
+  .legal{background:var(--legal-bg);border:1px solid var(--legal-line);border-radius:10px;padding:18px 22px;margin:20px 0;font-size:15px;}
+  .legal strong{display:block;margin-bottom:6px;color:#8a3b3b;}
+  .ok{background:var(--ok-bg);border:1px solid var(--ok-line);border-radius:10px;padding:16px 20px;margin:18px 0;font-size:15px;}
+  .ok strong{display:block;margin-bottom:5px;color:#2b6b3f;}
+
+  .mockup{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:20px;margin:18px 0;font-size:14px;color:var(--sub);
+  }
+  .mockup .field{border-bottom:1px solid var(--line);padding:8px 0;margin-bottom:8px;}
+  .mockup .field label{display:block;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);margin-bottom:3px;}
+  .mockup .field .val{color:var(--ink);}
+  .mockup .btn{display:inline-block;background:var(--ink);color:var(--bg);padding:9px 18px;border-radius:6px;font-size:13px;margin-top:6px;}
+
+  .divider{border:none;border-top:1px solid var(--line);margin:48px 0;}
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer.end{margin-top:56px;text-align:center;font-size:13px;color:var(--sub);}
+  footer.end .dann-logo{display:block;margin-bottom:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">DANN.web.workshop</span>
+    <h1>Kontakt forma na Vašem sajtu — šta treba da znate</h1>
+    <p class="lead">Kratak vodič, napisan jednostavno, da tačno znate šta dobijate, na šta treba da obratite pažnju, i koje su Vaše obaveze kao vlasnika sajta koji prikuplja podatke posetilaca.</p>
+  </header>
+
+  <!-- STA JE -->
+  <section class="blok">
+    <h2>Šta je kontakt forma</h2>
+
+    <p>Kontakt forma je kratak obrazac na Vašem sajtu preko kog posetilac može direktno da Vam pošalje poruku — bez da otvara svoj mejl ili traži Vaš broj telefona. Popuni nekoliko polja, klikne "Pošalji", i poruka Vam stiže na mejl.</p>
+
+    <div class="mockup">
+      <div class="field"><label>Ime i prezime</label><div class="val">Marija Petrović</div></div>
+      <div class="field"><label>Email ili telefon</label><div class="val">marija@primer.com</div></div>
+      <div class="field"><label>Poruka</label><div class="val">Zanima me termin za sledeću nedelju...</div></div>
+      <div class="btn">Pošalji upit</div>
+    </div>
+
+    <p>To je celo iskustvo za posetioca — jednostavno, brzo, bez napuštanja sajta. Za Vas, to znači da Vam poruke stižu direktno na mejl, spremne da im odgovorite.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- OSETLJIVOST PODATAKA -->
+  <section class="blok">
+    <h2>Zašto su ti podaci "osetljivi"</h2>
+
+    <p>Kad neko popuni formu, ostavlja Vam svoje <strong>lične podatke</strong> — ime, kontakt, ponekad i detalje o tome šta traži. To nisu "samo slova na ekranu" — to su podaci stvarne osobe, i zakon ih tretira ozbiljno, bez obzira na to koliko je Vaš sajt mali ili posao lokalan.</p>
+
+    <div class="warn">
+      <strong>Bitno da razumete</strong>
+      Čim prikupljate ime, mejl ili telefon posetilaca — bilo preko kontakt forme, bilo preko zakazivanja termina — Vi postajete odgovorni za te podatke. Ne mi kao developer sajta, i ne posetilac koji ih je ostavio — <strong>Vi</strong>, kao vlasnik sajta i biznisa.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- RIZICI -->
+  <section class="blok">
+    <h2>Na šta treba da obratite pažnju</h2>
+
+    <h3>Spam poruke</h3>
+    <p>Povremeno će stići besmislena ili reklamna poruka od automatizovanog bota, ne od stvarne osobe. To je normalna pojava na internetu, ne znak da nešto ne radi kako treba.</p>
+
+    <h3>Ko ima pristup podacima</h3>
+    <p>Poruke i podaci koje prikupite obično stižu na Vaš mejl i/ili u tabelu (npr. Google Sheet) koju Vi kontrolišete. To znači da ste Vi (i svako ko ima pristup Vašem nalogu) odgovorni da taj pristup ne bude dostupan nikom ko ne bi trebalo da ga ima — jaka lozinka, ne deljenje naloga bez razloga.</p>
+
+    <h3>Podaci nisu "zauvek bezbedni" sami po sebi</h3>
+    <p>Nijedan sistem nije 100% otporan na greške ili zloupotrebu. Ono što Vi možete da kontrolišete jeste da ne prikupljate više podataka nego što Vam je stvarno potrebno, i da ih ne čuvate duže nego što ima smisla.</p>
+
+    <h3>Ljudi imaju pravo da pitaju</h3>
+    <p>Osoba koja Vam je ostavila podatke ima pravo da pita šta ste sačuvali o njoj, i da traži da to obrišete. Ovo nije neuobičajen ili redak zahtev — dobro je unapred znati da taj zahtev može doći.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- POLITIKA PRIVATNOSTI -->
+  <section class="blok">
+    <h2>Politika privatnosti — Vaša zakonska obaveza</h2>
+
+    <p>U Srbiji važi <strong>Zakon o zaštiti podataka o ličnosti</strong> ("Sl. glasnik RS", br. 87/2018) — napravljen po uzoru na evropski GDPR. Ukratko: <strong>svaki sajt koji prikuplja lične podatke posetilaca mora da ima jasno vidljivu Politiku privatnosti</strong>, bez obzira na veličinu biznisa.</p>
+
+    <p>Ta stranica na sajtu treba jednostavnim jezikom da objasni:</p>
+    <ul>
+      <li>Koje podatke prikupljate (ime, mejl, telefon...)</li>
+      <li>Zašto ih prikupljate (npr. da biste odgovorili na upit ili potvrdili termin)</li>
+      <li>Koliko dugo ih čuvate</li>
+      <li>Kako neko može da zatraži uvid ili brisanje svojih podataka</li>
+    </ul>
+
+    <div class="legal">
+      <strong>Mi nismo advokati</strong>
+      Ovaj dokument je opšte upozorenje da ova obaveza postoji, ne pravni savet i ne zamena za konsultaciju sa advokatom. Za tačan tekst Politike privatnosti prilagođen Vašem biznisu, preporučujemo da se obratite advokatu ili knjigovođi — posebno ako planirate da radite i sa klijentima iz inostranstva (EU), gde dodatno važi GDPR.
+    </div>
+
+    <div class="ok">
+      <strong>Kako možemo da pomognemo</strong>
+      Možemo da pripremimo osnovnu, generičku Politiku privatnosti kao deo izrade sajta (dogovara se posebno) — ali to je polazna tačka koju treba da pregledate, prilagodite svom poslovanju, i idealno potvrdite sa nekim ko se pravno bavi ovom oblašću pre nego što je objavite.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="blok">
+    <h2>Ukratko</h2>
+    <p>Kontakt forma je jednostavna i korisna funkcija — ali nosi sa sobom stvarnu odgovornost, jer radite sa tuđim ličnim podacima. To ne treba da Vas plaši, samo da znate: <strong>Vi ste taj koji je odgovoran</strong> za ono što se prikuplja preko Vašeg sajta, ne mi kao developer, i ne posetilac koji je podatke ostavio. Uz malo pažnje (jaka lozinka, ne čuvati više nego što treba, jasna Politika privatnosti), ovo je potpuno uobičajen i bezbedan deo vođenja sajta.</p>
+  </section>
+
+  <footer class="end">
+    <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+    Pripremljeno uz izradu Vašeg sajta.
+  </footer>
+
+</div>
+</body>
+</html>

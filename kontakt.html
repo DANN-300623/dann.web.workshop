@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
+<meta name="description" content="Pišite nam o svom sajtu — DANN.web.workshop.">
+<link rel="canonical" href="https://dann-web.dann-standard.workers.dev/kontakt.html">
+<meta property="og:title" content="Zakažite izradu sajta | DANN.web.workshop">
+<meta property="og:description" content="Popunite kratku formu i javljamo se lično u roku od 24h da razgovaramo o Vašem sajtu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dann-web.dann-standard.workers.dev/kontakt.html">
+<title>Zakažite izradu sajta | DANN.web.workshop</title>
+<meta name="apple-mobile-web-app-title" content="DANN">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="style.css">
+<style>
+.lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
+.lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</a>
+    <div class="nav-links">
+      <a href="index.html" data-en="Home">Početna</a>
+      <a href="paketi.html" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
+      <a href="primeri.html" data-en="Work">Primeri</a>
+      <a href="resursi.html" data-en="Resources">Resursi</a>
+      <a href="kontakt.html" class="btn-nav" data-en="Book a call">Zakažite poziv</a>
+      <button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button>
+      <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link" data-en="Home">Početna</a>
+  <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
+  <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Book a call">Zakažite poziv</a>
+</div>
+
+<section class="page-title">
+  <div class="container">
+    <span class="mono" data-en="Contact">Kontakt</span>
+    <h1 data-en="Let's talk about your site">Popričajmo o Vašem sajtu</h1>
+    <p data-en="Send a message with the basics about your site and we'll get back to you shortly.">Pošaljite poruku sa osnovnim informacijama o sajtu i javljamo se u najkraćem roku.</p>
+  </div>
+</section>
+
+<section class="contact section-surface">
+  <div class="container contact-grid stagger">
+    <div class="contact-info reveal">
+      <span class="mono" data-en="Contact info">Kontakt info</span>
+      <h2 data-en="Direct, no middlemen">Direktno, bez posrednika</h2>
+      <p data-en="We read and answer every message ourselves — no middlemen. We usually reply within 24h.">Svaki upit čitamo i odgovaramo lično — bez posrednika. Najčešće odgovaramo u roku od 24h.</p>
+
+      <div class="contact-detail">
+        <span class="mono">Email</span>
+        <div>hello@dannweb.rs</div>
+      </div>
+      <div class="contact-detail">
+        <span class="mono">Instagram / Facebook</span>
+        <div>@dann.web</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form id="contactForm">
+        <input type="text" name="website" id="website" style="position:absolute;left:-9999px;top:-9999px;" tabindex="-1" autocomplete="off">
+        <div class="form-group">
+          <label for="ime" data-en="Name">Ime</label>
+          <input type="text" id="ime" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telefon" data-en="Phone <span style=&quot;opacity:.6;&quot;>(optional)</span>">Telefon <span style="opacity:.6;">(opciono)</span></label>
+          <input type="tel" id="telefon">
+        </div>
+        <div class="form-group">
+          <label for="tip" data-en="Site type">Tip sajta</label>
+          <select id="tip" required>
+            <option value="" data-en="-- Select --">-- Izaberite --</option>
+            <option value="Start">Start</option>
+            <option value="Comfort">Comfort</option>
+            <option value="Premium">Premium</option>
+            <option value="Exclusive">Exclusive</option>
+            <option value="Mini Booking">Mini Booking</option>
+            <option value="Nisam siguran/na" data-en="Not sure yet">Nisam siguran/na</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="poruka" data-en="Message">Poruka</label>
+          <textarea id="poruka" placeholder="Nekoliko reči o Vašem biznisu i šta Vam je potrebno..." data-en-placeholder="A few words about your business and what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" data-en="Send message">Pošaljite upit</button>
+      </form>
+      <div class="confirmation" id="confirmationMsg" data-en="Thanks for your message! We'll get back to you shortly at the contact you provided.">Hvala na poruci! Javljamo se uskoro na naveden kontakt.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+    <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
+    <div data-en="© 2026 DANN.web.workshop. Custom websites for small businesses and independent professionals.">© 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+let trenutniJezik = 'sr';
+function prebaciJezik(){
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if (trenutniJezik === 'sr'){
+      if (!el.dataset.sr) el.dataset.sr = el.innerHTML;
+      el.innerHTML = el.dataset.en;
+    } else {
+      el.innerHTML = el.dataset.sr;
+    }
+  });
+  document.querySelectorAll('[data-en-placeholder]').forEach(function(el){
+    if (trenutniJezik === 'sr'){
+      if (!el.dataset.srPlaceholder) el.dataset.srPlaceholder = el.placeholder;
+      el.placeholder = el.dataset.enPlaceholder;
+    } else {
+      el.placeholder = el.dataset.srPlaceholder;
+    }
+  });
+  trenutniJezik = trenutniJezik === 'sr' ? 'en' : 'sr';
+  document.getElementById('langToggle').textContent = trenutniJezik === 'sr' ? 'EN' : 'SR';
+  document.documentElement.lang = trenutniJezik;
+}
+</script>
+</body>
+</html>

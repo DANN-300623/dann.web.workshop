@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Šta je SEO i kako ga uvodimo? | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --ok: #2B6B3F;
+    --ok-bg: #EAF3EC;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.65; }
+  .page { max-width: 900px; margin: 0 auto; padding: 60px 28px 100px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin: 0; }
+
+  .doc-header { text-align: center; margin-bottom: 56px; }
+  .doc-kicker { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .doc-header h1 { font-size: 2.1rem; line-height: 1.25; max-width: 24ch; margin: 0 auto; }
+  .doc-sub { font-size: 1rem; color: var(--ink-soft); max-width: 56ch; margin: 16px auto 0; }
+
+  section { margin-bottom: 54px; }
+  .section-head { margin-bottom: 22px; }
+  .section-head h2 { font-size: 1.5rem; }
+  .section-head p { color: var(--ink-soft); font-size: 0.94rem; margin-top: 8px; max-width: 60ch; }
+
+  .plain-box {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 26px 28px; font-size: 0.98rem;
+  }
+  .plain-box p { margin: 0 0 14px; }
+  .plain-box p:last-child { margin-bottom: 0; }
+  .plain-box strong { color: var(--accent); }
+
+  .term-list { display: flex; flex-direction: column; gap: 14px; }
+  .term-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .term-name { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; display: block; }
+  .term-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .term-card p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .term-card .analogy { margin-top: 10px; font-size: 0.86rem; background: var(--accent-soft); padding: 10px 12px; border-radius: 8px; color: #7A2617; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.86rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--ink); color: var(--bg); font-weight: 500; font-size: 0.76rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .03em; }
+  th:first-child { width: 34%; }
+  tr:last-child td { border-bottom: none; }
+  td.check { color: var(--ok); font-weight: 700; text-align: center; }
+  td.dash { color: var(--ink-soft); text-align: center; }
+
+  .priority-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .priority-list li {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 18px; font-size: 0.92rem; display: flex; gap: 14px; align-items: baseline;
+  }
+  .priority-num { font-family: 'Space Mono', monospace; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+  .final-note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
+  .final-note strong { color: var(--ink); }
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+  footer .dann-logo { display: block; margin-bottom: 8px; }
+
+  @media (max-width: 780px) {
+    table { font-size: 0.78rem; }
+    th:first-child { width: auto; }
+  }
+</style>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="doc-kicker">DANN • Resursi</div>
+    <h1>Tehnički SEO — šta radimo pri izradi sajta</h1>
+    <p class="doc-sub">
+      SEO ima dve strane. Ova stranica pokriva samo jednu — tehnička podešavanja
+      koja se rade JEDNOM, pri izradi sajta, i deo su onoga što isporučujemo.
+    </p>
+  </div>
+
+  <section>
+    <div class="plain-box">
+      <p>
+        <strong>Tehnički SEO</strong> je sve ono što se podesi na samom sajtu, jednom, i ostaje tako.
+        Razlikuje se od <strong>kontinuiranog SEO-a</strong> (redovan blog, praćenje ključnih reči,
+        prikupljanje linkova sa drugih sajtova) — to je mesečni marketinški rad, ne deo izrade sajta,
+        i mi ga ne nudimo.
+      </p>
+      <p>
+        Ispod je svaka tehnička stavka koju ugrađujemo, objašnjena jednostavno.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Šta tačno radimo</h2>
+    </div>
+
+    <div class="term-list">
+
+      <div class="term-card">
+        <span class="term-name">Meta naslov</span>
+        <h3>Naslov koji se vidi u Google rezultatu</h3>
+        <p>Plavi tekst koji se prvi vidi kad neko pretraži nešto povezano sa Vašim poslom.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Meta opis</span>
+        <h3>Rečenica ispod naslova u rezultatu</h3>
+        <p>Kratak opis koji objašnjava o čemu je stranica, pre nego što neko klikne.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Struktura naslova (H1-H6)</span>
+        <h3>Logičan redosled naslova na stranici</h3>
+        <p>Jedan glavni naslov, pa podnaslovi ispod njega — ne haotičan raspored teksta.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Alt tekst</span>
+        <h3>Opis uz svaku sliku</h3>
+        <p>Kratak tekst koji kaže šta je na slici — čita ga Google, i čitač ekrana za slepe korisnike.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Čitljivi URL-ovi</span>
+        <h3>Jasne adrese stranica</h3>
+        <p>Na primer <code>/usluge</code>, umesto <code>/page?id=384</code>.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Favicon</span>
+        <h3>Mala ikonica sajta</h3>
+        <p>Ona koju vidite u tabu browsera — pojavljuje se i u Google rezultatima na telefonu.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Sitemap</span>
+        <h3>Popis svih stranica sajta, za Google</h3>
+        <p>Olakšava Google-u da pronađe sve stranice odjednom, umesto da ih traži klikanjem.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Robots.txt</span>
+        <h3>Uputstvo šta Google sme da pregleda</h3>
+        <p>Kaže robotima koje delove sajta da preskoče (npr. admin panel).</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">HTTPS/SSL</span>
+        <h3>Bezbedna konekcija</h3>
+        <p>Katanac u adresnoj traci — Google favorizuje sajtove koji ga imaju. Zavisi od hostinga, ne od samog sajta — pomažemo pri odabiru hostinga koji ovu zaštitu uključuje u paket.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Mobile-friendly dizajn</span>
+        <h3>Sajt radi ispravno na telefonu</h3>
+        <p>Ne samo da izgleda dobro — dugmad i tekst rade kako treba na manjem ekranu.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Brzina učitavanja</span>
+        <h3>Koliko brzo se sajt otvara</h3>
+        <p>Rešava se pri samoj izradi — kompresovane slike, čist kod, bez nepotrebnih dodataka.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Interno linkovanje</span>
+        <h3>Stranice sajta povezane kroz sadržaj</h3>
+        <p>Prirodni linkovi između stranica (npr. sa Usluga ka Kontaktu), ne izolovane celine.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">404 stranica</span>
+        <h3>Šta se prikazuje kad adresa ne postoji</h3>
+        <p>Umesto praznog ekrana, jasna poruka i link nazad na početnu.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Canonical oznaka</span>
+        <h3>Koja je "prava" verzija stranice</h3>
+        <p>Sprečava da Google zabuni istu stranicu dostupnu na dve adrese kao dva različita sajta.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Open Graph</span>
+        <h3>Izgled linka kad se podeli</h3>
+        <p>Da li se, kad pošaljete link na Viber ili Facebook, pojavljuje lepa slika i naslov, ili goli tekst.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Schema oznake</span>
+        <h3>Dodatni podaci direktno u Google rezultatu</h3>
+        <p>Omogućava da se pre klika vide stvari poput radnog vremena ili ocena, gde ima smisla.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Google Business profil</span>
+        <h3>Kartica na Google mapama i pretrazi</h3>
+        <p>Pomažemo da se pravilno postavi; u Exclusive paketu posvećujemo mu dodatnu pažnju.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Google Search Console</span>
+        <h3>Alat koji pokazuje kako Vas Google vidi</h3>
+        <p>Pokazuje koliko ljudi vidi sajt u pretrazi, i da li postoji tehnički problem.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Google Analytics</span>
+        <h3>Broji posetioce sajta</h3>
+        <p>Koliko ljudi dolazi, sa kog uređaja, koje stranice gledaju.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Ključne reči u tekstu</span>
+        <h3>Sadržaj piše se stvarnim rečima Vaše usluge</h3>
+        <p>Tekst prirodno sadrži ono što ljudi zaista pretražuju (npr. "šišanje", ne apstraktne zamene).</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Po paketima</h2>
+    </div>
+
+    <table>
+      <tr>
+        <th>Stavka</th>
+        <th>Start</th>
+        <th>Comfort</th>
+        <th>Premium</th>
+        <th>Exclusive</th>
+      </tr>
+      <tr>
+        <td>Osnovna tehnička podešavanja (1–14 sa liste)</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Sitemap, Robots.txt, Search Console, Analytics</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Pomoć oko Google Business profila</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Canonical, Open Graph, Schema oznake</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td>Dodatna pažnja na Google Business profil</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="check">✓</td>
+      </tr>
+    </table>
+  </section>
+
+  <div class="final-note">
+    <strong>Šta ovo NE pokriva:</strong> redovan blog, istraživanje ključnih reči, prikupljanje linkova
+    sa drugih sajtova, upravljanje recenzijama. To je kontinuiran marketinški rad, ne deo izrade sajta —
+    zahteva mesečno angažovanje, ne jednokratnu izradu.
+  </div>
+
+</div>
+
+<footer>
+  <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+  Web radionica za male biznise i velike ideje
+</footer>
+
+</body>
+</html>

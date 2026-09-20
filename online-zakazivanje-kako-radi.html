@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online zakazivanje — kako radi | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --warn-bg: #FDF3EA;
+    --warn-line: #E0C9A6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 60px 28px 90px; }
+
+  .hero { text-align: center; margin-bottom: 56px; }
+  .hero .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 36px; margin-bottom: 14px; line-height: 1.2; }
+  .hero p { color: var(--ink-soft); font-size: 16px; max-width: 520px; margin: 0 auto; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 30px 32px;
+    margin-bottom: 22px;
+  }
+  .card h2 { font-size: 21px; margin-bottom: 16px; }
+  .card p { margin-bottom: 12px; font-size: 15px; color: #333; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .step-flow { display: flex; flex-direction: column; gap: 0; margin: 18px 0 0; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+  }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step:first-child { padding-top: 0; }
+  .step-num {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px;
+  }
+  .step-text strong { display: block; margin-bottom: 3px; font-size: 15px; }
+  .step-text span { font-size: 14px; color: var(--ink-soft); }
+
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .benefit {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: #333;
+  }
+  .benefit strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .needed-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .needed-item {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #333;
+  }
+  .needed-item::before { content: "→"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+  .risk-item {
+    border-left: 3px solid var(--warn-line);
+    background: var(--warn-bg);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .risk-item:last-child { margin-bottom: 0; }
+  .risk-item strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 14.5px; }
+
+  .obligation-item {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .obligation-item:last-child { margin-bottom: 0; }
+  .obligation-item strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .highlight-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 26px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+  .highlight-box strong { color: var(--ink); }
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer { text-align: center; color: var(--ink-soft); font-size: 13px; margin-top: 50px; }
+  footer .dann-logo { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="eyebrow">Kako radi</span>
+    <h1>Online zakazivanje — kako radi</h1>
+    <p>Kratak pregled šta ovaj sistem tačno radi, šta je potrebno da se podesi za vaš salon, i na šta treba da obratite pažnju.</p>
+  </div>
+
+  <div class="card">
+    <h2>Šta ovo zapravo jeste</h2>
+    <p>Sistem koji klijentima omogućava da zakazuju termine online, 24 sata dnevno — bez telefonskih poziva, bez čekanja da neko odgovori. Svaki zahtev prvo dolazi vama na odobrenje, tako da vi imate potpunu kontrolu nad kalendarom.</p>
+    <p>Sve živi u vašem <strong>sopstvenom, privatnom Google nalogu</strong> — podaci klijenata nisu ni kod nas, ni kod bilo koje treće strane.</p>
+  </div>
+
+  <div class="card">
+    <h2>Kako izgleda ceo proces</h2>
+    <div class="step-flow">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Klijent popuni formu na sajtu</strong>
+          <span>Ime, telefon, email, usluga, željeni datum i vreme. Sajt mu odmah pokazuje koji su termini već zauzeti.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Vi dobijate mail sa zahtevom</strong>
+          <span>Sa tri dugmeta: Potvrdi, Predloži drugo vreme, ili Odbij — sve jednim klikom, bez ulaska bilo gde.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>Klijent dobija odgovor</strong>
+          <span>Ako potvrdite — dobija kalendarsku pozivnicu. Ako predložite drugi termin — dobija mail sa novim predlogom i može da ga prihvati ili odbije.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <strong>Termin je u vašem kalendaru</strong>
+          <span>Vidite sve rezervacije direktno u Google Kalendaru, i u posebnom panelu napravljenom za vas.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Prednosti sistema</h2>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <strong>Nemoguće duplo zakazivanje</strong>
+        Ako dvoje ljudi pokušaju da zakažu isti termin u istom trenutku, sistem automatski propušta samo jednog — drugi odmah dobija poruku da je termin zauzet.
+      </div>
+      <div class="benefit">
+        <strong>Vi uvek imate poslednju reč</strong>
+        Nijedan termin se ne potvrđuje automatski — svaki prolazi kroz vas.
+      </div>
+      <div class="benefit">
+        <strong>Radi i van radnog vremena</strong>
+        Klijenti mogu da zakažu u bilo koje doba dana, vi odgovarate kad vama odgovara.
+      </div>
+      <div class="benefit">
+        <strong>Poseban panel za vas</strong>
+        Kalendar, radno vreme, neradni dani — sve menjate sami, bez tuđe pomoći.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Šta je potrebno od vas, da bismo ovo podesili za vaš salon</h2>
+    <div class="needed-list">
+      <div class="needed-item">Spisak usluga i trajanje svake (npr. šišanje — 45 min)</div>
+      <div class="needed-item">Radno vreme (uključujući pauzu, ako postoji)</div>
+      <div class="needed-item">Neradni dani</div>
+      <div class="needed-item">Email adresa gde da stižu obaveštenja</div>
+      <div class="needed-item">Telefon i adresa za sajt</div>
+      <div class="needed-item">Google nalog (postojeći ili novi, samo za ovaj sistem)</div>
+      <div class="needed-item">Fotografije, ako želite galeriju</div>
+      <div class="needed-item">Kratak tekst o vama, za "O nama" stranicu</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Vaše obaveze</h2>
+    <div class="obligation-item">
+      <strong>Politika privatnosti</strong>
+      Sajt uključuje NACRT politike privatnosti (objašnjava klijentima koji se podaci prikupljaju i zašto). Ovo je nacrt, ne pravni dokument — vaša je obaveza da ga pregledate, prilagodite svom poslovanju, i po potrebi konsultujete nekog sa pravnim znanjem pre zvaničnog objavljivanja sajta.
+    </div>
+    <div class="obligation-item">
+      <strong>Redovna provera</strong>
+      Preporučuje se da mail i tabelu sa rezervacijama proveravate makar jednom dnevno, da nijedan zahtev ne ostane bez odgovora.
+    </div>
+    <div class="obligation-item">
+      <strong>Čuvanje lozinke admin panela</strong>
+      Lozinku menjate sami iz panela — čuvajte je na sigurnom mestu, jer se ne prikazuje ponovo posle promene.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Realna ograničenja sistema (iskreno, bez ulepšavanja)</h2>
+    <div class="risk-item">
+      <strong>Dnevni limit besplatnog Google naloga</strong>
+      Oko 30-35 rezervacija dnevno pre nego što se potroši besplatan limit za slanje mejlova. Za mali salon ovo gotovo nikad neće biti problem — ako ipak porastete, nadogradnja je jednostavna i jeftina.
+    </div>
+    <div class="risk-item">
+      <strong>Zavisnost od jednog Google naloga</strong>
+      Ako se nalog zaključa (npr. zbog neuobičajene aktivnosti) ili promenite lozinku, sistem privremeno prestaje da radi dok se to ne reši.
+    </div>
+    <div class="risk-item">
+      <strong>Samo email kao kanal</strong>
+      Nema SMS obaveštenja — ako klijent pogrešno unese email ili ga ne proveri, ne zna status bez direktnog poziva.
+    </div>
+    <div class="risk-item">
+      <strong>Zaštita od automatizovanih zahteva (botova) — dodaje se posle</strong>
+      Trenutno nije aktivna, dodaje se čim sajt bude na zvaničnom domenu. Za demo/testiranje ovo nije rizik.
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Ukratko:</strong> ovo je sistem koji radi ozbiljno i pouzdano za mali do srednji obim rezervacija, sa punom kontrolom u vašim rukama u svakom trenutku. Ograničenja iznad su realna, ali nijedno od njih nije prepreka za svakodnevno korišćenje — samo stvari koje je dobro da znate unapred.
+  </div>
+
+  <footer>
+    <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+    Priprema za predstavljanje sistema zakazivanja.
+  </footer>
+
+</div>
+</body>
+</html>

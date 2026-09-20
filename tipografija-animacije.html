@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tipografija i animacije — DANN.web.workshop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Italiana&family=Urbanist:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=Unbounded:wght@500;700&family=Instrument+Sans:wght@400;500&family=Newsreader:ital,wght@0,500;1,500&family=Karla:wght@400;500&family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500&family=Zilla+Slab:wght@500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1c1c1a; --sub:#63615c; --line:#e6e2d8; --bg:#faf8f3;
+    --card:#ffffff; --accent:#C1361E; --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Inter',sans-serif; line-height:1.65; font-size:16px;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:56px 24px 120px;}
+
+  header.top{margin-bottom:60px;}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:12px;display:block;}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:34px;margin:0 0 16px;line-height:1.2;}
+  .lead{color:var(--sub);font-size:17px;max-width:60ch;}
+
+  .nav-pills{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap;}
+  .nav-pills a{
+    font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.03em;
+    border:1px solid var(--line);padding:8px 16px;border-radius:20px;color:var(--sub);text-decoration:none;
+  }
+  .nav-pills a:hover{border-color:var(--accent);color:var(--accent);}
+
+  h2.deo-label{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin:0 0 8px;}
+  h2.deo-naslov{font-family:'Space Grotesk',sans-serif;font-size:26px;margin:0 0 8px;}
+  .deo-opis{color:var(--sub);font-size:15px;max-width:60ch;margin-bottom:36px;}
+  section.deo{margin-bottom:80px;}
+
+  /* ===== TIPOGRAFIJA KARTICE ===== */
+  .font-card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:32px 34px;margin-bottom:24px;
+  }
+  .font-card__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+  .font-card__name{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.04em;color:var(--sub);text-transform:uppercase;}
+  .font-card__used{font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);border:1px solid var(--accent);padding:4px 10px;border-radius:12px;}
+
+  .specimen-label{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--sub);text-transform:uppercase;margin:18px 0 6px;}
+  .specimen-label:first-of-type{margin-top:0;}
+  .specimen-header{font-size:clamp(26px,4vw,38px);line-height:1.15;margin-bottom:4px;}
+  .specimen-body{font-size:16px;color:#3a3934;max-width:62ch;}
+  .specimen-mono{font-size:12.5px;letter-spacing:.05em;color:var(--sub);}
+
+  .font-card__note{
+    margin-top:20px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--sub);
+  }
+  .font-card__note strong{color:var(--ink);}
+
+  /* ===== ANIMACIJE ===== */
+  .anim-card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:30px 32px;margin-bottom:24px;overflow:hidden;position:relative;
+  }
+  .anim-card__label{font-family:'Space Grotesk',sans-serif;font-size:17px;margin:0 0 6px;}
+  .anim-card__desc{color:var(--sub);font-size:14.5px;margin-bottom:22px;max-width:56ch;}
+  .anim-stage{
+    background:#f2efe6;border:1px dashed var(--line);border-radius:10px;
+    min-height:120px;display:flex;align-items:center;justify-content:center;gap:16px;
+    padding:24px;flex-wrap:wrap;position:relative;overflow:hidden;
+  }
+
+  .demo-box{
+    background:var(--ink);color:var(--bg);font-family:'Space Mono',monospace;font-size:12px;
+    padding:16px 20px;border-radius:8px;
+  }
+
+  /* reveal on scroll */
+  .reveal-demo{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+  .reveal-demo.is-visible{opacity:1;transform:translateY(0);}
+
+  /* stagger */
+  .stagger-demo .demo-box{transition-delay:0s;}
+  .stagger-demo .demo-box:nth-child(2){transition-delay:.12s;}
+  .stagger-demo .demo-box:nth-child(3){transition-delay:.24s;}
+
+  /* parallax */
+  .parallax-stage{height:220px;}
+  .parallax-back{
+    position:absolute;width:200px;height:200px;border-radius:50%;
+    background:radial-gradient(circle at 38% 35%, rgba(138,109,59,.38), rgba(138,109,59,0) 72%);
+    top:50%;left:50%;transform:translate(-50%,-50%);
+    will-change:transform;pointer-events:none;
+  }
+  .parallax-layer{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'Space Mono',monospace;font-size:14px;color:var(--ink);
+    will-change:transform;
+  }
+  .parallax-layer span{
+    background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:10px 18px;box-shadow:0 6px 20px rgba(28,28,26,.06);
+  }
+
+  /* hover: dugme sa fill sweep */
+  .btn-demo{
+    font-family:'Space Mono',monospace;font-size:13px;padding:14px 26px;
+    border:1px solid var(--ink);position:relative;overflow:hidden;cursor:pointer;background:none;color:var(--ink);
+  }
+  .btn-demo span{position:relative;z-index:2;transition:color .4s var(--ease);}
+  .btn-demo::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateX(-101%);transition:transform .4s var(--ease);z-index:1;}
+  .btn-demo:hover::before{transform:translateX(0);}
+  .btn-demo:hover span{color:var(--bg);}
+
+  /* hover: underline sweep */
+  .link-demo{
+    font-family:'Space Mono',monospace;font-size:13px;position:relative;padding-bottom:4px;
+    border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;
+  }
+  .link-demo:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* hover: dot scale */
+  .dot-demo{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-size:16px;cursor:pointer;}
+  .dot-demo .dot{color:var(--accent);display:inline-block;transition:transform .3s var(--ease);}
+  .dot-demo:hover .dot{transform:scale(1.5);}
+
+  @media(max-width:640px){
+    .font-card{padding:24px 22px;}
+  }
+
+  /* text split reveal */
+  .split-text{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;margin:0;}
+  .split-text .word{display:inline-block;opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
+  .split-text .word.is-visible{opacity:1;transform:translateY(0);}
+
+  /* image mask reveal */
+  .mask-reveal-wrap{position:relative;width:220px;height:130px;border-radius:10px;overflow:hidden;}
+  .mask-reveal-img{position:absolute;inset:0;background:linear-gradient(135deg,#C1361E,#2f2e2a);}
+  .mask-reveal-curtain{position:absolute;inset:0;background:#f2efe6;transform:translateX(0);transition:transform 1s var(--ease);}
+  .mask-reveal-curtain.is-visible{transform:translateX(101%);}
+
+  /* marquee */
+  .marquee-track{
+    display:flex;gap:18px;white-space:nowrap;align-items:center;
+    font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.04em;color:var(--ink);
+    animation:marquee-scroll 10s linear infinite;
+  }
+  .marquee-track .dot-sep{color:var(--accent);}
+  @keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* 3D tilt */
+  .tilt-card{
+    width:220px;height:120px;background:var(--card);border:1px solid var(--line);border-radius:10px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
+    font-family:'Space Mono',monospace;font-size:13px;color:var(--sub);
+    transition:transform .15s ease-out;transform-style:preserve-3d;
+    box-shadow:0 10px 30px rgba(28,28,26,.07);
+  }
+
+  /* scroll-triggered pin */
+  .pin-demo-scroll{
+    background:#f2efe6;border:1px dashed var(--line);border-radius:10px;
+    height:150px;overflow-y:auto;
+  }
+  .pin-demo-wrap{display:flex;gap:16px;padding:16px;}
+  .pin-demo-sticky{
+    position:sticky;top:16px;align-self:flex-start;flex-shrink:0;
+    background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px;
+    font-family:'Space Mono',monospace;font-size:11.5px;white-space:nowrap;
+  }
+  .pin-demo-content p{font-size:13px;color:var(--sub);margin:0 0 52px;}
+  .pin-demo-content p:last-child{margin-bottom:8px;}
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:15px;letter-spacing:.01em;}
+  .dann-logo .dot{color:#C1361E;font-weight:800;}
+
+  footer.end{margin-top:70px;text-align:center;font-size:13px;color:var(--sub);}
+  footer.end .dann-logo{display:block;margin-bottom:4px;font-size:16px;}
+
+  .to-top{
+    display:inline-flex;align-items:center;gap:8px;margin-top:28px;
+    border:1px solid var(--line);border-radius:24px;padding:10px 20px;
+    background:var(--card);font-family:'Space Mono',monospace;font-size:12.5px;color:var(--ink);
+    cursor:pointer;transition:border-color .25s var(--ease),color .25s var(--ease);
+  }
+  .to-top:hover{border-color:var(--accent);color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">DANN.web.workshop — dizajn opcije</span>
+    <h1>Tipografija i animacije koje koristimo</h1>
+    <p class="lead">Pregled fontova i pokreta koje ugrađujemo u sajtove — sve što vidite ovde je uživo, ne slika. Ovo je meni iz kog biramo pravac za Vaš projekat.</p>
+    <div class="nav-pills">
+      <a href="#tipografija">Tipografija</a>
+      <a href="#animacije">Animacije</a>
+    </div>
+  </header>
+
+  <!-- ====================== TIPOGRAFIJA ====================== -->
+  <section class="deo" id="tipografija">
+    <h2 class="deo-label">Deo 1</h2>
+    <h2 class="deo-naslov">Tipografija</h2>
+    <p class="deo-opis">Za svaki sajt biramo kombinaciju tri fonta: jedan za velike naslove (karakter, prvi utisak), jedan za tekst (čitljivost), i jedan uzan/mono font za sitne oznake i detalje. Izbegavamo standardne, viđene kombinacije (Arial, Roboto, generički Montserrat) — svaka od ovih kombinacija ima svoj karakter.</p>
+
+    <!-- STIL 1 -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 01 — Editorial, muževno</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Fraunces</div>
+      <div class="specimen-header" style="font-family:'Fraunces',serif;font-weight:600;">Rez koji ima <em style="font-style:italic;font-weight:400;">stav.</em></div>
+
+      <div class="specimen-label">Tekst — Archivo</div>
+      <div class="specimen-body" style="font-family:'Archivo',sans-serif;">Ovo je font koji nosi glavni tekst sajta — jasan, moderan grotesk, lako se čita u dužim pasusima bez zamora očiju.</div>
+
+      <div class="specimen-label">Sitne oznake — Space Mono</div>
+      <div class="specimen-mono" style="font-family:'Space Mono',monospace;">EST. 2026 · BARBER STUDIO · SRBIJA</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> muški saloni, barbershop-ovi, zanatske radnje — bilo šta što treba da deluje samouvereno i pomalo brutalno-elegantno.</div>
+    </div>
+
+    <!-- STIL 2 -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 02 — Elegantno, toplo</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Cormorant Garamond</div>
+      <div class="specimen-header" style="font-family:'Cormorant Garamond',serif;font-weight:500;">Trend prođe za sezonu.</div>
+
+      <div class="specimen-label">Logotip / veliki akcenti — Italiana</div>
+      <div class="specimen-header" style="font-family:'Italiana',serif;font-size:24px;letter-spacing:.03em;">SJAJ</div>
+
+      <div class="specimen-label">Tekst — Urbanist</div>
+      <div class="specimen-body" style="font-family:'Urbanist',sans-serif;">Čist, moderan sans-serif za telo teksta — dovoljno mek da se uklopi uz elegantan serif naslov, a dovoljno jasan za čitanje na telefonu.</div>
+
+      <div class="specimen-label">Sitne oznake — IBM Plex Mono</div>
+      <div class="specimen-mono" style="font-family:'IBM Plex Mono',monospace;">USLUGE · O NAMA · GALERIJA</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> saloni lepote, kozmetički studiji, wellness — sve što treba da deluje toplo i pristupačno, ne hladno.</div>
+    </div>
+
+    <!-- STIL 3 -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 03 — Luksuz, minimalizam</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Bodoni Moda</div>
+      <div class="specimen-header" style="font-family:'Bodoni Moda',serif;font-weight:500;">Lepota. <em style="font-style:italic;">Bez buke.</em></div>
+
+      <div class="specimen-label">Tekst — Manrope</div>
+      <div class="specimen-body" style="font-family:'Manrope',sans-serif;">Geometrijski, precizan sans-serif — koristi se kad naslov nosi sav karakter, a tekst treba da bude miran i nenametljiv.</div>
+
+      <div class="specimen-label">Sitne oznake — JetBrains Mono</div>
+      <div class="specimen-mono" style="font-family:'JetBrains Mono',monospace;">BEAUTY STUDIO — BEOGRAD</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> premium, ekskluzivni brendovi — kad želite da sajt deluje skupo bez ijednog viška elementa.</div>
+    </div>
+
+    <!-- STIL 4 -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 04 — Moderno, direktno</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Space Grotesk</div>
+      <div class="specimen-header" style="font-family:'Space Grotesk',sans-serif;font-weight:600;">Imate posao.</div>
+
+      <div class="specimen-label">Tekst — Inter</div>
+      <div class="specimen-body" style="font-family:'Inter',sans-serif;">Neutralan, izuzetno čitljiv sans-serif — bezbedan izbor kad prioritet nije karakter fonta, već jasnoća i brzina čitanja.</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> tech, konsultantske usluge, sajtovi gde se prodaje jasnoća i profesionalnost, ne emocija.</div>
+    </div>
+
+    <!-- STIL 5 - NOVO -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 05 — Smelo, savremeno</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Unbounded</div>
+      <div class="specimen-header" style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:clamp(22px,3.4vw,32px);">JAKA. DRUGAČIJA.</div>
+
+      <div class="specimen-label">Tekst — Instrument Sans</div>
+      <div class="specimen-body" style="font-family:'Instrument Sans',sans-serif;">Moderan, geometrijski font sa suptilnim karakterom — dobar pratilac za smele, kockaste naslove kojima ne treba konkurencija.</div>
+
+      <div class="specimen-label">Sitne oznake — Space Mono</div>
+      <div class="specimen-mono" style="font-family:'Space Mono',monospace;">FITNESS · STREETWEAR · MUZIKA</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> fitnes studiji, streetwear brendovi, mlađa i energičnija publika — kad "elegantno" nije cilj, nego "upečatljivo".</div>
+    </div>
+
+    <!-- STIL 6 - NOVO -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 06 — Mekano, pitomo</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Newsreader</div>
+      <div class="specimen-header" style="font-family:'Newsreader',serif;font-weight:500;font-style:italic;">Priča koja se pamti.</div>
+
+      <div class="specimen-label">Tekst — Karla</div>
+      <div class="specimen-body" style="font-family:'Karla',sans-serif;">Prijateljski, zaobljen sans-serif — deluje ličnije i toplije od standardnih grotesk fontova, dobar za brendove koji pričaju priču.</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> apartmani, mali hoteli, porodični restorani — mesta gde se prodaje osećaj dobrodošlice, ne luksuz.</div>
+    </div>
+
+    <!-- STIL 7 - NOVO, fokus na tekst -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 07 — Naglasak na čitljivost teksta</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Instrument Serif</div>
+      <div class="specimen-header" style="font-family:'Instrument Serif',serif;font-style:italic;">Priča ispričana polako.</div>
+
+      <div class="specimen-label">Tekst — Figtree (glavni fokus ovog stila)</div>
+      <div class="specimen-body" style="font-family:'Figtree',sans-serif;">Ovo je font napravljen prvenstveno da se dugo i udobno čita — zaobljena slova, ujednačen razmak, odlično za sajtove sa više teksta: opisi usluga, "o nama" priče, blog objave. Kad je tekst zvezda, ne naslov, ovo je pravi izbor.</div>
+
+      <div class="specimen-label">Sitne oznake — Space Mono</div>
+      <div class="specimen-mono" style="font-family:'Space Mono',monospace;">O NAMA · NAŠA PRIČA · FILOZOFIJA</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> sajtovi gde tekst nosi glavni teret — duže "o nama" priče, blog, edukativni sadržaj. Naslov je diskretan, tekst je taj koji mora da bude prijatan satima čitanja.</div>
+    </div>
+
+    <!-- STIL 8 - NOVO, fokus na tekst -->
+    <div class="font-card">
+      <div class="font-card__top">
+        <span class="font-card__name">Stil 08 — Poslovno, jasno, čitko</span>
+      </div>
+
+      <div class="specimen-label">Naslov — Zilla Slab</div>
+      <div class="specimen-header" style="font-family:'Zilla Slab',serif;font-weight:600;">Jasno rečeno.</div>
+
+      <div class="specimen-label">Tekst — Work Sans (glavni fokus ovog stila)</div>
+      <div class="specimen-body" style="font-family:'Work Sans',sans-serif;">Izuzetno čist, neutralan font za tekst — ne odvlači pažnju od sadržaja, radi podjednako dobro za cenovnike, uslove korišćenja, duže opise usluga i sve gde tačnost i jasnoća imaju prednost nad karakterom.</div>
+
+      <div class="specimen-label">Sitne oznake — IBM Plex Mono</div>
+      <div class="specimen-mono" style="font-family:'IBM Plex Mono',monospace;">USLOVI · CENOVNIK · KONTAKT</div>
+
+      <div class="font-card__note"><strong>Preporuka:</strong> zanatske radnje, knjigovodstvene/pravne usluge, bilo šta gde klijent prvo traži jasnoću i poverenje, tek onda estetiku.</div>
+    </div>
+  </section>
+
+  <!-- ====================== ANIMACIJE ====================== -->
+  <section class="deo" id="animacije">
+    <h2 class="deo-label">Deo 2</h2>
+    <h2 class="deo-naslov">Animacije</h2>
+    <p class="deo-opis">Suptilne, ne "demo efekat". Cilj je da sajt deluje pažljivo napravljen, ne da pokažemo koliko animacija može da stane na jednu stranicu. Skrolujte polako kroz ovaj deo da vidite svaku animaciju uživo.</p>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Pojavljivanje pri skrolu</h3>
+      <p class="anim-card__desc">Elementi se blago podignu i pojave kada skrolujete do njih, umesto da su svi vidljivi odjednom. Osnovna animacija, uključena u svaki paket.</p>
+      <div class="anim-stage">
+        <div class="demo-box reveal-demo">Pojavljujem se kad me vidite</div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Sekvencijalno pojavljivanje</h3>
+      <p class="anim-card__desc">Kad ima više elemenata u nizu (npr. usluge, koraci saradnje), pojavljuju se jedan za drugim, sa malim zakašnjenjem — daje osećaj reda, ne haosa.</p>
+      <div class="anim-stage stagger-demo">
+        <div class="demo-box reveal-demo">01</div>
+        <div class="demo-box reveal-demo">02</div>
+        <div class="demo-box reveal-demo">03</div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Suptilan parallax</h3>
+      <p class="anim-card__desc">Deo sadržaja (obično u hero sekciji) pomera se blago drugom brzinom od ostatka stranice dok skrolujete — daje osećaj dubine. Koristi se retko i pažljivo, ne svuda. <em>Skrolujte polako gore-dole preko ove kartice.</em></p>
+      <div class="anim-stage parallax-stage">
+        <div class="parallax-back" id="parallaxBack"></div>
+        <div class="parallax-layer" id="parallaxDemo"><span>Ja se pomeram</span></div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Hover mikro-interakcije</h3>
+      <p class="anim-card__desc">Sitni pokreti kad pređete mišem preko dugmadi, linkova ili logotipa — potvrđuju da je element klikabilan, bez ičega upadljivog. Pređite mišem preko svakog primera.</p>
+      <div class="anim-stage" style="gap:28px;">
+        <button class="btn-demo"><span>Dugme — fill efekat</span></button>
+        <a href="#" class="link-demo" onclick="return false;">Link — linija ispod</a>
+        <span class="dot-demo">Logotip<span class="dot">.</span></span>
+      </div>
+    </div>
+
+    
+    <div class="anim-card">
+      <h3 class="anim-card__label">Animirani brojač <span style="font-weight:400;color:var(--sub);font-size:13px;">(count-up animation)</span></h3>
+      <p class="anim-card__desc">Broj "broji" uživo od 0 do konačne vrednosti kad ga skrolujete u vidno polje — česta stavka za statistiku (godine rada, broj usluga, itd).</p>
+      <div class="anim-stage">
+        <div class="demo-box" id="counterDemo" style="font-size:26px;font-weight:700;">0</div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Magnetno dugme <span style="font-weight:400;color:var(--sub);font-size:13px;">(magnetic hover)</span></h3>
+      <p class="anim-card__desc">Dugme se blago "privlači" ka kursoru kad mu priđete mišem, umesto da samo stoji nepomično. Igrivo, retko se koristi, upečatljivo kad se koristi na jednom-dva ključna mesta.</p>
+      <div class="anim-stage">
+        <button class="btn-demo" id="magneticDemo" style="border-radius:30px;"><span>Priđi mi mišem</span></button>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Reveal teksta po rečima <span style="font-weight:400;color:var(--sub);font-size:13px;">(text split reveal)</span></h3>
+      <p class="anim-card__desc">Naslov se ne pojavljuje odjednom, nego reč po reč dok skrolujete do njega — upečatljivo za veliki hero naslov, koristi se retko, samo na jednom mestu po sajtu da ne izgubi efekat.</p>
+      <div class="anim-stage">
+        <h4 class="split-text" id="splitTextDemo">Svaka reč stiže posebno</h4>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Otkrivanje slike maskom <span style="font-weight:400;color:var(--sub);font-size:13px;">(image mask reveal)</span></h3>
+      <p class="anim-card__desc">Fotografija se ne pojavi naglo, nego je "zavesa" postepeno otkriva pomerajući se u stranu — elegantnije od običnog fade-in efekta za galerije i portfolio sekcije.</p>
+      <div class="anim-stage">
+        <div class="mask-reveal-wrap" id="maskWrap">
+          <div class="mask-reveal-img"></div>
+          <div class="mask-reveal-curtain" id="maskCurtain"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Beskonačna traka <span style="font-weight:400;color:var(--sub);font-size:13px;">(marquee / infinite scroll)</span></h3>
+      <p class="anim-card__desc">Tekst ili logotipi se kontinuirano pomeraju horizontalno u petlji — korisno za isticanje usluga, brendova sa kojima sarađujete, ili kratkih poruka.</p>
+      <div class="anim-stage" style="justify-content:flex-start;padding:0;overflow:hidden;">
+        <div class="marquee-track">
+          <span>USLUGE</span><span class="dot-sep">·</span><span>CENOVNIK</span><span class="dot-sep">·</span><span>GALERIJA</span><span class="dot-sep">·</span><span>ZAKAZIVANJE</span><span class="dot-sep">·</span>
+          <span>USLUGE</span><span class="dot-sep">·</span><span>CENOVNIK</span><span class="dot-sep">·</span><span>GALERIJA</span><span class="dot-sep">·</span><span>ZAKAZIVANJE</span><span class="dot-sep">·</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">3D nagib pri hover-u <span style="font-weight:400;color:var(--sub);font-size:13px;">(3D tilt hover)</span></h3>
+      <p class="anim-card__desc">Kartica se blago naginje u 3D prostoru prateći poziciju kursora — daje osećaj fizičkog, opipljivog objekta. Pređite mišem preko kartice ispod.</p>
+      <div class="anim-stage">
+        <div class="tilt-card" id="tiltCard">Pomerajte miš preko mene</div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Fiksirana sekcija pri skrolu <span style="font-weight:400;color:var(--sub);font-size:13px;">(scroll-triggered pin)</span></h3>
+      <p class="anim-card__desc">Deo sadržaja ostane "zalepljen" dok ostatak teksta prolazi pored njega. Skrolujte unutar okvira ispod (ne cele stranice).</p>
+      <div class="pin-demo-scroll">
+        <div class="pin-demo-wrap">
+          <div class="pin-demo-sticky">Ja stojim fiksno</div>
+          <div class="pin-demo-content">
+            <p>Skrolujte unutar ovog malog okvira.</p>
+            <p>Tekst prolazi pored fiksiranog elementa.</p>
+            <p>Koristi se kad slika treba da "sačeka" dok tekst objašnjava nešto pored nje.</p>
+            <p>Ovo je kraj primera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim-card">
+      <h3 class="anim-card__label">Smooth scroll navigacija</h3>
+      <p class="anim-card__desc">Klik na link u navigaciji ne "skoči" naglo, nego glatko skroluje do te sekcije. Mala stvar, ali se oseti kao razlika između jeftinog i pažljivo napravljenog sajta.</p>
+      <div class="anim-stage">
+        <a href="#" id="smoothScrollDemo" class="link-demo">↑ Probajte — vratiće Vas na vrh, glatko</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="end">
+    <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+    predlozi dizajna za Vaš sajt.
+    <br>
+    <button class="to-top" id="toTopBtn">↑ Nazad na vrh</button>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // dugme "nazad na vrh" — stoji na dnu stranice, ne prati skrol
+  const toTopBtn = document.getElementById('toTopBtn');
+  if (toTopBtn) {
+    toTopBtn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // demo link u sredini stranice — isto ponasanje, pravi vrh stranice
+  const smoothScrollDemo = document.getElementById('smoothScrollDemo');
+  if (smoothScrollDemo) {
+    smoothScrollDemo.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // reveal on scroll — ponavlja se svaki put kad element udje/izadje iz vidnog polja,
+  // ne samo jednom, da bi demonstracija radila pouzdano bez obzira na velicinu ekrana
+  const revealEls = document.querySelectorAll('.reveal-demo');
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.35, rootMargin: '-12% 0px -12% 0px' });
+  revealEls.forEach(function(el){ io.observe(el); });
+
+  // parallax demo — dva sloja, razlicita brzina pomeranja
+  const layer = document.getElementById('parallaxDemo');
+  const back = document.getElementById('parallaxBack');
+  const stage = layer ? layer.closest('.parallax-stage') : null;
+  if (layer && stage) {
+    function updateParallax(){
+      const rect = stage.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (rect.top < vh && rect.bottom > 0) {
+        const progress = (vh - rect.top) / (vh + rect.height); // 0 -> 1 kroz prolazak kroz ekran
+        const shiftFront = (progress - 0.5) * 90;   // prednji sloj — brze, veci pomeraj
+        const shiftBack  = (progress - 0.5) * 30;   // pozadinski sloj — sporije, manji pomeraj
+        layer.style.transform = 'translateY(' + shiftFront + 'px)';
+        back.style.transform  = 'translate(-50%, calc(-50% + ' + shiftBack + 'px))';
+      }
+    }
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    updateParallax();
+  }
+
+  // animirani brojac — ponavlja se svaki put kad udje u vidno polje
+  const counterEl = document.getElementById('counterDemo');
+  if (counterEl) {
+    let running = false;
+    const counterIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting && !running) {
+          running = true;
+          counterEl.textContent = '0';
+          const target = 15;
+          const duration = 1200;
+          const startTime = performance.now();
+          function tick(now){
+            const progress = Math.min((now - startTime) / duration, 1);
+            counterEl.textContent = Math.round(progress * target);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              running = false;
+            }
+          }
+          requestAnimationFrame(tick);
+        } else if (!entry.isIntersecting) {
+          running = false;
+          counterEl.textContent = '0';
+        }
+      });
+    }, { threshold: 0.6 });
+    counterIo.observe(counterEl);
+  }
+
+  // magnetno dugme — prati kursor unutar svog opsega
+  const magneticBtn = document.getElementById('magneticDemo');
+  if (magneticBtn) {
+    magneticBtn.addEventListener('mousemove', function(e){
+      const rect = magneticBtn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      magneticBtn.style.transform = 'translate(' + (x * 0.35) + 'px,' + (y * 0.35) + 'px)';
+    });
+    magneticBtn.addEventListener('mouseleave', function(){
+      magneticBtn.style.transform = 'translate(0,0)';
+    });
+    magneticBtn.style.transition = 'transform .25s ' + 'cubic-bezier(.22,.61,.36,1)';
+  }
+
+  // text split reveal — deli tekst na reci, otkriva ih redom kad udje u vidno polje
+  const splitEl = document.getElementById('splitTextDemo');
+  if (splitEl) {
+    const words = splitEl.textContent.trim().split(' ');
+    splitEl.innerHTML = words.map(function(w, i){
+      return '<span class="word" style="transition-delay:' + (i * 0.09) + 's">' + w + '</span>';
+    }).join(' ');
+    const splitIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        entry.target.querySelectorAll('.word').forEach(function(w){
+          w.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      });
+    }, { threshold: 0.6 });
+    splitIo.observe(splitEl);
+  }
+
+  // image mask reveal — zavesa se pomera kad element udje u vidno polje
+  const maskWrap = document.getElementById('maskWrap');
+  const maskCurtain = document.getElementById('maskCurtain');
+  if (maskWrap && maskCurtain) {
+    const maskIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        maskCurtain.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.5 });
+    maskIo.observe(maskWrap);
+  }
+
+  // 3D tilt hover — nagib prati poziciju kursora
+  const tiltCard = document.getElementById('tiltCard');
+  if (tiltCard) {
+    tiltCard.addEventListener('mousemove', function(e){
+      const rect = tiltCard.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      tiltCard.style.transform = 'perspective(600px) rotateX(' + (y * -14) + 'deg) rotateY(' + (x * 14) + 'deg)';
+    });
+    tiltCard.addEventListener('mouseleave', function(){
+      tiltCard.style.transform = 'perspective(600px) rotateX(0) rotateY(0)';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

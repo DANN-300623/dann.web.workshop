@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dann-web.dann-standard.workers.dev/sitemap.xml

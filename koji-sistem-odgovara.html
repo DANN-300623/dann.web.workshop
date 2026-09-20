@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koji sistem odgovara vašem biznisu? | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --ok: #2B6B3F;
+    --ok-bg: #EAF3EC;
+    --warn: #8A6D3B;
+    --warn-bg: #FDF3EA;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+  .page { max-width: 980px; margin: 0 auto; padding: 60px 28px 100px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin: 0; }
+
+  .doc-header { text-align: center; margin-bottom: 56px; }
+  .doc-kicker { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .doc-header h1 { font-size: 2.2rem; line-height: 1.2; max-width: 26ch; margin: 0 auto; }
+  .doc-sub { font-size: 1rem; color: var(--ink-soft); max-width: 58ch; margin: 16px auto 0; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 60px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 28px 24px;
+    display: flex; flex-direction: column;
+  }
+  .card .tier { font-family: 'Space Mono', monospace; font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
+  .card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+  .card .desc { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 18px; flex-grow: 1; }
+  .card { border-top: 3px solid var(--accent); }
+
+  .pm-list { margin: 0 0 14px; padding: 0; list-style: none; }
+  .pm-list li { font-size: 0.86rem; padding: 5px 0 5px 20px; position: relative; color: #333; }
+  .pm-list.plus li::before { content: '+'; position: absolute; left: 0; color: var(--ok); font-weight: 700; }
+  .pm-list.minus li::before { content: '–'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .pm-label { font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin: 14px 0 6px; }
+
+  .recommend-box { background: var(--ok-bg); border-radius: 8px; padding: 12px 14px; font-size: 0.84rem; margin-top: 12px; color: #1F4E2C; }
+  .limit-box { background: var(--warn-bg); border-radius: 8px; padding: 12px 14px; font-size: 0.82rem; margin-top: 10px; color: #5C4212; }
+
+  section { margin-bottom: 56px; }
+  .section-head { margin-bottom: 24px; }
+  .section-head h2 { font-size: 1.6rem; }
+  .section-head p { color: var(--ink-soft); font-size: 0.94rem; margin-top: 8px; max-width: 60ch; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.86rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--ink); color: var(--bg); font-weight: 500; font-size: 0.78rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .03em; }
+  th:first-child { width: 26%; }
+  tr:last-child td { border-bottom: none; }
+  td.check { color: var(--ok); font-weight: 700; text-align: center; }
+  td.cross { color: var(--accent); font-weight: 700; text-align: center; }
+  td.partial { color: var(--warn); font-weight: 700; text-align: center; }
+
+  .pages-table td, .pages-table th { text-align: center; }
+  .pages-table td:first-child, .pages-table th:first-child { text-align: left; }
+
+  .final-note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
+  .final-note strong { color: var(--ink); }
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+  footer .dann-logo { display: block; margin-bottom: 8px; }
+
+  @media (max-width: 780px) {
+    .cards { grid-template-columns: 1fr; }
+    table { font-size: 0.78rem; }
+    th, td { padding: 9px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <div class="doc-kicker">Tri nivoa online prodavnice</div>
+    <h1>Koji sistem odgovara vašem biznisu?</h1>
+    <p class="doc-sub">Nudimo tri različita rešenja za online prodaju — od najjednostavnijeg do potpuno prilagođenog sistema. Ovaj pregled objašnjava razlike, prednosti i ograničenja svakog, da biste izabrali ono što odgovara obimu i planovima vašeg posla.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="tier">Paket 1</div>
+      <h3>Starter</h3>
+      <p class="desc">Prodavnica koja u pozadini koristi Google tabelu kao bazu — Vi upravljate SVIM (proizvodi, porudžbine, zalihe, statistika) preko posebnog admin panela, ne direktnim uređivanjem tabele. Bez potrebe za hostingom ili posebnom bazom podataka.</p>
+
+      <div class="pm-label">Prednosti</div>
+      <ul class="pm-list plus">
+        <li>Bez hostinga i baze — sve na vašem Google nalogu</li>
+        <li>Pun admin panel — proizvodi, porudžbine, zalihe, statistika</li>
+        <li>Najbrže se pokreće</li>
+      </ul>
+      <div class="pm-label">Ograničenja</div>
+      <ul class="pm-list minus">
+        <li>Praktičan plafon pre nego što postane nepregledno</li>
+        <li>Dnevni limit porudžbina (besplatan Google nalog)</li>
+      </ul>
+      <div class="recommend-box">Preporuka: mali prodavci, testiranje ideje, umeren dnevni obim porudžbina.</div>
+      <div class="limit-box">Praktičan okvir: do ~200 proizvoda, 33-100 porudžbina dnevno (zavisi od tipa Google naloga).</div>
+    </div>
+
+    <div class="card">
+      <div class="tier">Paket 2</div>
+      <h3>Standard</h3>
+      <p class="desc">Prava, samostalna online prodavnica sa punom bazom podataka i admin panelom — radi na gotovo bilo kom standardnom hosting paketu.</p>
+
+      <div class="pm-label">Prednosti</div>
+      <ul class="pm-list plus">
+        <li>Prava baza — bezbedna zaštita zaliha</li>
+        <li>Radi na širokom izboru hosting paketa</li>
+        <li>Pun admin panel: proizvodi, porudžbine, statistika</li>
+        <li>Bez mesečne pretplate na platformu</li>
+      </ul>
+      <div class="pm-label">Ograničenja</div>
+      <ul class="pm-list minus">
+        <li>Zahteva hosting sa bazom podataka</li>
+        <li>Manje pogodno za vrlo specifičnu poslovnu logiku</li>
+      </ul>
+      <div class="recommend-box">Preporuka: male i srednje prodavnice koje žele profesionalan sajt bez visokih troškova.</div>
+      <div class="limit-box">Praktičan okvir: stotine do nekoliko hiljada proizvoda, desetine porudžbina dnevno bez problema.</div>
+    </div>
+
+    <div class="card">
+      <div class="tier">Paket 3</div>
+      <h3>Custom</h3>
+      <p class="desc">Potpuno prilagođen sistem pisan po meri, za prodavnice sa specifičnim zahtevima koje standardna rešenja teško pokrivaju.</p>
+
+      <div class="pm-label">Prednosti</div>
+      <ul class="pm-list plus">
+        <li>Potpuno prilagodljiva poslovna logika</li>
+        <li>Moderna tehnologija, brz odziv</li>
+        <li>Najbolje se skalira uz rast biznisa</li>
+        <li>Lako se povezuje sa budućim spoljnim servisima</li>
+      </ul>
+      <div class="pm-label">Ograničenja</div>
+      <ul class="pm-list minus">
+        <li>Zahteva poseban tip hostinga (manje ponuđača)</li>
+        <li>Duže vreme izrade za custom logiku</li>
+        <li>Teže se nalazi zamenski programer za održavanje</li>
+      </ul>
+      <div class="recommend-box">Preporuka: specifičan poslovni model ili plan ozbiljnog rasta od starta.</div>
+      <div class="limit-box">Praktičan okvir: bez realnih ograničenja — skalira najbolje od sva tri.</div>
+    </div>
+
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Uporedna tabela</h2>
+      <p>Tehnički i praktični detalji jedno pored drugog.</p>
+    </div>
+    <table>
+      <thead><tr><th>Kriterijum</th><th>Starter</th><th>Standard</th><th>Custom</th></tr></thead>
+      <tbody>
+        <tr><td>Tehnologija</td><td>Google Sheets</td><td>PHP + baza podataka</td><td>Custom sistem po meri</td></tr>
+        <tr><td>Hosting</td><td>Nije potreban</td><td>Bilo koji standardni hosting — ne zavisi koji provajder izaberete</td><td>Poseban tip hostinga</td></tr>
+        <tr><td>Zaštita zaliha pri istovremenim porudžbinama</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
+        <tr><td>Broj proizvoda bez problema</td><td>Do ~200</td><td>Stotine – hiljade</td><td>Bez limita</td></tr>
+        <tr><td>Dnevni limit porudžbina</td><td class="partial">33-100</td><td class="check">Nema</td><td class="check">Nema</td></tr>
+        <tr><td>Admin panel (dashboard, statistika)</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
+        <tr><td>Email obaveštenja</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
+        <tr><td>Filteri (pol, boja, veličina, kategorija)</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
+        <tr><td>Prilagođena poslovna logika</td><td class="partial">Osnovna</td><td class="partial">Solidna</td><td class="check">Potpuno</td></tr>
+        <tr><td>Vreme izrade</td><td>Najkraće</td><td>Srednje</td><td>Najduže</td></tr>
+        <tr><td>Dalje održavanje (dostupnost programera)</td><td>Jednostavno</td><td>Lako se nalazi</td><td>Zahtevnije</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Šta je uključeno u svaki paket</h2>
+      <p>Bez obzira na izabrani nivo, svaka prodavnica dolazi sa osnovnim stranicama potrebnim za profesionalno poslovanje.</p>
+    </div>
+    <table class="pages-table">
+      <thead><tr><th>Stranica</th><th>Starter</th><th>Standard</th><th>Custom</th></tr></thead>
+      <tbody>
+        <tr><td>Početna</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>O nama</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Kontakt</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Prodavnica / Naručivanje</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="final-note">
+    <strong>Napomena:</strong> Sva tri sistema pokrivaju osnovne potrebe online prodaje — razlika je u tome koliko prodavnica može da naraste, koliko je zaštićena od tehničkih problema pri rastu, i koliko fleksibilno može da prati specifične potrebe vašeg poslovanja. Rado ćemo zajedno proći kroz vaše konkretne potrebe i predložiti najbolji izbor.
+  </div>
+
+  <footer>
+    <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+    Ovaj dokument služi kao pregled opcija pre donošenja odluke. Za detaljnu ponudu i cene, kontaktirajte nas direktno.
+  </footer>
+
+</div>
+</body>
+</html>

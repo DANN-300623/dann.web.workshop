@@ -1,0 +1,905 @@
+:root {
+  --void: #17181A;
+  --ink: #343638;
+  --surface: #232427;
+  --paper: #F2F0EB;
+  --line: rgba(242,240,235,0.18);
+  --line-strong: rgba(242,240,235,0.34);
+  --text-soft: rgba(242,240,235,0.68);
+  --accent: #C1361E;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+.red-dot {
+  color: var(--accent);
+  font-weight: 700;
+  font-style: normal;
+}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-soft);
+  }
+
+  /* ---------- BRAND / LOGO ---------- */
+  .brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+  }
+
+  .brand .dot { color: var(--accent); }
+
+  /* ---------- NAV ---------- */
+ nav {
+  position: sticky;
+  top: 0;
+  background: var(--void);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+}
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 32px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .burger span { height: 1px; background: var(--paper); width: 100%; }
+
+  .nav-links a {
+    position: relative;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    color: var(--text-soft);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--paper); border-color: var(--line-strong); }
+
+  .nav-links a.active {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .nav-links a:focus-visible,
+  .btn-nav:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .nav-links a:active { opacity: 0.6; }
+
+  .btn-nav {
+    border: 1px solid var(--line-strong);
+    color: var(--paper) !important;
+    padding: 9px 18px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-nav:hover { border-color: var(--accent); color: var(--accent) !important; }
+
+  /* ---------- HERO (asimetrican, blueprint uglovi) ---------- */
+  .hero {
+    padding: 130px 0 90px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+
+  .hero .container { position: relative; }
+
+  .hero .container::before,
+  .hero .container::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -40px;
+    border-top: 1px solid var(--line-strong);
+  }
+  .hero .container::before { left: 32px; border-left: 1px solid var(--line-strong); }
+  .hero .container::after { right: 32px; border-right: 1px solid var(--line-strong); }
+
+  .hero .mono { margin-bottom: 26px; display: block; }
+
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.05;
+    max-width: 780px;
+    margin-bottom: 26px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .hero p {
+    font-size: 16px;
+    color: var(--text-soft);
+    max-width: 460px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 14px 30px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--paper);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--paper);
+    padding: 14px 30px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border: 1px solid var(--line-strong);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    margin-top: 70px;
+    border-top: 1px solid var(--line);
+  }
+
+  .hero-stats > div {
+    flex: 1;
+    padding: 22px 0 0;
+    border-right: 1px solid var(--line);
+  }
+  .hero-stats > div:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-top: 6px;
+    max-width: 160px;
+  }
+
+  /* ---------- SECTION HEAD ---------- */
+  .section-head {
+    margin-bottom: 56px;
+    max-width: 560px;
+  }
+  .section-head h2 { font-size: 30px; margin-bottom: 12px; position: relative; padding-left: 22px; }
+  .section-head h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 14px;
+    height: 3px;
+    background: var(--accent);
+  }
+  .section-head p { color: var(--text-soft); font-size: 14px; }
+
+  /* ---------- PAGE TITLE (podstranice) ---------- */
+  .page-title {
+    padding: 140px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+  .page-title .mono { display: block; margin-bottom: 20px; }
+  .page-title h1 { font-size: clamp(34px, 5vw, 52px); max-width: 760px; }
+  .page-title p { color: var(--text-soft); font-size: 15px; max-width: 560px; margin-top: 18px; }
+
+  /* ---------- USLUGE (teaser row na Početnoj) - bez kartica, samo hairline kolone ---------- */
+  .services { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .teaser-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+  }
+  .teaser-cell {
+    padding: 30px 26px 30px 0;
+    border-right: 1px solid var(--line);
+  }
+  .teaser-cell:last-child { border-right: none; padding-right: 0; }
+  .teaser-cell:not(:first-child) { padding-left: 26px; }
+  .teaser-cell h3 { font-size: 19px; margin: 12px 0 8px; }
+  .teaser-cell p { font-size: 13px; color: var(--text-soft); }
+
+  .teaser-price {
+    margin: 14px 0 10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .teaser-price .old {
+    text-decoration: line-through;
+    opacity: .5;
+    font-size: 13px;
+    margin-right: 8px;
+  }
+  .teaser-price .new { font-size: 20px; font-weight: 600; color: var(--accent); }
+  .teaser-price .new::before { content: 'od '; font-size: 12px; font-weight: 400; color: var(--text-soft); }
+
+  .teaser-features {
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .teaser-cta {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+  .teaser-cta:hover { opacity: .8; }
+
+  .link-arrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--text-soft);
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 2px;
+  }
+  .link-arrow:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- PROCES teaser (Početna) - asimetrican, bez ikonica ---------- */
+  .process { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .process-step {
+    position: relative;
+    padding: 26px 22px 0 0;
+    border-right: 1px solid var(--line);
+  }
+  .process-step:last-child { border-right: none; }
+  .process-step:not(:first-child) { padding-left: 22px; }
+  .process-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    top: 24px;
+    right: -13px;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1;
+    background: var(--ink);
+    width: 24px;
+    text-align: center;
+  }
+  .process-step .mono { color: var(--accent); margin-bottom: 14px; display: block; }
+  .process-step h3 { font-size: 16px; margin-bottom: 8px; }
+  .process-step p { font-size: 13px; color: var(--text-soft); }
+
+  /* ---------- PORTFOLIO teaser (Početna) ---------- */
+  .portfolio { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .portfolio-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 40px 0;
+  }
+
+.portfolio-visual {
+  aspect-ratio: 16/11;
+  background: var(--void);
+  border: 1px solid var(--line-strong);
+  display: flex; align-items: center; justify-content: center;
+}
+  .portfolio-visual span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    color: var(--text-soft);
+    letter-spacing: 1px;
+  }
+
+  .portfolio-text .mono { margin-bottom: 14px; display: block; }
+  .portfolio-text h3 { font-size: 24px; margin-bottom: 12px; }
+  .portfolio-text p { font-size: 14px; color: var(--text-soft); margin-bottom: 20px; }
+
+  .tag-list { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+  .tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--line-strong);
+    color: var(--text-soft);
+  }
+
+  /* ---------- ZA KOGA RADIMO (Početna) ---------- */
+  .services-audience { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+
+  /* ---------- CENOVNIK — LEDGER STIL, ne kartice ---------- */
+  .price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+  /* Za sekcije sa samo jednim paketom (npr. Mini Booking) —
+     ista vizuelna porodica kao price-grid, ali bez praznih kolona */
+  .price-grid-single {
+    display: grid;
+    grid-template-columns: minmax(0, 420px);
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .price-grid-single .price-card { padding-right: 0; }
+
+  /* Istaknuta promo napomena iznad cenovnika */
+  .promo-banner {
+    font-size: 13px;
+    color: var(--text-soft);
+    border: 1px solid var(--line-strong);
+    padding: 14px 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .promo-banner .mono { color: var(--accent); }
+  .promo-banner strong { color: var(--paper); }
+
+  .price-card {
+    padding: 34px 26px 34px 0;
+    border-right: 1px solid var(--line);
+  }
+  .price-card:last-child { border-right: none; }
+  .price-card:not(:first-child) { padding-left: 26px; }
+
+  .price-card.featured { border-left: none; }
+  .price-card.featured .mono { color: var(--accent); }
+
+  .price-card h3 { font-size: 17px; margin: 10px 0 8px; color: var(--text-soft); font-weight: 400; }
+
+  .price-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 10px 0 14px;
+  }
+  .price-amount span { font-size: 13px; font-weight: 400; color: var(--text-soft); }
+  .price-desc { font-size: 13px; color: var(--text-soft); margin-bottom: 18px; }
+
+  .price-features {
+    list-style: none;
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+  .price-features li {
+    padding: 7px 0;
+    padding-left: 16px;
+    position: relative;
+    border-top: 1px solid var(--line);
+  }
+  .price-features li:first-child { border-top: none; }
+  .price-features li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* ---------- CENOVNIK — DODACI (ledger tabela) ---------- */
+  .addon-section { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .addon-table {
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .addon-row {
+    display: grid;
+    grid-template-columns: 1fr 160px 100px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    gap: 16px;
+  }
+
+  .addon-row .naziv { font-size: 14px; display: block; }
+  .addon-row .opis { font-size: 12.5px; color: var(--text-soft); display: block; margin-top: 3px; }
+  .addon-row .ukljuceno {
+    font-size: 11.5px;
+    color: var(--text-soft);
+    text-align: left;
+  }
+  .addon-row .cena {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 14px;
+    color: var(--accent);
+    text-align: right;
+  }
+  .addon-row .cena-old {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: line-through;
+    opacity: .5;
+    color: var(--text-soft);
+  }
+  .addon-row .cena-new {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 2px;
+  }
+
+  /* ---------- PROCES stranica — indeks, ne kartice ---------- */
+  .timeline { padding: 100px 0; }
+
+  .timeline-list {
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 28px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .timeline-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    padding-top: 4px;
+  }
+
+  .timeline-content h3 { font-size: 19px; margin-bottom: 8px; font-weight: 500; }
+  .timeline-content p { color: var(--text-soft); font-size: 14px; max-width: 520px; }
+
+  /* ---------- DEMO / PRIMERI ---------- */
+  .demo-grid { padding: 90px 0; }
+
+  .demo-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .demo-card:first-child { border-top: 1px solid var(--line-strong); }
+
+  .demo-visual {
+    aspect-ratio: 16/11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line-strong);
+  }
+  .demo-visual span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+.demo-latice,
+.demo-stil,
+.demo-sapica {
+  background: var(--surface);
+}
+
+.demo-latice span { color: #D9A7A0; }
+.demo-stil span { color: #C9A66B; }
+.demo-sapica span { color: #9FC98A; }
+
+  /* ---------- O NAMA / ABOUT ---------- */
+  .about { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+    border-top: 1px solid var(--line);
+    padding-top: 40px;
+  }
+  .about h2 { font-size: 28px; margin-bottom: 18px; }
+  .about-text p { font-size: 15px; color: var(--text-soft); margin-bottom: 16px; max-width: 560px; }
+
+  /* ---------- FAQ ---------- */
+  .faq { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .faq-list { border-top: 1px solid var(--line-strong); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    line-height: 1;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform .3s var(--ease);
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+
+  .faq-item p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-soft);
+    max-width: 640px;
+  }
+
+  /* ---------- KONTAKT ---------- */
+  .contact { padding: 90px 0; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+    border-top: 1px solid var(--line);
+    padding-top: 44px;
+  }
+
+  .contact-info h2 { font-size: 28px; margin-bottom: 18px; }
+  .contact-info p { color: var(--text-soft); font-size: 14px; margin-bottom: 30px; max-width: 380px; }
+
+  .contact-detail { margin-bottom: 20px; }
+  .contact-detail .mono { margin-bottom: 4px; display: block; }
+  .contact-detail div:last-child { font-size: 15px; }
+
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--text-soft);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--line-strong);
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--paper);
+  }
+  .form-group select option { color: #111; }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+
+  .btn-submit {
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--paper);
+    padding: 14px 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn-submit:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+
+  .confirmation {
+    display: none;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--text-soft);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 36px 0;
+    background: var(--void);
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--text-soft);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px) {
+    .nav-links a:not(.btn-nav) { display: none; }
+    .burger { display: flex; }
+    .price-grid { grid-template-columns: 1fr; }
+    .price-card { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 30px; }
+    .teaser-row { grid-template-columns: 1fr; }
+    .teaser-cell { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-step { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 24px; }
+    .process-step:last-child { border-bottom: none; margin-bottom: 0; }
+    .process-step::after { content: '↓' !important; right: auto !important; left: 50%; top: auto !important; bottom: -21px; transform: translateX(-50%); }
+    .process-step:last-child::after { display: none; }
+    .portfolio-card, .demo-card { grid-template-columns: 1fr; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .addon-row { grid-template-columns: 1fr; gap: 4px; }
+    .addon-row .cena { text-align: left; }
+    .hero-stats { flex-direction: column; }
+    .hero-stats > div { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 16px; }
+  }
+/* ---------- SVESNA SMENA TONOVA (ne automatska po klasi) ----------
+   Podrazumevana pozadina stranice je --ink (srednji graphite).
+   .section-surface svesno zatamnjuje pojedinu sekciju na --surface,
+   da bi se sekcije jasno smenjivale — dodaje se ručno u HTML-u,
+   naizmenično, ne svakoj sekciji određene klase. */
+.section-surface { background: var(--surface); }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Sekvencijalno pojavljivanje dece unutar iste grupe —
+   dodati klasu "stagger" na roditelja (grid/red), reveal na svako dete */
+.stagger > *:nth-child(1) { transition-delay: 0s; }
+.stagger > *:nth-child(2) { transition-delay: .08s; }
+.stagger > *:nth-child(3) { transition-delay: .16s; }
+.stagger > *:nth-child(4) { transition-delay: .24s; }
+.stagger > *:nth-child(5) { transition-delay: .32s; }
+.stagger > *:nth-child(6) { transition-delay: .40s; }
+.stagger > *:nth-child(7) { transition-delay: .48s; }
+
+/* Suptilan hover na logotip — mala, elegantna mikro-interakcija */
+.brand .dot {
+  display: inline-block;
+  transition: transform .3s var(--ease);
+}
+.brand:hover .dot { transform: scale(1.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .brand .dot { transition: none; }
+  .hero .container { transform: none !important; }
+}
+/* ---------- MOBILE MENU OVERLAY ---------- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--void);
+  z-index: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  transform: translateY(-100%);
+  transition: transform .5s var(--ease);
+}
+.mobile-menu.open { transform: translateY(0); }
+
+.mobile-menu__close {
+  position: absolute;
+  top: 26px;
+  right: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text-soft);
+}
+
+.mobile-menu a.mnav-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(22px, 6.5vw, 30px);
+  color: var(--paper);
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  transition: border-color .2s ease, color .2s ease;
+}
+.mobile-menu a.mnav-link:active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+.mobile-menu a.mnav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.mobile-menu__book {
+  margin-top: 28px;
+  align-self: flex-start;
+  display: inline-flex;
+  width: auto;
+  background: none !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-radius: 24px;
+  padding: 12px 26px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  transition: background .2s ease, color .2s ease;
+}
+.mobile-menu__book:active {
+  background: var(--accent) !important;
+  color: var(--void) !important;
+  opacity: 1;
+}
+
+/* ---------- SKRIVEN DETALJ + POPUP (samo paketi.html) ---------- */
+.hidden-detail {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--line-strong);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 4px;
+  z-index: 300;
+  opacity: 0.5;
+  transition: opacity .4s var(--ease), color .4s var(--ease);
+}
+.hidden-detail:hover,
+.hidden-detail:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.detail-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 24, 26, 0.92);
+  z-index: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease);
+}
+.detail-modal.open { opacity: 1; pointer-events: auto; }
+
+.detail-modal__box {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  padding: 44px 36px;
+  max-width: 400px;
+  text-align: center;
+  transform: translateY(14px);
+  transition: transform .4s var(--ease);
+}
+.detail-modal.open .detail-modal__box { transform: translateY(0); }
+
+.detail-modal__box .mono {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+.detail-modal__box h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  margin-bottom: 14px;
+  color: var(--paper);
+}
+.detail-modal__box p {
+  color: var(--text-soft);
+  margin-bottom: 26px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.detail-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.detail-modal__close {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px;
+}
+.detail-modal__close:hover { color: var(--paper); }
+
+@media (max-width: 640px) {
+  .hidden-detail { right: 4px; font-size: 9px; }
+}

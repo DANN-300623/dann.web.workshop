@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koji paket je za Vas? | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3; --card: #FFFFFF; --ink: #1C1C1A; --ink-soft: #63615C;
+    --line: #E6E2D8; --accent: #C1361E; --accent-soft: #FBEAE5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+  .page { max-width: 980px; margin: 0 auto; padding: 60px 28px 100px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin: 0; }
+
+  .doc-header { text-align: center; margin-bottom: 52px; }
+  .doc-kicker { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .doc-header h1 { font-size: 2.2rem; line-height: 1.2; max-width: 26ch; margin: 0 auto; }
+  .doc-sub { font-size: 1rem; color: var(--ink-soft); max-width: 58ch; margin: 16px auto 0; }
+
+  .guide-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 56px; }
+  .guide-row {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 22px; display: flex; align-items: baseline; gap: 16px;
+  }
+  .guide-row .pkg { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; color: var(--accent); flex-shrink: 0; width: 110px; }
+  .guide-row .who { font-size: 14.5px; color: #333; }
+
+  section { margin-bottom: 56px; }
+  .section-head { margin-bottom: 24px; }
+  .section-head h2 { font-size: 1.6rem; }
+  .section-head p { color: var(--ink-soft); font-size: 0.94rem; margin-top: 8px; max-width: 60ch; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.85rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--ink); color: var(--bg); font-weight: 500; font-size: 0.76rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .03em; }
+  tr:last-child td { border-bottom: none; }
+  td:not(:first-child), th:not(:first-child) { text-align: center; }
+  td:first-child { text-align: left; font-weight: 500; }
+
+  .mini-box {
+    background: var(--accent-soft); border: 1px solid var(--line); border-radius: 12px;
+    padding: 24px 28px; margin-top: 8px;
+  }
+  .mini-box h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--accent); }
+  .mini-box p { font-size: 0.92rem; color: #333; margin: 0; }
+
+  .final-note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
+  .final-note strong { color: var(--ink); }
+  .final-note a { color: var(--accent); }
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+  footer .dann-logo { display: block; margin-bottom: 8px; }
+
+  @media (max-width: 780px) {
+    table { font-size: 0.76rem; }
+    th, td { padding: 8px 6px; }
+    .guide-row { flex-direction: column; gap: 4px; }
+    .guide-row .pkg { width: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <div class="doc-kicker">Izbor paketa</div>
+    <h1>Koji paket je za Vas?</h1>
+    <p class="doc-sub">Pet nivoa, od jednostavnog predstavljanja do potpuno prilagođenog sajta sa dubokim SEO-om. Ovaj vodič Vam pomaže da brzo prepoznate koji nivo odgovara Vašem biznisu.</p>
+  </div>
+
+  <div class="guide-list">
+    <div class="guide-row"><span class="pkg">Start</span><span class="who">Mali biznis kome treba jednostavan, lep, funkcionalan sajt — jedna stranica sa svim osnovnim informacijama.</span></div>
+    <div class="guide-row"><span class="pkg">Comfort</span><span class="who">Saloni, restorani, apartmani, zanatlije i male firme kojima treba više prostora i prava kontakt forma.</span></div>
+    <div class="guide-row"><span class="pkg">Premium</span><span class="who">Ozbiljnije online prisustvo — napredniji tehnički SEO, veći broj stranica, praćenje poseta.</span></div>
+    <div class="guide-row"><span class="pkg">Exclusive</span><span class="who">Kompletno, custom rešenje — duboka struktura, mikro-interakcije, admin panel za samostalno uređivanje.</span></div>
+    <div class="guide-row"><span class="pkg">Mini Booking</span><span class="who">Salon ili uslužni biznis kome je online zakazivanje ključan deo sajta, od samog starta.</span></div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Uporedna tabela</h2>
+      <p>Šta tačno dobijate na svakom nivou.</p>
+    </div>
+    <table>
+      <thead><tr><th>Kriterijum</th><th>Start</th><th>Comfort</th><th>Premium</th><th>Exclusive</th></tr></thead>
+      <tbody>
+        <tr><td>Broj stranica</td><td>1</td><td>Do 5</td><td>Do 8</td><td>Do 15</td></tr>
+        <tr><td>Fotografije</td><td>5</td><td>10</td><td>30</td><td>50</td></tr>
+        <tr><td>Kontakt forma</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+        <tr><td>FAQ sekcija</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Sitemap i Robots.txt</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Search Console i Analytics</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Mikro-interakcije</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+        <tr><td>Admin panel za sadržaj</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+        <tr><td>Krugova izmena</td><td>1</td><td>2</td><td>2</td><td>3</td></tr>
+        <tr><td>Rok izrade</td><td>3-5 dana</td><td>5-8 dana</td><td>7-14 dana</td><td>10-20 dana</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Mini Booking — posebna opcija</h2>
+      <p>Ne uklapa se u istu lestvicu kao ostali paketi, jer je fokusiran na jednu stvar.</p>
+    </div>
+    <div class="mini-box">
+      <h3>Mini Booking</h3>
+      <p>Mali, custom sajt (do 3 stranice) sa online zakazivanjem ugrađenim od starta — izbor usluge, provera slobodnih termina, admin panel za radno vreme. Najbolji izbor ako Vam je zakazivanje termina centralna funkcija sajta, ne dodatak.</p>
+    </div>
+  </section>
+
+  <div class="final-note">
+    <strong>Napomena:</strong> Ako Vam je potrebna online prodavnica (ne samo predstavljanje biznisa), pogledajte poseban vodič — <em>"Koji sistem odgovara vašem biznisu"</em> — koji objašnjava tri nivoa Webshop rešenja. Nesigurni ste koji nivo Vam odgovara? Javite se — rado ćemo zajedno proći kroz Vaše potrebe.
+  </div>
+
+  <footer>
+    <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+    Ovaj dokument služi kao pregled opcija pre donošenja odluke. Za detaljnu ponudu i cene, kontaktirajte nas direktno.
+  </footer>
+
+</div>
+</body>
+</html>

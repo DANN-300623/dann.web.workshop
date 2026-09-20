@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kupovina domena i hostinga — vodič | DANN.web.workshop</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --ok: #2B6B3F;
+    --ok-bg: #EAF3EC;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.65; }
+  .page { max-width: 900px; margin: 0 auto; padding: 60px 28px 100px; }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin: 0; }
+
+  .doc-header { text-align: center; margin-bottom: 56px; }
+  .doc-kicker { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .doc-header h1 { font-size: 2.1rem; line-height: 1.25; max-width: 26ch; margin: 0 auto; }
+  .doc-sub { font-size: 1rem; color: var(--ink-soft); max-width: 58ch; margin: 16px auto 0; }
+
+  section { margin-bottom: 54px; }
+  .section-head { margin-bottom: 22px; }
+  .section-head h2 { font-size: 1.5rem; }
+  .section-head p { color: var(--ink-soft); font-size: 0.94rem; margin-top: 8px; max-width: 60ch; }
+
+  .plain-box {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 26px 28px; font-size: 0.98rem;
+  }
+  .plain-box p { margin: 0 0 14px; }
+  .plain-box p:last-child { margin-bottom: 0; }
+  .plain-box strong { color: var(--accent); }
+
+  .term-list { display: flex; flex-direction: column; gap: 14px; }
+  .term-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .term-name { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; display: block; }
+  .term-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .term-card p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+  .price-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 20px; margin-bottom: 10px; font-size: 0.94rem;
+  }
+  .price-row .naziv { font-weight: 500; }
+  .price-row .cena { font-family: 'Space Mono', monospace; color: var(--accent); white-space: nowrap; margin-left: 16px; }
+  .price-note { font-size: 0.85rem; color: var(--ink-soft); margin-top: 14px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.86rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--ink); color: var(--bg); font-weight: 500; font-size: 0.76rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .03em; }
+  tr:last-child td { border-bottom: none; }
+  td.tag { font-family: 'Space Mono', monospace; font-size: 0.78rem; color: var(--accent); }
+
+  .steps { counter-reset: step; display: flex; flex-direction: column; gap: 14px; }
+  .step {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 20px 18px 56px; position: relative; font-size: 0.94rem;
+  }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 18px; top: 18px;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
+  }
+  .step h3 { font-size: 1rem; margin-bottom: 6px; }
+  .step p { color: var(--ink-soft); margin: 0; }
+
+  .final-note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
+  .final-note strong { color: var(--ink); }
+
+  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
+  .dann-logo .dot{color:var(--accent);font-weight:800;}
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
+  footer .dann-logo { display: block; margin-bottom: 8px; }
+
+  @media (max-width: 780px) {
+    table { font-size: 0.78rem; }
+    .price-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .price-row .cena { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="doc-kicker">DANN • Resursi</div>
+    <h1>Kupovina domena i hostinga</h1>
+    <p class="doc-sub">
+      Tehnički vodič kroz ono što treba da znate pre nego što poručite domen i hosting —
+      pojmovi, koraci, i orijentacione cene.
+    </p>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Domen i hosting — osnovna razlika</h2>
+    </div>
+    <div class="plain-box">
+      <p>
+        <strong>Domen</strong> je adresa Vašeg sajta (npr. vasfirma.rs) — ime pod kojim Vas ljudi pronalaze.
+        To je kao kućna adresa.
+      </p>
+      <p>
+        <strong>Hosting</strong> je prostor na serveru gde fajlovi sajta stvarno "žive" — kao kuća sama.
+        Domen bez hostinga je adresa bez kuće; hosting bez domena je kuća bez adrese. Trebaju Vam oba,
+        obično od dva odvojena ili istog provajdera.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Pojmovi koje ćete sretati</h2>
+    </div>
+
+    <div class="term-list">
+
+      <div class="term-card">
+        <span class="term-name">cPanel</span>
+        <h3>Kontrolna tabla Vašeg hostinga</h3>
+        <p>Web ekran preko kog upravljate svime — postavljate fajlove sajta, pravite email naloge, instalirate SSL. Većina hosting provajdera ga nudi; njime ćemo mi (ili Vi) postavljati sajt.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">DNS / Nameserver</span>
+        <h3>"Adresar" koji povezuje domen sa hostingom</h3>
+        <p>Kad kupite domen kod jednog provajdera a hosting kod drugog, DNS podešavanje je ono što im kaže da rade zajedno. Obično se podesi jednom, na početku, i posle se ne dira.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">SSL sertifikat</span>
+        <h3>Katanac pored adrese sajta (HTTPS)</h3>
+        <p>Šifruje konekciju između posetioca i sajta. Danas je standard, i kod većine hosting paketa dolazi besplatno i automatski — retko treba posebno da se plaća.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Poddomen</span>
+        <h3>Dodatna adresa unutar istog domena</h3>
+        <p>Npr. <code>prodavnica.vasfirma.rs</code> — deo istog hosting naloga, bez dodatne kupovine. Koristan ako želite odvojen deo sajta (npr. webshop) na svojoj adresi.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">MySQL baza</span>
+        <h3>Mesto gde se čuvaju podaci sajta</h3>
+        <p>Potrebno za sajtove koji imaju "pamćenje" — korisničke naloge, proizvode u prodavnici, porudžbine. Statičkim, jednostavnim sajtovima ovo obično ne treba.</p>
+      </div>
+
+      <div class="term-card">
+        <span class="term-name">Node.js podrška</span>
+        <h3>Posebna tehnička mogućnost servera</h3>
+        <p>Nemaju svi hosting paketi ovo uključeno — često samo viši paketi kod provajdera. Potrebno je za određene, naprednije tipove web prodavnica (videti tabelu ispod).</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Koraci — kako to izgleda u praksi</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>1. Izaberite i proverite domen</h3>
+        <p>Proverite da li je željeno ime slobodno kod provajdera po izboru. Ako jeste, rezervišete ga (obično godišnja pretplata).</p>
+      </div>
+      <div class="step">
+        <h3>2. Izaberite hosting paket</h3>
+        <p>Prema tome šta sajt treba da radi (videti preporuke ispod) — statički sajt, sajt sa formom, ili prodavnica.</p>
+      </div>
+      <div class="step">
+        <h3>3. Povežite domen i hosting (DNS)</h3>
+        <p>Ako su kod istog provajdera, ovo se često radi automatski. Ako su kod različitih, treba uneti nameserver podatke — provajder hostinga Vam ih daje, upisuju se kod provajdera domena.</p>
+      </div>
+      <div class="step">
+        <h3>4. Postavite sajt (preko cPanel-a)</h3>
+        <p>Fajlovi sajta se prebace na hosting. Ovo mi radimo za Vas, ili Vam pokažemo kako, zavisno od dogovora.</p>
+      </div>
+      <div class="step">
+        <h3>5. Proverite SSL</h3>
+        <p>Kod većine provajdera se uključi sam, u roku od par sati do 24h. Ako ne, aktivira se ručno kroz cPanel — jednostavan klik, ne zahteva tehničko znanje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Orijentacione cene</h2>
+      <p>Stvarne cene zavise od provajdera, ekstenzije domena i izabranog paketa — ovo su realni okviri, ne fiksne cene.</p>
+    </div>
+
+    <div class="price-row"><span class="naziv">Domen (.rs)</span><span class="cena">~1.600 – 2.500 RSD / godišnje</span></div>
+    <div class="price-row"><span class="naziv">Domen (.com)</span><span class="cena">~1.200 – 1.800 RSD / godišnje</span></div>
+    <div class="price-row"><span class="naziv">Osnovni hosting (statički sajt)</span><span class="cena">~2.500 – 6.000 RSD / godišnje</span></div>
+    <div class="price-row"><span class="naziv">Hosting sa MySQL/PHP podrškom</span><span class="cena">~5.000 – 9.000 RSD / godišnje</span></div>
+    <div class="price-row"><span class="naziv">Hosting sa Node.js podrškom</span><span class="cena">~6.000 – 11.000 RSD / godišnje</span></div>
+
+    <p class="price-note">Mnogi provajderi nude nižu cenu za prvu godinu, sa poskupljenjem pri obnovi — vredi proveriti tu razliku pre kupovine, ne samo početnu cenu.</p>
+    <p class="price-note" style="margin-top:8px;"><strong style="color:var(--ink);">Napomena o cenama:</strong> ovo su okvirne vrednosti, ne rezultat ozbiljnijeg tržišnog istraživanja — analizirane su radi postavljanja demo sajta, u septembru 2026. Uzmite ih sa tim u obzir i proverite trenutne cene pre odluke.</p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Naši paketi — koji hosting je potreban</h2>
+    </div>
+
+    <table>
+      <tr>
+        <th>Paket</th>
+        <th>Šta treba od hostinga</th>
+        <th>Napomena</th>
+      </tr>
+      <tr>
+        <td>Start, Comfort, Premium, Exclusive</td>
+        <td class="tag">Osnovni hosting</td>
+        <td>Statički sajt — bilo koji standardni paket radi, ništa posebno nije potrebno.</td>
+      </tr>
+      <tr>
+        <td>Mini Booking</td>
+        <td class="tag">Osnovni hosting</td>
+        <td>Zakazivanje radi preko Google Apps Script-a (spolja) — hosting samo nosi obične stranice sajta.</td>
+      </tr>
+      <tr>
+        <td>Start Webshop (Apps Script)</td>
+        <td class="tag">Osnovni hosting</td>
+        <td>Isto kao Mini Booking — prodavnica radi preko Google Apps Script-a, hosting ostaje jednostavan.</td>
+      </tr>
+      <tr>
+        <td>Webshop Standard (PHP)</td>
+        <td class="tag">MySQL + PHP</td>
+        <td>Prava baza podataka na hostingu — potreban paket koji ovo uključuje (većina "srednjih" paketa kod provajdera ima).</td>
+      </tr>
+      <tr>
+        <td>Webshop Premium (Node.js)</td>
+        <td class="tag">Node.js podrška</td>
+        <td>Ovo NEMAJU svi paketi — proverite eksplicitno pre kupovine da paket uključuje Node.js, obično viši/skuplji nivo kod provajdera.</td>
+      </tr>
+    </table>
+  </section>
+
+  <div class="final-note">
+    <strong>Poštena napomena:</strong> mi ne biramo umesto Vas, ali rado pomažemo u odluci — možemo da
+    Vas posavetujemo koji je najpametniji izbor za Vaš sajt. Ukoliko niste sigurni, pošaljite nam ponudu
+    provajdera, pa možemo zajedno da je izanaliziramo.
+  </div>
+
+</div>
+
+<footer>
+  <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+  Web radionica za male biznise i velike ideje
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
+
+<meta name="description" content="Paketi i cenovnik izrade sajtova — Start, Comfort, Premium, Exclusive i Mini Booking. Jasne cene, dodatne usluge i održavanje.">
+
+<link rel="canonical" href="https://dann-web.dann-standard.workers.dev/paketi.html">
+<meta property="og:title" content="Paketi i cenovnik izrade sajtova | DANN.web.workshop">
+<meta property="og:description" content="Jasni paketi i transparentne cene za izradu sajta — od jednostavnog predstavljanja do sajta sa online zakazivanjem.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dann-web.dann-standard.workers.dev/paketi.html">
+
+<title>Paketi i cenovnik izrade sajtova | DANN.web.workshop</title>
+<meta name="apple-mobile-web-app-title" content="DANN">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="style.css">
+<style>
+.lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
+.lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
+</style>
+</head>
+
+<body>
+
+<button class="hidden-detail" id="hiddenDetail" aria-label="Detalj">DΛNN.</button>
+
+<div class="detail-modal" id="detailModal">
+  <div class="detail-modal__box">
+    <span class="mono">OTKRIVENO</span>
+    <h3 data-en="You spotted a detail.">Uočili ste detalj.</h3>
+    <p data-en="A small reward for noticing — 5% extra off, on top of the current promo price.">Mala nagrada za pažnju — 5% dodatnog popusta, pored trenutne promo cene.</p>
+    <div class="detail-modal__actions">
+      <a href="kontakt.html?kod=DANN5" class="btn-primary" data-en="Use the discount">Iskoristite popust</a>
+      <button class="detail-modal__close" id="closeDetailModal" data-en="Close">Zatvorite</button>
+    </div>
+  </div>
+</div>
+
+
+
+<nav>
+  <div class="container">
+
+    <a href="index.html" class="brand" style="text-decoration:none;">
+      DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html" data-en="Home">Početna</a>
+
+      <a href="paketi.html" class="active">
+        Paketi i cenovnik
+      </a>
+
+      <a href="primeri.html" data-en="Work">Primeri</a>
+
+      <a href="resursi.html" data-en="Resources">Resursi</a>
+
+      <a href="kontakt.html" class="btn-nav" data-en="Book a call">
+        Zakažite poziv
+      </a>
+
+      <button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button>
+
+      <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link" data-en="Home">Početna</a>
+  <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
+  <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Book a call">Zakažite poziv</a>
+</div>
+
+
+<!-- UVOD -->
+
+<section class="page-title">
+
+  <div class="container">
+
+    <span class="mono">Paketi i cenovnik</span>
+
+    <h1 data-en="Choose what your business actually needs.">
+      Izaberite ono što Vašem biznisu zaista treba.
+    </h1>
+
+    <p data-en="A site built to fit you — from a simple presentation to a full web solution, with the features your business actually needs.">
+      Izrada sajta po Vašoj meri — od jednostavne prezentacije do
+      kompletnog web rešenja, sa funkcionalnostima koje Vašem poslu
+      zaista trebaju.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- PAKETI -->
+
+<section class="services section-surface">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <h2 data-en="Build packages">Paketi izrade</h2>
+
+      <p data-en="A one-time build price.">
+        Jednokratna cena izrade.
+      </p>
+
+    </div>
+
+    <div class="promo-banner">
+      <span class="mono">Promo</span data-en="The crossed-out price is regular. The highlighted price is valid for">
+      Precrtana cena je redovna. Istaknuta cena važi
+      <strong data-en="the first 30 days or the first 5 projects">prvih 30 dana ili za prvih 5 projekata</strong data-en=" — whichever comes first."> — šta god nastupi pre.
+    </div>
+
+
+    <div class="price-grid stagger">
+
+
+      <!-- START -->
+
+      <div class="price-card reveal" id="start">
+
+        <span class="mono">Start</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            180€
+          </span>
+
+          <br>
+
+          126€
+
+        </div>
+
+        <p class="price-desc" data-en="For a small business that needs a simple, good-looking, functional site.">
+          Za mali biznis kome treba jednostavan,
+          lep i funkcionalan sajt.
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="1 page">1 stranica</li>
+          <li data-en="Custom design">Custom dizajn</li>
+          <li data-en="Responsive desktop / tablet / mobile">Responsive desktop / tablet / mobile</li>
+          <li data-en="Up to 5 photos">Do 5 fotografija</li>
+          <li data-en="Contact information">Kontakt informacije</li>
+          <li data-en="Call button">Dugme za poziv</li>
+          <li data-en="Instagram / Facebook">Instagram / Facebook</li>
+          <li data-en="Google Maps">Google Maps</li>
+          <li data-en="Favicon">Favicon</li>
+          <li data-en="Basic technical SEO">Osnovni tehnički SEO</li>
+          <li data-en="Help publishing the site">Pomoć pri objavljivanju sajta</li>
+          <li data-en="Help with domain and hosting">Pomoć oko domena i hostinga</li>
+          <li data-en="1 round of revisions">1 krug izmena</li>
+
+        </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: 3–5 business days">Rok: 3–5 radnih dana</strong>
+        </p>
+
+      </div>
+
+
+      <!-- COMFORT -->
+
+      <div class="price-card reveal" id="comfort">
+
+        <span class="mono">
+          Comfort
+        </span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            360€
+          </span>
+
+          <br>
+
+          252€
+
+        </div>
+
+        <p class="price-desc" data-en="For salons, restaurants, apartments, tradespeople, and small firms that need more room.">
+          Za salone, restorane, apartmane, zanatlije
+          i male firme kojima treba više prostora.
+        </p>
+
+        <ul class="price-features">
+
+          <li><strong data-en="Everything in Start, plus:">Sve iz Start, plus:</strong></li>
+          <li data-en="Up to 5 pages">Do 5 stranica</li>
+          <li data-en="Up to 10 photos">Do 10 fotografija</li>
+          <li data-en="Contact form">Kontakt forma</li>
+          <li data-en="FAQ section">FAQ sekcija</li>
+          <li data-en="2 rounds of revisions">2 kruga izmena</li>
+
+        </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: 5–8 business days">Rok: 5–8 radnih dana</strong>
+        </p>
+
+      </div>
+
+
+      <!-- PREMIUM -->
+
+      <div class="price-card reveal" id="premium">
+
+        <span class="mono">Premium</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            600€
+          </span>
+
+          <br>
+
+          420€
+
+        </div>
+
+        <p class="price-desc" data-en="For a more serious online presence and businesses that need a more advanced structure and functionality.">
+          Za ozbiljnije online prisustvo i biznise kojima
+          treba naprednija struktura i funkcionalnost.
+        </p>
+
+        <ul class="price-features">
+
+          <li><strong data-en="Everything in Comfort, plus:">Sve iz Comfort, plus:</strong></li>
+          <li data-en="Up to 8 pages">Do 8 stranica</li>
+          <li data-en="Up to 30 photos">Do 30 fotografija</li>
+          <li data-en="Sitemap">Sitemap</li>
+          <li data-en="Robots.txt">Robots.txt</li>
+          <li data-en="Search Console and Google Analytics">Search Console i Google Analytics</li>
+          <li data-en="Help with your Google Business profile">Pomoć oko Google Business profila</li>
+          <li>2 kruga izmena</li>
+
+        </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: 7–14 business days">Rok: 7–14 radnih dana</strong>
+        </p>
+
+      </div>
+
+
+      <!-- EXCLUSIVE -->
+
+      <div class="price-card reveal" id="exclusive">
+
+        <span class="mono">Exclusive</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            1.150€
+          </span>
+
+          <br>
+
+          805€
+
+        </div>
+
+        <p class="price-desc" data-en="A fuller custom solution for businesses that need advanced design, content, and functionality.">
+          Kompletnije custom rešenje za biznise kojima treba
+          napredan dizajn, sadržaj i funkcionalnost.
+        </p>
+
+        <ul class="price-features">
+
+          <li><strong data-en="Everything in Premium, plus:">Sve iz Premium, plus:</strong></li>
+          <li><strong data-en="Up to 15 pages">Do 15 stranica</strong></li>
+          <li><strong data-en="Admin panel for self-editing">Admin panel za samostalno uređivanje</strong></li>
+          <li data-en="Up to 50 photos">Do 50 fotografija</li>
+          <li data-en="3 rounds of revisions">3 kruga izmena</li>
+          <li data-en="More advanced technical SEO (canonical, Open Graph, schema)">Napredniji tehnički SEO (canonical, Open Graph, schema)</li>
+
+        </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: 10–20 business days">Rok: 10–20 radnih dana</strong>
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:32px; text-align:center;" data-en="A photo = one photo supplied by the client, processed and optimized for the web. Included: Start 5 / Comfort 10 / Premium 30 / Exclusive 50 photos. Each additional: €2.">
+
+      Fotografija = jedna fotografija koju klijent dostavi,
+      obrađena i optimizovana za web.
+
+      Uključeno:
+      Start 5 / Comfort 10 / Premium 30 /
+      Exclusive 50 fotografija.
+
+      Svaka dodatna: 2€.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- MINI BOOKING -->
+
+<section class="addon-section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="mono" data-en="Add-on option">Posebna opcija</span>
+
+      <h2 data-en="Mini Booking">Mini Booking</h2>
+
+      <p data-en="A small custom site with online booking — built specifically for salons and service businesses where booking is a core part of the site.">
+        Mali custom sajt sa online zakazivanjem —
+        posebno napravljen za salone i uslužne biznise
+        kojima je booking važan deo sajta.
+      </p>
+
+    </div>
+
+
+    <div class="price-grid-single">
+
+      <div class="price-card featured reveal" id="mini-booking">
+
+        <span class="mono">
+          Mini Booking
+        </span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            420€
+          </span>
+
+          <br>
+
+          294€
+
+        </div>
+
+        <p class="price-desc" data-en="A small custom site with online booking.">
+          Mali custom sajt sa online zakazivanjem.
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="Up to 3 pages">Do 3 stranice</li>
+          <li data-en="Custom responsive design">Custom responsive dizajn</li>
+          <li data-en="Up to 15 photos">Do 15 fotografija</li>
+          <li>Google Maps</li>
+          <li data-en="Instagram / social media">Instagram / društvene mreže</li>
+          <li>Dugme za poziv</li>
+          <li>Favicon</li>
+          <li data-en="Basic SEO">Osnovni SEO</li>
+
+          <li><strong data-en="Online booking">Online zakazivanje</strong data-en=" (up to 2 staff, up to 10 services)"> (do 2 zaposlena, do 10 usluga)</li>
+          <li data-en="Apps Script integration">Apps Script integracija</li>
+          <li data-en="Service selection">Izbor usluge</li>
+          <li data-en="Date selection">Izbor datuma</li>
+          <li data-en="Available slot check">Provera slobodnih termina</li>
+          <li data-en="Client name and phone">Ime i telefon klijenta</li>
+          <li data-en="Booking storage">Čuvanje rezervacije</li>
+          <li data-en="Protection against double-booking">Zaštita od zauzetog termina</li>
+          <li data-en="Admin panel for working hours and days">Admin panel za radno vreme i radne dane</li>
+
+          <li>1 krug izmena</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WEBSHOP -->
+
+<section class="addon-section section-surface" id="webshop">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="mono">Posebna opcija</span>
+
+      <h2 data-en="Webshop">Webshop</h2>
+
+      <p data-en="A full online store — from a simple, fast version to a fully custom system with no limits. Every tier includes Home, About, Contact, and the store itself with an admin panel.">
+        Potpuna online prodavnica — od jednostavne, brze verzije
+        do potpuno prilagođenog sistema bez ograničenja. Svaki
+        nivo uključuje Početnu, O nama, Kontakt i samu prodavnicu
+        sa admin panelom.
+      </p>
+
+    </div>
+
+
+    <div class="price-grid stagger">
+
+      <div class="price-card reveal" id="webshop-start">
+
+        <span class="mono" data-en="Start Webshop">Start Webshop</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            800€
+          </span>
+
+          <br>
+
+          560€
+
+        </div>
+
+        <p class="price-desc" data-en="A fast, self-contained store — no hosting, no monthly subscription.">
+          Brza, samostalna prodavnica — bez hostinga, bez mesečne pretplate.
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="Home, About, Contact">Početna, O nama, Kontakt</li>
+          <li data-en="Store with cart and checkout">Prodavnica sa korpom i checkout-om</li>
+          <li data-en="Admin panel — products, orders, stock, statistics">Admin panel — proizvodi, porudžbine, zalihe, statistika</li>
+          <li data-en="Add and edit products yourself, photos included">Samostalan unos i izmena proizvoda, uključujući fotografije</li>
+          <li data-en="Protection against double-selling the last item in stock">Zaštita od duplog prodavanja poslednjeg komada</li>
+          <li data-en="Up to ~200 products">Do ~200 proizvoda</li>
+          <li data-en="Up to 33–100 orders per day (depends on account type)">Do 33-100 porudžbina dnevno (zavisi od tipa naloga)</li>
+          <li>2 kruga izmena</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="price-card reveal" id="webshop-standard">
+
+        <span class="mono" data-en="Webshop Standard">Webshop Standard</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            1.400€
+          </span>
+
+          <br>
+
+          980€
+
+        </div>
+
+        <p class="price-desc" data-en="A real database, no daily limits — works with a wide range of hosting plans.">
+          Prava baza podataka, bez dnevnih ograničenja — radi na širokom izboru hosting paketa.
+        </p>
+
+        <ul class="price-features">
+
+          <li>Početna, O nama, Kontakt</li>
+          <li>Prodavnica sa korpom i checkout-om</li>
+          <li data-en="A real database — no daily order limit">Prava baza — bez dnevnog limita porudžbina</li>
+          <li>Admin panel — proizvodi, porudžbine, zalihe, statistika</li>
+          <li>Zaštita od duplog prodavanja poslednjeg komada</li>
+          <li data-en="No practical limit on number of products">Bez praktičnog limita broja proizvoda</li>
+          <li>2 kruga izmena</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="price-card reveal" id="webshop-premium">
+
+        <span class="mono" data-en="Webshop Premium">Webshop Premium</span>
+
+        <div class="price-amount">
+
+          <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
+            2.000€
+          </span>
+
+          <br>
+
+          1.400€
+
+        </div>
+
+        <p class="price-desc" data-en="The most advanced system, the most room to grow — for serious plans.">
+          Najsavremeniji sistem, najveća sposobnost rasta — za ozbiljne planove.
+        </p>
+
+        <ul class="price-features">
+
+          <li>Početna, O nama, Kontakt</li>
+          <li>Prodavnica sa korpom i checkout-om</li>
+          <li>Prava baza — bez dnevnog limita porudžbina</li>
+          <li>Admin panel — proizvodi, porudžbine, zalihe, statistika</li>
+          <li>Zaštita od duplog prodavanja poslednjeg komada</li>
+          <li>Bez praktičnog limita broja proizvoda</li>
+          <li data-en="The easiest to connect with future third-party services">Najlakše povezivanje sa budućim spoljnim servisima</li>
+          <li>2 kruga izmena</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:32px; text-align:center;" data-en="All three tiers are included in the promo period (-30%, first 5 projects).">
+      Sva tri nivoa uključena su u promo period (-30%, prvih 5 projekata).
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- DODATNE USLUGE -->
+
+<section class="addon-section section-surface">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <h2 data-en="Add-on services">Dodatne usluge</h2>
+
+      <p data-en="Features that can be added to any package, depending on what the project needs.">
+        Funkcionalnosti koje se mogu dodati na paket,
+        u zavisnosti od potreba projekta.
+      </p>
+
+    </div>
+
+
+    <div class="addon-table reveal">
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra page">Dodatna stranica</span>
+          <span class="opis" data-en="Outside the package">Van paketa</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 20€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra section">Dodatna sekcija</span>
+          <span class="opis" data-en="An extra content block">Dodatni blok sadržaja</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 10€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra photo">Dodatna fotografija</span>
+          <span class="opis">Van paketa</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 2€ / kom.</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Kontakt forma</span>
+          <span class="opis" data-en="A real form for messages">Prava forma za poruke</span>
+        </div>
+        <span class="ukljuceno">Comfort, Premium, Exclusive</span>
+        <span class="cena">od 40€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">FAQ sekcija</span>
+          <span class="opis" data-en="Prepared questions">Pripremljena pitanja</span>
+        </div>
+        <span class="ukljuceno">Comfort, Premium, Exclusive</span>
+        <span class="cena">od 40€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Online zakazivanje</span>
+          <span class="opis" data-en="Depends on the system">Zavisi od sistema</span>
+        </div>
+        <span class="ukljuceno">Mini Booking</span>
+        <span class="cena"><span class="cena-old">od 200€</span><span class="cena-new">od 140€</span></span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra staff member">Dodatni zaposleni</span>
+          <span class="opis" data-en="Beyond 2, per person">Preko 2, po osobi</span>
+        </div>
+        <span class="ukljuceno">Mini Booking</span>
+        <span class="cena">od 50€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra service">Dodatna usluga</span>
+          <span class="opis" data-en="Beyond 10, per service">Preko 10, po usluzi</span>
+        </div>
+        <span class="ukljuceno">Mini Booking</span>
+        <span class="cena">od 5€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="WhatsApp / Viber button">WhatsApp / Viber dugme</span>
+          <span class="opis" data-en="Direct chat link">Direktan chat link</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 5€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Multiple languages">Višejezičnost</span>
+          <span class="opis" data-en="Premium+, by agreement">Premium+ po dogovoru</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 50€ / jezik</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Blog section">Blog sekcija</span>
+          <span class="opis" data-en="With an admin panel">Sa admin panelom</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 150€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="More advanced animations">Naprednije animacije</span>
+          <span class="opis" data-en="Parallax, sequences">Parallax, sekvence</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 25€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Simple logo">Jednostavan logo</span>
+          <span class="opis" data-en="Text-based or icon-based">Tekstualni ili ikonski</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 30€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Google Analytics</span>
+          <span class="opis" data-en="Visitor tracking">Praćenje poseta</span>
+        </div>
+        <span class="ukljuceno">Premium, Exclusive</span>
+        <span class="cena">od 10€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Google Search Console">Google Search Console</span>
+          <span class="opis" data-en="Search tracking">Praćenje pretrage</span>
+        </div>
+        <span class="ukljuceno">Premium, Exclusive</span>
+        <span class="cena">od 10€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Analytics + Search Console">Analytics + Search Console</span>
+          <span class="opis" data-en="Both together">Oba zajedno</span>
+        </div>
+        <span class="ukljuceno">Premium, Exclusive</span>
+        <span class="cena">od 15€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Extra round of revisions">Dodatni krug izmena</span>
+          <span class="opis" data-en="An extra site revision">Dodatna izmena sajta</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 15€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Admin panel">Admin panel</span>
+          <span class="opis" data-en="Prices, services, contact">Cene, usluge, kontakt</span>
+        </div>
+        <span class="ukljuceno" data-en="Exclusive (included) — available to everyone as an add-on">Exclusive (uključeno) — dostupno svima kao dodatak</span>
+        <span class="cena">od 200€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="PDF price list / menu">PDF cenovnik / meni</span>
+          <span class="opis" data-en="A downloadable document">Dokument za preuzimanje</span>
+        </div>
+        <span class="ukljuceno">—</span>
+        <span class="cena">od 10€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv" data-en="Spam protection">Zaštita od spam-a</span>
+          <span class="opis" data-en="reCAPTCHA form protection">reCAPTCHA zaštita formi</span>
+        </div>
+        <span class="ukljuceno" data-en="On request only">Samo na zahtev</span>
+        <span class="cena" data-en="free">besplatno</span>
+      </div>
+
+
+    </div>
+
+
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:24px; text-align:center;" data-en="Online booking starts at €200. This covers solutions built on Google Apps Script and your own Google data (like Mini Booking). For an online store, see the Webshop section above — three tiers, from simple to fully custom.">
+
+      Cena za online zakazivanje počinje od 200€. Ovo pokriva
+      rešenja bazirana na Google Apps Script-u i ličnoj Google
+      bazi podataka (kao kod Mini Booking-a). Za online prodavnicu
+      pogledajte Webshop odeljak iznad — tri nivoa, od jednostavnog
+      do potpuno prilagođenog sistema.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ODRŽAVANJE -->
+
+<section class="services">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <h2 data-en="Site maintenance">Održavanje sajta</h2>
+
+      <p data-en="Optional, after launch — monthly support for small changes and upkeep of your existing site.">
+        Opciono, posle lansiranja — mesečna podrška za
+        manje izmene i održavanje postojećeg sajta.
+      </p>
+
+    </div>
+
+
+    <div class="price-grid stagger">
+
+
+      <div class="price-card reveal">
+
+        <span class="mono">Basic</span>
+
+        <h3>10€ / mesec</h3>
+
+        <p class="price-desc" data-en="For a client who mostly just needs the site to keep working.">
+          Za klijenta kome sajt uglavnom samo treba da radi.
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="Checking that the site is online">Provera da li je sajt dostupan</li>
+          <li data-en="Checking basic functionality">Provera osnovnih funkcionalnosti</li>
+          <li data-en="Minor technical fixes">Manje tehničke ispravke</li>
+          <li data-en="Up to 15 minutes of changes per month">Do 15 minuta izmena mesečno</li>
+          <li data-en="Updating contact details / working hours">Ažuriranje kontakt podataka / radnog vremena</li>
+          <li data-en="Swapping up to 2 photos per month">Zamena do 2 fotografije mesečno</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="price-card featured reveal">
+
+        <span class="mono">Standard</span>
+
+        <h3>20€ / mesec</h3>
+
+        <p class="price-desc" data-en="For a business that changes content occasionally. Includes everything in Basic, plus:">
+          Za biznis koji povremeno menja sadržaj.
+          Uključuje sve iz Basic +:
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="Up to 30 minutes of changes per month">Do 30 minuta izmena mesečno</li>
+          <li data-en="Swapping up to 5 photos per month">Zamena do 5 fotografija mesečno</li>
+          <li data-en="Text edits">Izmene tekstova</li>
+          <li data-en="Updating pricing and working hours">Ažuriranje cenovnika i radnog vremena</li>
+          <li data-en="Small edits to existing sections">Manje izmene postojećih sekcija</li>
+          <li data-en="Basic check of the inquiry form">Osnovna provera forme za upite</li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="price-card reveal">
+
+        <span class="mono">Premium</span>
+
+        <h3>35€ / mesec</h3>
+
+        <p class="price-desc" data-en="For a client who wants support whenever something needs changing. Includes everything in Standard, plus:">
+          Za klijenta koji želi podršku kada god je potrebno
+          nešto promeniti. Uključuje sve iz Standard +:
+        </p>
+
+        <ul class="price-features">
+
+          <li data-en="Up to 60 minutes of changes per month">Do 60 minuta izmena mesečno</li>
+          <li data-en="Up to 10 photo swaps per month">Do 10 zamena fotografija mesečno</li>
+          <li data-en="Bigger edits to existing content">Veće izmene postojećeg sadržaja</li>
+          <li data-en="Adding new items to the price list">Dodavanje novih stavki u cenovnik</li>
+          <li data-en="Updating the gallery">Ažuriranje galerije</li>
+          <li data-en="Minor visual tweaks">Manje vizuelne izmene</li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:32px; text-align:center;" data-en="Maintenance doesn't include building new pages or new features. Those follow the add-on service prices, or get a custom quote.">
+
+      Održavanje ne uključuje izradu novih stranica ili
+      novih funkcionalnosti. Za to važe cene iz dodatnih
+      usluga ili se dogovara posebna ponuda.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- NAPOMENA -->
+
+<section class="about section-surface" style="border-bottom:none;">
+
+  <div class="container about-grid">
+
+    <div>
+      <span class="mono" data-en="Important">Važno</span>
+    </div>
+
+    <div class="about-text reveal">
+
+      <h2 data-en="Not sure which package you need?">
+        Niste sigurni koji paket Vam je potreban?
+      </h2>
+
+      <p data-en="No problem — in a free consultation, we go through what you need and I'll suggest the package that makes the most sense for your business, no pressure to decide on the spot.">
+        Nema problema — u besplatnoj konsultaciji prolazimo
+        kroz Vaše potrebe i predlažem paket koji ima najviše
+        smisla za Vaš biznis, bez pritiska da odmah odlučite.
+      </p>
+
+      <p style="font-size:14px;" data-en="Domain, hosting, and publishing the site aren't included in the price. The client arranges and pays for these separately. On request, I help with setup instructions.">
+
+        Domen, hosting i objavljivanje sajta nisu uključeni
+        u cenu. Klijent ih samostalno obezbeđuje i plaća.
+        Na zahtev, pomažem sa uputstvima za podešavanje.
+
+      </p>
+
+      <a href="kontakt.html" class="btn-primary" data-en="Tell us about your business">
+        Pišite nam o svom poslu
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+  <div class="container">
+
+    <div class="section-head">
+      <h2 data-en="FAQ">Česta pitanja</h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <details class="faq-item">
+        <summary data-en="How long does building a site take?">Koliko traje izrada sajta?</summary>
+        <p data-en="It depends on the package — 3 to 20 business days, depending on the number of pages and features. The exact timeline is agreed before work starts.">Zavisi od paketa — od 3 do 20 radnih dana, u zavisnosti od broja stranica i funkcionalnosti. Tačan rok se dogovara pre početka rada.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="What do I need to prepare?">Šta je potrebno da pripremim?</summary>
+        <p data-en="Text and information about your services, photos if you have them, contact details, and links to your social media. If you're missing something, we can figure it out together.">Tekstove i informacije o uslugama, fotografije ako ih imate, kontakt podatke i linkove ka društvenim mrežama. Ako nešto od ovoga nemate, možemo zajedno da definišemo šta je potrebno.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Do you provide the domain and hosting?">Da li obezbeđujete domen i hosting?</summary>
+        <p data-en="No — the domain and hosting are purchased separately, in your name. On request, I help with setup instructions.">Ne — domen i hosting se kupuju posebno, na Vaše ime. Na zahtev pomažem sa uputstvima za podešavanje.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Is the site mobile-friendly?">Da li je sajt prilagođen telefonu?</summary>
+        <p data-en="Yes, every site is responsive — it works on phone, tablet, and desktop.">Da, svaki sajt je responsive — radi na telefonu, tabletu i računaru.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Is SEO included?">Da li je SEO uključen?</summary>
+        <p data-en="Basic technical SEO is included in every package. More advanced SEO elements (sitemap, Search Console, local SEO) are included from Premium up.">Osnovni tehnički SEO je uključen u sve pakete. Napredniji SEO elementi (sitemap, Search Console, lokalni SEO) uključeni su od paketa Premium naviše.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Can I change the content later?">Da li mogu kasnije da menjam sadržaj?</summary>
+        <p data-en="Yes — through monthly maintenance, agreed changes, or by getting the admin panel (edit content yourself whenever you like, no need to wait on us).">Da — kroz mesečno održavanje, izmene po dogovoru, ili kupovinom admin panela (samostalno menjate sadržaj kad god poželite, bez čekanja na nas).</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Do you offer maintenance?">Da li nudite održavanje?</summary>
+        <p data-en="Yes, three maintenance packages are available after your site launches — see the maintenance pricing above.">Da, tri paketa održavanja su dostupna posle lansiranja sajta — pogledajte cenovnik održavanja iznad.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Can I get online booking?">Da li mogu dobiti online zakazivanje?</summary>
+        <p data-en="Yes — included in the Mini Booking package, and available as an add-on to every other package (including Exclusive).">Da — uključeno u Mini Booking paket, a dostupno je i kao dodatak svim ostalim paketima (uključujući Exclusive).</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Can I get an online store?">Da li mogu dobiti online prodavnicu?</summary>
+        <p data-en="Yes — Webshop comes in three tiers (Start, Standard, Premium), from a simple, fast solution to a fully custom system with no limits. See the Webshop section above for details and pricing on each tier.">Da — Webshop dolazi u tri nivoa (Start, Standard, Premium), od jednostavnog i brzog rešenja do potpuno prilagođenog sistema bez ograničenja. Pogledajte Webshop odeljak iznad za detalje i cene svakog nivoa.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="How does the admin panel work, and can I change the password myself?">Kako radi admin panel i mogu li sam da menjam lozinku?</summary>
+        <p data-en="The admin panel lets you edit content yourself (prices, services, contact, and for Webshop, products too, photos included) without contacting us for every small thing. You change the password yourself, from the panel, any time — for security reasons, the old password isn't shown again after it's changed, so keep it somewhere safe.">Admin panel Vam omogućava da sami menjate sadržaj (cene, usluge, kontakt, a kod Webshop-a i proizvode, uključujući fotografije) bez da nas kontaktirate za svaku sitnicu. Lozinku menjate sami, iz samog panela, u svakom trenutku — iz bezbednosnih razloga, stara lozinka se ne prikazuje ponovo posle promene, pa je čuvajte na sigurnom mestu.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="What if I don't have photos?">Šta ako nemam fotografije?</summary>
+        <p data-en="We work with the photos you provide. If you don't have any, we'll talk through what makes sense for your site.">Radimo sa fotografijama koje dostavite. Ako ih nemate, razgovaramo o rešenju koje ima smisla za Vaš sajt.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="What if I don't have a logo?">Šta ako nemam logo?</summary>
+        <p data-en="A site can be built without a logo too, just with your business name. A simple logo is available as an add-on service.">Sajt može da se napravi i bez logotipa, samo sa nazivom biznisa. Jednostavan logo je dostupan kao dodatna usluga.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="Can I expand the site later?">Da li mogu kasnije proširiti sajt?</summary>
+        <p data-en="Yes — extra pages, photos, and features can be added later, priced from the add-on services list.">Da — dodatne stranice, fotografije i funkcionalnosti mogu se dodati naknadno, po cenovniku dodatnih usluga.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-en="How do I check my page speed?">Kako da proverim brzinu stranice?</summary>
+        <p>Možete koristiti besplatan Google alat <strong>PageSpeed Insights</strong> (<a href="https://pagespeed.web.dev" target="_blank" rel="noopener">pagespeed.web.dev</a>) — ukucate URL Vašeg sajta i dobijate detaljnu analizu brzine, pristupačnosti i SEO-a, za mobilni i desktop prikaz odvojeno.</p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+
+    <div class="brand" style="font-size:16px;">
+      DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop
+    </div>
+
+    <div data-en="© 2026 DANN.web.workshop. Custom websites for small businesses and independent professionals.">
+      © 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+let trenutniJezik = 'sr';
+function prebaciJezik(){
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if (trenutniJezik === 'sr'){
+      if (!el.dataset.sr) el.dataset.sr = el.innerHTML;
+      el.innerHTML = el.dataset.en;
+    } else {
+      el.innerHTML = el.dataset.sr;
+    }
+  });
+  trenutniJezik = trenutniJezik === 'sr' ? 'en' : 'sr';
+  document.getElementById('langToggle').textContent = trenutniJezik === 'sr' ? 'EN' : 'SR';
+  document.documentElement.lang = trenutniJezik;
+}
+</script>
+
+</body>
+</html>
