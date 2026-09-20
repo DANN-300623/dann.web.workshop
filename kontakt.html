@@ -38,7 +38,7 @@
       <a href="primeri.html" data-en="Work">Primeri</a>
       <a href="resursi.html" data-en="Resources">Resursi</a>
       <a href="kontakt.html" class="btn-nav" data-en="Book a call">Zakažite poziv</a>
-      <button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button>
+      <span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button>
       <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -127,28 +127,36 @@
 
 <script src="script.js"></script>
 <script>
-let trenutniJezik = 'sr';
-function prebaciJezik(){
+let trenutniJezik = localStorage.getItem('dann_jezik') || 'sr';
+
+function primeniJezik(jezik){
   document.querySelectorAll('[data-en]').forEach(function(el){
-    if (trenutniJezik === 'sr'){
+    if (jezik === 'en'){
       if (!el.dataset.sr) el.dataset.sr = el.innerHTML;
       el.innerHTML = el.dataset.en;
-    } else {
+    } else if (el.dataset.sr) {
       el.innerHTML = el.dataset.sr;
     }
   });
   document.querySelectorAll('[data-en-placeholder]').forEach(function(el){
-    if (trenutniJezik === 'sr'){
+    if (jezik === 'en'){
       if (!el.dataset.srPlaceholder) el.dataset.srPlaceholder = el.placeholder;
       el.placeholder = el.dataset.enPlaceholder;
-    } else {
+    } else if (el.dataset.srPlaceholder) {
       el.placeholder = el.dataset.srPlaceholder;
     }
   });
-  trenutniJezik = trenutniJezik === 'sr' ? 'en' : 'sr';
-  document.getElementById('langToggle').textContent = trenutniJezik === 'sr' ? 'EN' : 'SR';
-  document.documentElement.lang = trenutniJezik;
+  document.getElementById('langToggle').textContent = jezik === 'sr' ? 'EN' : 'SR';
+  document.documentElement.lang = jezik;
 }
+
+function prebaciJezik(){
+  trenutniJezik = trenutniJezik === 'sr' ? 'en' : 'sr';
+  localStorage.setItem('dann_jezik', trenutniJezik);
+  primeniJezik(trenutniJezik);
+}
+
+document.addEventListener('DOMContentLoaded', function(){ primeniJezik(trenutniJezik); });
 </script>
 </body>
 </html>
