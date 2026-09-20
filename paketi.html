@@ -30,6 +30,9 @@
 <style>
 .lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
 .lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
+.mnav-lang{font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid rgba(255,255,255,.3);background:none;padding:8px 16px;border-radius:20px;cursor:pointer;color:inherit;margin-top:18px;}
+@media (max-width:900px){ .lang-toggle-wrap{ display:none !important; } }
+@media (min-width:901px){ .mnav-lang-wrap{ display:none !important; } }
 </style>
 </head>
 
@@ -74,7 +77,7 @@
         Zakažite poziv
       </a>
 
-      <span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button>
+      <span class="lang-toggle-wrap"><span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button></span>
 
       <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -92,6 +95,10 @@
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
   <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Book a call">Zakažite poziv</a>
+  <div class="mnav-lang-wrap">
+    <span class="mono" style="font-size:12px;color:rgba(255,255,255,.5);display:block;margin-top:20px;" data-en="Choose language:">Izaberi jezik:</span>
+    <button class="mnav-lang" id="langToggleMobile" onclick="prebaciJezik()">EN</button>
+  </div>
 </div>
 
 
@@ -1075,6 +1082,8 @@ function primeniJezik(jezik){
     }
   });
   document.getElementById('langToggle').textContent = jezik === 'sr' ? 'EN' : 'SR';
+  var mobBtn = document.getElementById('langToggleMobile');
+  if (mobBtn) mobBtn.textContent = jezik === 'sr' ? 'EN' : 'SR';
   document.documentElement.lang = jezik;
 }
 
