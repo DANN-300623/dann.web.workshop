@@ -71,7 +71,7 @@
 
     // Nakon što deployuješ kontakt-apps-script.gs kao Web app,
     // nalepi tu adresu ovde (Deploy → New deployment → Web app → kopiraj URL).
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxmeG5EMXdHw0PbtJZ_SnWRGi84_lXkQWPWOhDGh9d8waWbGULNWB1VSR90H4WZY_NYYg/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjI54hyzpgX-xsr0dy3_dhiklNf8MLcfS3MIAg56UBXrQCbU4QK2EbfdAB_IwBPblTyQ/exec';
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
