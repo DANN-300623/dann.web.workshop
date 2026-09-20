@@ -78,7 +78,7 @@
 
       // honeypot provera - ako je skriveno polje popunjeno, to je bot,
       // tiho prekini slanje bez ikakve poruke o grešci
-      const honeypotEl = document.getElementById('website');
+      const honeypotEl = document.getElementById('hp_field');
       if (honeypotEl && honeypotEl.value) {
         return;
       }
@@ -89,7 +89,7 @@
       fd.append('phone', document.getElementById('telefon').value);
       fd.append('projectType', document.getElementById('tip').value);
       fd.append('message', document.getElementById('poruka').value);
-      fd.append('website', honeypotEl ? honeypotEl.value : '');
+      fd.append('hp_field', honeypotEl ? honeypotEl.value : '');
       fd.append('lang', document.documentElement.lang || 'sr');
 
       fetch(SCRIPT_URL, { method: 'POST', body: fd })
