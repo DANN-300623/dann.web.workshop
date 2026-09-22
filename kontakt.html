@@ -119,6 +119,12 @@
           <label for="poruka" data-en="Message">Poruka</label>
           <textarea id="poruka" placeholder="Nekoliko reči o Vašem biznisu i šta Vam je potrebno..." data-en-placeholder="A few words about your business and what you need..."></textarea>
         </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:400;">
+            <input type="checkbox" id="privacyConsent" required style="margin-top:3px;flex-shrink:0;width:auto;padding:0;border:none;">
+            <span data-en="I agree with the &lt;a href=&quot;privatnost.html&quot; style=&quot;color:var(--accent);&quot;&gt;Privacy Policy&lt;/a&gt; — email is used only to respond to this inquiry.">Slažem se sa <a href="privatnost.html" style="color:var(--accent);">Politikom privatnosti</a> — email se koristi isključivo za odgovor na ovaj upit.</span>
+          </label>
+        </div>
         <button type="submit" class="btn-submit" data-en="Send message">Pošaljite upit</button>
       </form>
       <div class="confirmation" id="confirmationMsg" data-en="Thanks for your message! We'll get back to you shortly at the contact you provided.">Hvala na poruci! Javljamo se uskoro na naveden kontakt.</div>
@@ -129,7 +135,10 @@
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
-    <div data-en="© 2026 DANN.web.workshop. Custom websites for small businesses and independent professionals.">© 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.</div>
+    <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+      <div data-en="© 2026 DANN.web.workshop. Custom websites for small businesses and independent professionals.">© 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.</div>
+      <a href="privatnost.html" data-en="Privacy Policy" style="color:var(--text-soft);font-size:12px;">Politika privatnosti</a>
+    </div>
   </div>
 </footer>
 
