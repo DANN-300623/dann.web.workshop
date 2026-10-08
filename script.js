@@ -145,3 +145,14 @@
       poljePoruka.setSelectionRange(poljePoruka.value.length, poljePoruka.value.length);
     }
   }
+
+/* ---------- PROMO BROJAČ ----------
+   JEDINO mesto koje menjaš: "zavrseno" = broj STVARNIH plaćenih projekata.
+   Na sajtu se prikazuje (ukupno - zavrseno) / ukupno, na svim stranicama. */
+const DANN_PROMO = { ukupno: 5, zavrseno: 0 };
+
+(function(){
+  var ostalo = Math.max(0, DANN_PROMO.ukupno - DANN_PROMO.zavrseno);
+  document.querySelectorAll('[data-promo="ostalo"]').forEach(function(el){ el.textContent = ostalo; });
+  document.querySelectorAll('[data-promo="ukupno"]').forEach(function(el){ el.textContent = DANN_PROMO.ukupno; });
+})();

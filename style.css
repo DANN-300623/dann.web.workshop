@@ -405,6 +405,16 @@
     flex-wrap: wrap;
   }
   .promo-banner .mono { color: var(--accent); }
+  /* Brojač promo mesta (vrednosti se podešavaju u script.js → DANN_PROMO) */
+  .promo-counter {
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    margin-top: 28px; font-size: 13px; color: var(--text-soft);
+  }
+  .promo-counter .mono { color: var(--accent); }
+  .promo-counter__num { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--paper); letter-spacing: .02em; }
+  .promo-counter__num b { font-weight: 600; }
+  .promo-banner .promo-counter__num { font-size: 15px; }
+
   .promo-banner strong { color: var(--paper); }
 
   .price-card {
