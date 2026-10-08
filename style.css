@@ -256,6 +256,10 @@
   }
   .teaser-cell:last-child { border-right: none; padding-right: 0; }
   .teaser-cell:not(:first-child) { padding-left: 26px; }
+  /* red od 3 kolone: svaka prva ćelija u redu bez levog uvlačenja, svaka treća bez desne linije, drugi red dobija gornju liniju */
+  .teaser-row .teaser-cell:nth-child(3n+1) { padding-left: 0; }
+  .teaser-row .teaser-cell:nth-child(3n) { border-right: none; padding-right: 0; }
+  .teaser-row .teaser-cell:nth-child(n+4) { border-top: 1px solid var(--line); }
   .teaser-cell h3 { font-size: 19px; margin: 12px 0 8px; }
   .teaser-cell p { font-size: 13px; color: var(--text-soft); }
 
@@ -704,6 +708,8 @@
     .price-card { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 30px; }
     .teaser-row { grid-template-columns: 1fr; }
     .teaser-cell { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+    .teaser-row .teaser-cell:nth-child(n+4) { border-top: none; }
+    .teaser-row .teaser-cell:nth-child(3n) { padding-right: 26px; }
     .process-grid { grid-template-columns: 1fr; }
     .process-step { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 24px; }
     .process-step:last-child { border-bottom: none; margin-bottom: 0; }
