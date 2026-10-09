@@ -230,9 +230,12 @@
 
   <footer>
     <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
-    Web radionica za male biznise i velike ideje
+    Web radionica za male biznise i velike ideje · © 2026 · <a href="privatnost.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Politika privatnosti</a>
   </footer>
 
 </div>
+<button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
+<style>.dann-top{position:fixed;right:16px;bottom:16px;z-index:90;width:44px;height:44px;padding:0;border:1px solid rgba(242,240,235,.25);border-radius:0;background:#17181A;color:#F2F0EB;font:600 18px/1 "JetBrains Mono",monospace;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s,border-color .2s,color .2s}.dann-top.show{opacity:1;visibility:visible;transform:none}.dann-top:hover,.dann-top:focus-visible{border-color:#C1361E;color:#C1361E}@media (prefers-reduced-motion:reduce){.dann-top{transition:none}}</style>
+<script>(function(){var b=document.getElementById('dannTop');if(!b)return;function u(){b.classList.toggle('show',window.scrollY>600)}window.addEventListener('scroll',u,{passive:true});u();b.addEventListener('click',function(){var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:r?'auto':'smooth'})})})();</script>
 </body>
 </html>

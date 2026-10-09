@@ -38,6 +38,8 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="style.css">
 <style>
+.pkg-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}.pkg-jump a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;padding:9px 14px;border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .2s,color .2s}.pkg-jump a:hover{border-color:var(--accent);color:var(--accent)}#paketi-izrade,#booking,#webshop,#dodaci,#odrzavanje,#pitanja{scroll-margin-top:80px}
+.addon-table:not(.open) .addon-extra{display:none}.addon-toggle{display:block;margin:20px auto 0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;padding:11px 18px;border:1px solid var(--line);background:none;color:inherit;cursor:pointer;border-radius:0}.addon-toggle:hover{border-color:var(--accent);color:var(--accent)}.addon-toggle .less{display:none}.addon-table.open + .addon-toggle .more{display:none}.addon-table.open + .addon-toggle .less{display:inline}
 .lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
 .lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
 .mnav-lang{font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid rgba(255,255,255,.3);background:none;padding:8px 16px;border-radius:20px;cursor:pointer;color:inherit;margin-top:18px;}
@@ -125,11 +127,19 @@
       zaista trebaju.
     </p>
 
+    <div class="pkg-jump" role="navigation" aria-label="Sekcije stranice">
+      <a href="#paketi-izrade" data-en="Packages">Paketi</a>
+      <a href="#booking">Mini Booking</a>
+      <a href="#webshop">Webshop</a>
+      <a href="#dodaci" data-en="Add-ons">Dodaci</a>
+      <a href="#odrzavanje" data-en="Maintenance">Održavanje</a>
+      <a href="#pitanja" data-en="FAQ">Pitanja</a>
+    </div>
   </div>
 
 </section>
 
-<section class="services section-surface">
+<section class="services section-surface" id="paketi-izrade">
 
   <div class="container">
 
@@ -335,7 +345,7 @@
 
 </section>
 
-<section class="addon-section">
+<section class="addon-section" id="booking">
 
   <div class="container">
 
@@ -545,7 +555,7 @@
 
 </section>
 
-<section class="addon-section section-surface">
+<section class="addon-section section-surface" id="dodaci">
 
   <div class="container">
 
@@ -634,7 +644,7 @@
         <span class="cena"><span class="cena-old">od 8€</span><span class="cena-new">od 6€</span></span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="WhatsApp / Viber button">WhatsApp / Viber dugme</span>
           <span class="opis" data-en="Direct chat link">Direktan chat link</span>
@@ -643,7 +653,7 @@
         <span class="cena">od 5€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Multiple languages">Višejezičnost</span>
           <span class="opis" data-en="Premium+, by agreement">Premium+ po dogovoru</span>
@@ -652,7 +662,7 @@
         <span class="cena" data-en="from €130 / language">od 130€ / jezik</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Blog section">Blog sekcija</span>
           <span class="opis" data-en="With an admin panel">Sa admin panelom</span>
@@ -661,7 +671,7 @@
         <span class="cena">od 170€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="More advanced animations">Naprednije animacije</span>
           <span class="opis" data-en="Parallax, sequences">Parallax, sekvence</span>
@@ -670,7 +680,7 @@
         <span class="cena">od 35€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Simple logo">Jednostavan logo</span>
           <span class="opis" data-en="Text-based or icon-based">Tekstualni ili ikonski</span>
@@ -679,7 +689,7 @@
         <span class="cena">od 35€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Google Analytics">Google Analytics</span>
           <span class="opis" data-en="Visitor tracking">Praćenje poseta</span>
@@ -688,7 +698,7 @@
         <span class="cena">od 10€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Google Search Console">Google Search Console</span>
           <span class="opis" data-en="Search tracking">Praćenje pretrage</span>
@@ -697,7 +707,7 @@
         <span class="cena">od 10€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Analytics + Search Console">Analytics + Search Console</span>
           <span class="opis" data-en="Both together">Oba zajedno</span>
@@ -706,7 +716,7 @@
         <span class="cena">od 15€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Extra round of revisions">Dodatni krug izmena</span>
           <span class="opis" data-en="An extra site revision">Dodatna izmena sajta</span>
@@ -715,7 +725,7 @@
         <span class="cena">od 25€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Admin panel">Admin panel</span>
           <span class="opis" data-en="Prices, services, contact">Cene, usluge, kontakt</span>
@@ -724,7 +734,7 @@
         <span class="cena">od 280€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="PDF price list / menu">PDF cenovnik / meni</span>
           <span class="opis" data-en="A downloadable document">Dokument za preuzimanje</span>
@@ -733,7 +743,7 @@
         <span class="cena">od 20€</span>
       </div>
 
-      <div class="addon-row">
+      <div class="addon-row addon-extra">
         <div>
           <span class="naziv" data-en="Spam protection">Zaštita od spam-a</span>
           <span class="opis" data-en="reCAPTCHA form protection">reCAPTCHA zaštita formi</span>
@@ -743,6 +753,7 @@
       </div>
 
     </div>
+    <button type="button" class="addon-toggle" onclick="this.previousElementSibling.classList.toggle('open')"><span class="more" data-en="Show all add-ons (20) ↓">Prikaži sve dodatke (20) ↓</span><span class="less" data-en="Show fewer ↑">Prikaži manje ↑</span></button>
 
     <p style="font-size:13px; color:var(--ink-soft); margin-top:24px; text-align:center;" data-en="Online booking starts at €220. This covers solutions built on Google Apps Script and your own Google data (like Mini Booking). For an online store, see the Webshop section above — three tiers, from simple to fully custom. The -30% promo applies to packages and online booking; other add-ons are charged at the regular price.">
 
@@ -759,7 +770,7 @@
 
 </section>
 
-<section class="services">
+<section class="services" id="odrzavanje">
 
   <div class="container">
 
@@ -899,7 +910,7 @@
 
 </section>
 
-<section class="faq">
+<section class="faq" id="pitanja">
 
   <div class="container">
 
@@ -986,19 +997,13 @@
 </section>
 
 <footer>
-
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-
-    <div class="brand" style="font-size:16px;">
-      DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop
+    <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
+    <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+      <span data-en="Web workshop for small businesses and big ideas · © 2026">Web radionica za male biznise i velike ideje · © 2026</span>
+      <a href="privatnost.html" data-en="Privacy Policy" style="color:var(--text-soft);font-size:12px;">Politika privatnosti</a>
     </div>
-
-    <div data-en="© 2026 DANN.web.workshop. Custom websites for local businesses and entrepreneurs.">
-      © 2026 DANN.web.workshop. Sajtovi po meri za lokalne biznise i preduzetnike.
-    </div>
-
   </div>
-
 </footer>
 
 <script src="script.js"></script>
@@ -1030,5 +1035,8 @@ function prebaciJezik(){
 document.addEventListener('DOMContentLoaded', function(){ primeniJezik(trenutniJezik); });
 </script>
 
+<button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
+<style>.dann-top{position:fixed;right:16px;bottom:16px;z-index:90;width:44px;height:44px;padding:0;border:1px solid rgba(242,240,235,.25);border-radius:0;background:#17181A;color:#F2F0EB;font:600 18px/1 "JetBrains Mono",monospace;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s,border-color .2s,color .2s}.dann-top.show{opacity:1;visibility:visible;transform:none}.dann-top:hover,.dann-top:focus-visible{border-color:#C1361E;color:#C1361E}@media (prefers-reduced-motion:reduce){.dann-top{transition:none}}</style>
+<script>(function(){var b=document.getElementById('dannTop');if(!b)return;function u(){b.classList.toggle('show',window.scrollY>600)}window.addEventListener('scroll',u,{passive:true});u();b.addEventListener('click',function(){var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:r?'auto':'smooth'})})})();</script>
 </body>
 </html>
