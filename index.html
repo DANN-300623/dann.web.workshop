@@ -36,6 +36,8 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="style.css">
 <style>
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}.trio-card{display:block;color:inherit;text-decoration:none;border:1px solid var(--line);background:var(--bg,transparent);transition:border-color .2s}.trio-card:hover{border-color:var(--accent)}.trio-card img{display:block;width:100%;aspect-ratio:1200/750;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}.trio-body{padding:22px 22px 24px}.trio-body .mono{display:block;font-size:11px;color:var(--accent);margin-bottom:10px}.trio-body h3{font-size:20px;margin-bottom:8px}.trio-body p{font-size:13px;color:var(--text-soft);line-height:1.6}@media (max-width:860px){.trio{grid-template-columns:1fr}}
+.duo-head{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-bottom:0}.duo-head .section-head{margin-bottom:0;max-width:none}@media (max-width:860px){.duo-head{grid-template-columns:1fr;gap:40px}}
 .lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
 .lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
 .mnav-lang{font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid rgba(255,255,255,.3);background:none;padding:8px 16px;border-radius:20px;cursor:pointer;color:inherit;margin-top:18px;}
@@ -52,7 +54,7 @@
       <a href="paketi.html" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
       <a href="primeri.html" data-en="Work">Primeri</a>
       <a href="resursi.html" data-en="Resources">Resursi</a>
-      <a href="kontakt.html" class="btn-nav" data-en="Book a call">Zakažite poziv</a>
+      <a href="kontakt.html" class="btn-nav" data-en="Request a call">Zatražite poziv</a>
       <span class="lang-toggle-wrap"><span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button></span>
       <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -64,7 +66,7 @@
   <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
-  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Book a call">Zakažite poziv</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Request a call">Zatražite poziv</a>
   <div class="mnav-lang-wrap">
     <span class="mono" style="font-size:12px;color:rgba(255,255,255,.5);display:block;margin-top:20px;" data-en="Choose language:">Izaberi jezik:</span>
     <button class="mnav-lang" id="langToggleMobile" onclick="prebaciJezik()">EN</button>
@@ -84,11 +86,6 @@
       <span class="promo-counter__num"><b data-promo="ostalo">5</b>/<b data-promo="ukupno">5</b></span>
       <span data-en="projects left at the promo price · valid until the end of 2026">projekata ostalo po promo ceni · važi do kraja 2026.</span>
     </div>
-    <div class="hero-stats stagger">
-      <div class="reveal"><div class="stat-num">Custom</div><div class="stat-label" data-en="Design built around your business">Dizajn pravljen za Vaš biznis</div></div>
-      <div class="reveal"><div class="stat-num">Responsive</div><div class="stat-label" data-en="Works on phone, tablet, and desktop">Radi na telefonu, tabletu i računaru</div></div>
-      <div class="reveal"><div class="stat-num" data-en="Direct">Direktno</div><div class="stat-label" data-en="You work directly with the people building your site">Radite direktno sa onima koji prave Vaš sajt</div></div>
-    </div>
   </div>
 </section>
 <section class="services section-surface">
@@ -102,11 +99,10 @@
       <div class="teaser-cell reveal"><span class="mono" data-en="Package 2">Paket 2</span><h3>Comfort</h3><p data-en="For salons, restaurants, apartments, tradespeople, and firms that need more room.">Za salone, restorane, apartmane, zanatlije i firme kojima treba više prostora.</p><div class="teaser-price"><span class="old">500€</span><span class="new">350€</span></div><p class="teaser-features" data-en="Up to 5 pages · Contact form &amp; FAQ · 2 rounds of revisions">Do 5 stranica · Kontakt forma i FAQ · 2 kruga izmena</p><a href="paketi.html#comfort" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
       <div class="teaser-cell reveal"><span class="mono" data-en="Package 3">Paket 3</span><h3>Premium</h3><p data-en="For a more serious online presence and businesses that need a more advanced structure and functionality.">Za ozbiljnije online prisustvo i biznise kojima treba naprednija struktura i funkcionalnost.</p><div class="teaser-price"><span class="old">700€</span><span class="new">490€</span></div><p class="teaser-features" data-en="Up to 8 pages · Sitemap &amp; Search Console · Google Business profile">Do 8 stranica · Sitemap i Search Console · Google Business profil</p><a href="paketi.html#premium" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
       <div class="teaser-cell reveal"><span class="mono" data-en="Package 4">Paket 4</span><h3>Exclusive</h3><p data-en="A fuller custom solution for businesses that need advanced design, content, and functionality.">Kompletnije custom rešenje za biznise kojima treba napredan dizajn, sadržaj i funkcionalnost.</p><div class="teaser-price"><span class="old">1.400€</span><span class="new">980€</span></div><p class="teaser-features" data-en="Up to 15 pages · Admin panel · Sitemap &amp; Search Console">Do 15 stranica · Admin panel · Sitemap i Search Console</p><a href="paketi.html#exclusive" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
-      <div class="teaser-cell reveal"><span class="mono" data-en="Add-on option">Posebna opcija</span><h3>Mini Booking</h3><p data-en="A smaller site with online booking — for salons and service businesses.">Manji sajt sa online zakazivanjem — za salone i uslužne biznise.</p><div class="teaser-price"><span class="old">550€</span><span class="new">385€</span></div><p class="teaser-features" data-en="Up to 3 pages · Online booking · Apps Script integration">Do 3 stranice · Online zakazivanje · Apps Script integracija</p><a href="paketi.html#mini-booking" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
-      <div class="teaser-cell reveal"><span class="mono" data-en="Add-on option">Posebna opcija</span><h3 data-en="Web Store">Web prodavnica</h3><p data-en="A full online store — from a simple, fast version to a fully custom system.">Potpuna online prodavnica — od jednostavne, brze verzije do potpuno prilagođenog sistema.</p><div class="teaser-price"><span class="old">800€</span><span class="new" data-en="from 560€">od 560€</span></div><p class="teaser-features" data-en="Cart &amp; checkout · Admin panel · Three tiers, as you grow">Korpa i checkout · Admin panel · Tri nivoa, po potrebi rasta</p><a href="paketi.html#webshop" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
+      <div class="teaser-cell reveal"><span class="mono" data-en="Standalone option">Posebna opcija</span><h3>Mini Booking</h3><p data-en="A smaller site with online booking — for salons and service businesses.">Manji sajt sa online zakazivanjem — za salone i uslužne biznise.</p><div class="teaser-price"><span class="old">550€</span><span class="new">385€</span></div><p class="teaser-features" data-en="Up to 3 pages · Online booking · Apps Script integration">Do 3 stranice · Online zakazivanje · Apps Script integracija</p><a href="paketi.html#mini-booking" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
+      <div class="teaser-cell reveal"><span class="mono" data-en="Standalone option">Posebna opcija</span><h3 data-en="Web Store">Web prodavnica</h3><p data-en="A full online store — from a simple, fast version to a fully custom system.">Potpuna online prodavnica — od jednostavne, brze verzije do potpuno prilagođenog sistema.</p><div class="teaser-price"><span class="old">800€</span><span class="new" data-en="from 560€">od 560€</span></div><p class="teaser-features" data-en="Cart &amp; checkout · Admin panel · Three tiers, as you grow">Korpa i checkout · Admin panel · Tri nivoa, po potrebi rasta</p><a href="paketi.html#webshop" class="teaser-cta" data-en="View package →">Pogledajte paket →</a></div>
     </div>
     <a href="paketi.html" class="link-arrow" data-en="See all packages and what's included →">Pogledajte sve pakete i šta uključuju →</a>
-    <a href="paketi.html#webshop" class="link-arrow" style="margin-left:24px;" data-en="Building an online store? See webshop options →">Pravite online prodavnicu? Pogledajte Webshop opcije →</a>
   </div>
 </section>
 <section class="process">
@@ -124,16 +120,33 @@
 <section class="portfolio section-surface" id="portfolio">
   <div class="container">
     <div class="section-head"><h2 data-en="Our work">Primeri rada</h2><p data-en="Demo projects, built through the same process.">Demo projekti rađeni po istom procesu.</p></div>
-    <div class="portfolio-card reveal">
-      <div class="portfolio-visual" style="padding:0;overflow:hidden;border-radius:0;"><img src="slike-primeri/osmeh.jpg" alt="OSMEH — stomatološka ordinacija" style="width:100%;display:block;"></div>
-      <div class="portfolio-text">
-        <span class="mono" data-en="Dental practice · Contact form">Stomatološka ordinacija · Kontakt forma</span>
-        <h3>OSMEH</h3>
-        <p data-en="Warm, direct tone for someone who dreads the dentist. Five pages, a contact form that actually sends an email.">Topao, direktan ton za nekog ko izbegava zubara. Pet stranica, kontakt forma koja stvarno šalje mejl.</p>
-        <div class="tag-list"><span class="tag">HTML/CSS/JS</span><span class="tag">Responsive</span><span class="tag" data-en="5 pages">5 stranica</span></div>
-        <a href="primeri.html" class="btn-secondary" data-en="See all examples →">Pogledajte sve primere →</a>
-      </div>
+    <div class="trio stagger">
+      <a href="primeri.html" class="trio-card reveal">
+        <img src="slike-primeri/osmeh.jpg" alt="OSMEH — stomatološka ordinacija" loading="lazy">
+        <div class="trio-body">
+          <span class="mono" data-en="Site with a contact form">Sajt sa kontakt formom</span>
+          <h3>OSMEH</h3>
+          <p data-en="A dental practice. A warm tone for someone who dreads the dentist, five pages and a contact form.">Stomatološka ordinacija. Topao ton za nekog ko izbegava zubara, pet stranica i kontakt forma.</p>
+        </div>
+      </a>
+      <a href="primeri.html" class="trio-card reveal">
+        <img src="slike-primeri/form.jpg" alt="FORM — muški frizerski studio" loading="lazy">
+        <div class="trio-body">
+          <span class="mono" data-en="Online booking">Online zakazivanje</span>
+          <h3>FORM</h3>
+          <p data-en="A men's barbershop. Bold, confident typography and online appointment booking.">Muški frizerski studio. Krupna, samouverena tipografija i zakazivanje termina online.</p>
+        </div>
+      </a>
+      <a href="primeri.html" class="trio-card reveal">
+        <img src="slike-primeri/korak.jpg" alt="KORAK — online prodavnica obuće" loading="lazy">
+        <div class="trio-body">
+          <span class="mono" data-en="Online store">Web prodavnica</span>
+          <h3>KORAK</h3>
+          <p data-en="A shoe store. Cart, checkout and an admin panel with stock tracked by size.">Prodavnica obuće. Korpa, checkout i admin panel sa zalihama po veličinama.</p>
+        </div>
+      </a>
     </div>
+    <a href="primeri.html" class="link-arrow" data-en="See all seven examples →">Pogledajte svih sedam primera →</a>
   </div>
 </section>
 <section class="services-audience">
@@ -147,16 +160,17 @@
 </section>
 <section class="services section-surface">
   <div class="container">
-    <div class="section-head">
+    <div class="duo-head" id="ko-smo">
+      <div class="section-head">
+      <h2 data-en="Who we are">Ko smo mi</h2>
+      <p data-en="We're Ana and Dejan, the two freelancers behind DANN.web.workshop. DANN started with a simple idea: a good website should be within reach of anyone who takes their work seriously. Together we shape the design and the content, and we build the site ourselves. You work with us directly, from the first idea to the finished site, with a clearly agreed price and no unpleasant surprises.">Mi smo Ana i Dejan, dvoje freelancera koji stoje iza DANN.web.workshop-a. DANN je nastao iz jednostavne ideje: dobar sajt treba da bude dostupan svakome ko ozbiljno radi svoj posao. Zajedno osmišljavamo izgled i sadržaj i sami od toga pravimo sajt. Sa nama sarađujete direktno, od prve ideje do gotovog sajta, uz jasno dogovorenu cenu i bez neprijatnih iznenađenja.</p>
+      </div>
+      <div class="section-head">
       <h2 data-en="Why DANN?">Zašto DANN?</h2>
       <p data-en="Your website should look like your business, not like everyone else's. That's why we don't start with design — we start with a conversation: who your clients are, why they come to you, and what they need to do when they open your site. Only then do we choose the look, the copy and the features — and nothing you don't need.">Vaš sajt treba da liči na Vaš posao, a ne na sve ostale. Zato ne počinjemo od dizajna, nego od razgovora: ko su Vaši klijenti, zašto dolaze baš kod Vas i šta treba da urade kad otvore sajt. Tek onda biramo izgled, tekst i funkcije — i ništa što Vam ne treba.</p>
+      </div>
     </div>
-    <div class="teaser-row stagger">
-      <div class="teaser-cell reveal"><span class="mono">01</span><h3 data-en="Custom design">Custom dizajn</h3><p data-en="Every site is built around your business.">Svaki sajt se pravi za Vaš biznis.</p></div>
-      <div class="teaser-cell reveal"><span class="mono">02</span><h3 data-en="Direct communication">Direktna komunikacija</h3><p data-en="You work directly with the people building your site, no middlemen.">Radite direktno sa onima koji prave Vaš sajt, bez posrednika.</p></div>
-      <div class="teaser-cell reveal"><span class="mono">03</span><h3 data-en="Clear packages">Jasni paketi</h3><p data-en="You know exactly what you're getting and what it costs, no hidden fees.">Znate tačno šta dobijate i koliko to košta, bez skrivenih troškova.</p></div>
-    </div>
-  </div>
+      </div>
 </section>
 <section class="contact" style="padding: 80px 0; border-bottom: 1px solid var(--line); text-align:center;">
   <div class="container reveal">
