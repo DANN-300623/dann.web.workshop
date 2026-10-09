@@ -51,12 +51,16 @@
 </head>
 <body>
 <div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a></nav>
+<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> <span class="t-sr">Nazad na sajt</span><span class="t-en" hidden>Back to site</span></a><button type="button" id="privLang" style="margin-left:auto;font:inherit;letter-spacing:inherit;text-transform:inherit;background:none;border:1px solid currentColor;border-radius:20px;padding:4px 12px;cursor:pointer;color:inherit;opacity:.8">EN</button></nav>
 
+<div class="jezik" data-jezik="sr">
   <h1>Politika privatnosti</h1>
-  <p class="datum">Poslednja izmena: septembar 2026.</p>
+  <p class="datum">Poslednja izmena: oktobar 2026.</p>
 
-  <p>DANN.web.workshop poštuje Vašu privatnost. Ova stranica objašnjava koje podatke prikupljamo preko kontakt forme i kako ih koristimo — jednostavno, bez pravnog žargona.</p>
+  <p>DANN.web.workshop poštuje Vašu privatnost. Ova stranica objašnjava koje podatke prikupljamo preko kontakt forme, zašto i kako ih koristimo — jednostavno, bez pravnog žargona.</p>
+
+  <h2>Ko prikuplja podatke</h2>
+  <p>Podatke prikuplja i njima upravlja DANN.web.workshop (dannwebworkshop.rs). Za sva pitanja o Vašim podacima pišite na <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a>.</p>
 
   <h2>Koje podatke prikupljamo</h2>
   <p>Kada popunite kontakt formu na ovom sajtu, prikupljamo samo ono što nam sami pošaljete:</p>
@@ -64,21 +68,26 @@
     <li>Ime</li>
     <li>Email adresu</li>
     <li>Telefon (ako ga unesete — nije obavezno)</li>
+    <li>Tip sajta koji Vas zanima</li>
     <li>Sadržaj poruke koju napišete</li>
   </ul>
 
+  <h2>Osnov za obradu</h2>
+  <p>Podatke obrađujemo na osnovu Vašeg pristanka, koji dajete označavanjem polja za saglasnost pre slanja forme. Pristanak možete povući u bilo kom trenutku, slanjem mejla na adresu iznad.</p>
+
   <h2>Kako koristimo Vaše podatke</h2>
   <p>Vaš email i ostali podaci koriste se <strong>isključivo</strong> da bismo Vam odgovorili na upit koji ste poslali. To je sve.</p>
-  <p>Ne koristimo Vaš email za slanje reklama, newslettera, ili bilo šta osim direktnog odgovora na Vašu poruku. Ne prodajemo, ne iznajmljujemo, i ne delimo Vaše podatke sa trećim stranama.</p>
+  <p>Ne koristimo Vaš email za slanje reklama, newslettera, ili bilo šta osim odgovora na Vašu poruku. Vaše podatke ne prodajemo, ne iznajmljujemo i ne ustupamo drugima.</p>
 
   <h2>Gde se podaci čuvaju</h2>
-  <p>Poruke poslate preko kontakt forme čuvaju se u internoj tabeli (Google Sheets), dostupnoj samo nama. Ne koristimo spoljne servise za marketing ili analitiku Vaših ličnih podataka.</p>
+  <p>Poruke poslate preko kontakt forme čuvaju se u tabeli na Google servisima (Google Sheets) i stižu nam mejlom, pa ih Google tehnički obrađuje kao pružalac usluge. Pristup tim podacima imamo samo mi. Ne koristimo servise za marketing ili analitiku Vaših ličnih podataka.</p>
+  <p>Fontovi na sajtu učitavaju se sa Google servera (Google Fonts), pa Google pri tome vidi IP adresu Vašeg uređaja.</p>
 
   <h2>Koliko dugo čuvamo podatke</h2>
-  <p>Poruke čuvamo dok su relevantne za komunikaciju sa Vama. Ako želite da Vaši podaci budu obrisani, samo nam pošaljite zahtev — vidite kontakt ispod.</p>
+  <p>Poruke čuvamo dok su relevantne za komunikaciju sa Vama. Ako želite da Vaši podaci budu obrisani, pošaljite nam zahtev mejlom.</p>
 
   <h2>Kolačići (cookies)</h2>
-  <p>Ovaj sajt ne koristi kolačiće za praćenje ili reklamiranje.</p>
+  <p>Ovaj sajt ne koristi kolačiće za praćenje ili reklamiranje. Pregledač pamti samo jezik koji ste izabrali (SR/EN), i to ostaje na Vašem uređaju.</p>
 
   <h2>Vaša prava</h2>
   <p>U svakom trenutku možete da tražite:</p>
@@ -86,18 +95,90 @@
     <li>Uvid u podatke koje imamo o Vama</li>
     <li>Ispravku netačnih podataka</li>
     <li>Brisanje Vaših podataka</li>
+    <li>Povlačenje pristanka</li>
   </ul>
+  <p>Ako smatrate da Vaši podaci nisu obrađeni u skladu sa zakonom, imate pravo da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (poverenik.rs).</p>
 
   <div class="kontakt-box">
     <strong>Pitanja o privatnosti?</strong><br>
     Pišite nam na <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> — odgovaramo lično, bez posrednika.
   </div>
+</div>
+
+<div class="jezik" data-jezik="en" lang="en" hidden>
+  <h1>Privacy Policy</h1>
+  <p class="datum">Last updated: October 2026.</p>
+
+  <p>DANN.web.workshop respects your privacy. This page explains what data we collect through the contact form, why, and how we use it — simply, without legal jargon.</p>
+
+  <h2>Who collects the data</h2>
+  <p>Your data is collected and managed by DANN.web.workshop (dannwebworkshop.rs). For any questions about your data, email <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a>.</p>
+
+  <h2>What data we collect</h2>
+  <p>When you fill in the contact form on this site, we only collect what you send us:</p>
+  <ul>
+    <li>Name</li>
+    <li>Email address</li>
+    <li>Phone number (if you enter it — optional)</li>
+    <li>The type of site you're interested in</li>
+    <li>The content of your message</li>
+  </ul>
+
+  <h2>Legal basis</h2>
+  <p>We process your data based on your consent, which you give by ticking the consent box before sending the form. You can withdraw your consent at any time by emailing the address above.</p>
+
+  <h2>How we use your data</h2>
+  <p>Your email and other details are used <strong>only</strong> to reply to the inquiry you sent. That's all.</p>
+  <p>We don't use your email for ads, newsletters, or anything other than replying to your message. We don't sell, rent or hand over your data to anyone.</p>
+
+  <h2>Where the data is stored</h2>
+  <p>Messages sent through the contact form are stored in a spreadsheet on Google services (Google Sheets) and reach us by email, so Google processes them technically as a service provider. Only we have access to this data. We don't use any marketing or analytics services on your personal data.</p>
+  <p>The site's fonts are loaded from Google servers (Google Fonts), so Google sees your device's IP address when they load.</p>
+
+  <h2>How long we keep the data</h2>
+  <p>We keep messages for as long as they're relevant to our communication with you. If you'd like your data deleted, just send us a request by email.</p>
+
+  <h2>Cookies</h2>
+  <p>This site doesn't use tracking or advertising cookies. Your browser only remembers the language you chose (SR/EN), and that stays on your device.</p>
+
+  <h2>Your rights</h2>
+  <p>At any time, you can ask for:</p>
+  <ul>
+    <li>Access to the data we hold about you</li>
+    <li>Correction of inaccurate data</li>
+    <li>Deletion of your data</li>
+    <li>Withdrawal of your consent</li>
+  </ul>
+  <p>If you believe your data hasn't been processed in line with the law, you have the right to file a complaint with the Commissioner for Information of Public Importance and Personal Data Protection of Serbia (poverenik.rs).</p>
+
+  <div class="kontakt-box">
+    <strong>Questions about privacy?</strong><br>
+    Email us at <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> — we reply personally, no middlemen.
+  </div>
+</div>
 
   <footer style="margin-top:56px;padding-top:20px;border-top:1px solid rgba(128,128,128,.25);text-align:center;font-size:13px;opacity:.75;">
     <span style="display:block;margin-bottom:6px;font-family:'JetBrains Mono',monospace;">DΛNN<span style="color:#C1361E">.</span>web<span style="color:#C1361E">.</span>workshop</span>
-    Web radionica za male biznise i velike ideje · © 2026
+    <span class="t-sr">Web radionica za male biznise i velike ideje</span><span class="t-en" hidden>Web workshop for small businesses and big ideas</span> · © 2026
   </footer>
 
 </div>
+<script>
+(function(){
+  function get(){try{return localStorage.getItem('dann_jezik')||'sr'}catch(e){return 'sr'}}
+  function set(j){try{localStorage.setItem('dann_jezik',j)}catch(e){}}
+  function apply(j){
+    document.querySelectorAll('.jezik').forEach(function(el){el.hidden=el.getAttribute('data-jezik')!==j});
+    document.querySelectorAll('.t-sr').forEach(function(el){el.hidden=j!=='sr'});
+    document.querySelectorAll('.t-en').forEach(function(el){el.hidden=j!=='en'});
+    document.documentElement.lang=j;
+    document.title=j==='en'?'Privacy Policy | DANN.web.workshop':'Politika privatnosti | DANN.web.workshop';
+    var b=document.getElementById('privLang'); if(b) b.textContent=j==='en'?'SR':'EN';
+  }
+  var j=get(); apply(j);
+  var b=document.getElementById('privLang');
+  if(b) b.addEventListener('click',function(){j=j==='en'?'sr':'en'; set(j); apply(j);});
+})();
+</script>
 </body>
 </html>
