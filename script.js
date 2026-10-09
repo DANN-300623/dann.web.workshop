@@ -1,4 +1,4 @@
-  /* ---------- MOBILE MENU ---------- */
+
   const burgerBtn = document.getElementById('burgerBtn');
   const closeMenuBtn = document.getElementById('closeMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -21,7 +21,6 @@
     });
   }
 
-  /* ---------- LOGO — vraca na vrh ako smo vec na pocetnoj ---------- */
   const brandLink = document.querySelector('.brand');
   if (brandLink) {
     brandLink.addEventListener('click', function(e){
@@ -34,7 +33,6 @@
     });
   }
 
-  /* ---------- SCROLL REVEAL + SEKVENCIJALNO POJAVLJIVANJE ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const revealEls = document.querySelectorAll('.reveal');
@@ -52,7 +50,6 @@
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
-  /* ---------- SUPTILAN PARALLAX NA HERO SADRŽAJU ---------- */
   const heroInner = document.querySelector('.hero .container');
   if (heroInner && !prefersReducedMotion) {
     window.addEventListener('scroll', function(){
@@ -63,21 +60,16 @@
     }, { passive: true });
   }
 
-  /* ---------- KONTAKT FORMA ---------- */
   const formCheck = document.getElementById('contactForm');
   if (formCheck) {
     const form = document.getElementById('contactForm');
     const confirmationMsg = document.getElementById('confirmationMsg');
 
-    // Nakon što deployuješ kontakt-apps-script.gs kao Web app,
-    // nalepi tu adresu ovde (Deploy → New deployment → Web app → kopiraj URL).
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjI54hyzpgX-xsr0dy3_dhiklNf8MLcfS3MIAg56UBXrQCbU4QK2EbfdAB_IwBPblTyQ/exec';
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // honeypot provera - ako je skriveno polje popunjeno, to je bot,
-      // tiho prekini slanje bez ikakve poruke o grešci
       const honeypotEl = document.getElementById('hp_field');
       if (honeypotEl && honeypotEl.value) {
         return;
@@ -105,14 +97,13 @@
         .catch(function(){
           var jeEngleski = document.documentElement.lang === 'en';
           confirmationMsg.textContent = jeEngleski
-            ? 'Something went wrong — please try again or email us directly at dann.web.workshop@gmail.com'
-            : 'Došlo je do greške — probajte ponovo ili pišite direktno na dann.web.workshop@gmail.com';
+            ? 'Something went wrong — please try again or email us directly at hello@dannwebworkshop.rs'
+            : 'Došlo je do greške — probajte ponovo ili pišite direktno na hello@dannwebworkshop.rs';
           confirmationMsg.style.display = 'block';
         });
     });
   }
 
-  /* ---------- SKRIVEN DETALJ (samo paketi.html) ---------- */
   const hiddenDetailBtn = document.getElementById('hiddenDetail');
   const detailModal = document.getElementById('detailModal');
   const closeDetailModalBtn = document.getElementById('closeDetailModal');
@@ -134,7 +125,6 @@
     });
   }
 
-  /* ---------- KOD ZA POPUST IZ URL-a (samo kontakt.html) ---------- */
   const poljePoruka = document.getElementById('poruka');
   if (poljePoruka) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -146,9 +136,6 @@
     }
   }
 
-/* ---------- PROMO BROJAČ ----------
-   JEDINO mesto koje menjaš: "zavrseno" = broj STVARNIH plaćenih projekata.
-   Na sajtu se prikazuje (ukupno - zavrseno) / ukupno, na svim stranicama. */
 const DANN_PROMO = { ukupno: 5, zavrseno: 0 };
 
 (function(){

@@ -4,14 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
-<meta name="description" content="Primeri i koncept projekti — pregled stila i pristupa izradi sajtova za male biznise.">
-<link rel="canonical" href="https://dann-web-workshop.dann-standard.workers.dev/primeri.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Sedam demo sajtova za različite delatnosti: stomatološka ordinacija, saloni, frizer, prodavnica, auto servis i prodavnica za ljubimce. Otvorite ih uživo.">
+<meta name="author" content="DANN.web.workshop">
+<meta name="theme-color" content="#17181A">
+<link rel="canonical" href="https://dannwebworkshop.rs/primeri.html">
+<meta property="og:site_name" content="DANN.web.workshop">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Primeri web sajtova | DANN.web.workshop">
 <meta property="og:description" content="Koncept projekti koji pokazuju stil i pristup izradi sajtova za male biznise i uslužne delatnosti.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dann-web-workshop.dann-standard.workers.dev/primeri.html">
-<meta property="og:image" content="https://dann-web-workshop.dann-standard.workers.dev/og-image.png">
+<meta property="og:url" content="https://dannwebworkshop.rs/primeri.html">
+<meta property="og:image" content="https://dannwebworkshop.rs/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DANN.web.workshop — izrada sajtova za male biznise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Primeri web sajtova | DANN.web.workshop">
+<meta name="twitter:description" content="Koncept projekti koji pokazuju stil i pristup izradi sajtova za male biznise i uslužne delatnosti.">
+<meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/primeri.html#stranica","url":"https://dannwebworkshop.rs/primeri.html","name":"Primeri web sajtova | DANN.web.workshop","description":"Sedam demo sajtova za različite delatnosti: stomatološka ordinacija, saloni, frizer, prodavnica, auto servis i prodavnica za ljubimce. Otvorite ih uživo.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Primeri","item":"https://dannwebworkshop.rs/primeri.html"}]},{"@type":"ItemList","name":"Demo projekti","itemListElement":[{"@type":"ListItem","position":1,"url":"https://osmeh.dannwebworkshop.rs/","name":"OSMEH — demo sajt"},{"@type":"ListItem","position":2,"url":"https://stil.dannwebworkshop.rs/","name":"STIL — demo sajt"},{"@type":"ListItem","position":3,"url":"https://korak.dannwebworkshop.rs/","name":"KORAK — demo sajt"},{"@type":"ListItem","position":4,"url":"https://atelier.dannwebworkshop.rs/","name":"ATELIER — demo sajt"},{"@type":"ListItem","position":5,"url":"https://form.dannwebworkshop.rs/","name":"FORM — demo sajt"},{"@type":"ListItem","position":6,"url":"https://pogon.dannwebworkshop.rs/","name":"POGON — demo sajt"},{"@type":"ListItem","position":7,"url":"https://repibrk.dannwebworkshop.rs/","name":"Rep i Brk — demo sajt"}]}]}</script>
 <title>Primeri web sajtova | DANN.web.workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,9 +45,9 @@
 
 <nav>
   <div class="container">
-    <a href="index.html" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</a>
+    <a href="/" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</a>
     <div class="nav-links">
-      <a href="index.html" data-en="Home">Početna</a>
+      <a href="/" data-en="Home">Početna</a>
       <a href="paketi.html" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
       <a href="primeri.html" class="active" data-en="Work">Primeri</a>
       <a href="resursi.html" data-en="Resources">Resursi</a>
@@ -50,7 +62,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni" data-en="CLOSE ✕">ZATVORI ✕</button>
-  <a href="index.html" class="mnav-link" data-en="Home">Početna</a>
+  <a href="/" class="mnav-link" data-en="Home">Početna</a>
   <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
@@ -75,7 +87,7 @@
   }
   .primeri-card{
     background: var(--surface, #fff); border: 1px solid var(--line, #e5e1d8);
-    border-radius: 12px; overflow: hidden;
+    border-radius:0; overflow: hidden;
   }
   .primeri-card__img{
     width: 100%; aspect-ratio: 1200/750; object-fit: cover; object-position: top;
@@ -90,15 +102,12 @@
   .primeri-card h3{ font-size: 22px; margin: 8px 0 10px; }
   .primeri-card p.opis{ color: var(--text-soft, #666); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
   .primeri-card .tag-list{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-  /* Tagovi su samo opis (nisu dugmad, ne vode nigde) — prikazani kao obican tekst sa tackicom */
+
   .primeri-card .tag-list{ gap: 0 !important; }
-  .primeri-card .tag{ font-size: 12.5px; color: var(--text-soft, #666); border: 0 !important; background: none !important; padding: 0 !important; border-radius: 0 !important; }
+  .primeri-card .tag{ font-size: 12.5px; color: var(--text-soft, #666); border: 0 !important; background: none !important; padding: 0 !important; border-radius:0; }
   .primeri-card .tag + .tag::before{ content: '·'; margin: 0 9px; color: var(--accent, #c1361e); }
-  .primeri-card .btn-demo{
-    display: inline-block; padding: 11px 20px; border: 1px solid var(--ink, #1c1c1a);
-    border-radius: 6px; font-size: 13.5px; text-decoration: none; color: var(--ink, #1c1c1a);
-    opacity: .5; cursor: default;
-  }
+  .primeri-card .demo-actions{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+  .primeri-card .demo-url{ font-family: var(--mono, monospace); font-size: 12px; color: var(--text-soft, #666); }
   @media (max-width: 800px){ .primeri-grid{ grid-template-columns: 1fr; } }
 </style>
 
@@ -117,6 +126,10 @@
             <span class="tag" data-en="Contact form">Kontakt forma</span>
             <span class="tag" data-en="Warm palette">Topla paleta</span>
           </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://osmeh.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">osmeh.dannwebworkshop.rs</span>
+          </div>
         </div>
       </div>
 
@@ -130,6 +143,10 @@
             <span class="tag" data-en="10 pages">10 stranica</span>
             <span class="tag" data-en="Online booking">Online zakazivanje</span>
             <span class="tag" data-en="Elegant palette">Elegantna paleta</span>
+          </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://stil.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">stil.dannwebworkshop.rs</span>
           </div>
         </div>
       </div>
@@ -145,11 +162,15 @@
             <span class="tag">Admin panel</span>
             <span class="tag" data-en="Stock by size">Zalihe po veličinama</span>
           </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://korak.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">korak.dannwebworkshop.rs</span>
+          </div>
         </div>
       </div>
 
       <div class="primeri-card">
-        <img class="primeri-card__img bez-slike" src="slike-primeri/atelier.jpg" alt="ATELIER — beauty studio">
+        <img class="primeri-card__img" src="slike-primeri/atelier.jpg" alt="ATELIER — beauty studio">
         <div class="primeri-card__body">
           <span class="mono">Beauty studio</span>
           <h3>ATELIER</h3>
@@ -159,11 +180,15 @@
             <span class="tag" data-en="Minimalism">Minimalizam</span>
             <span class="tag" data-en="One page">Jedna stranica</span>
           </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://atelier.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">atelier.dannwebworkshop.rs</span>
+          </div>
         </div>
       </div>
 
       <div class="primeri-card">
-        <img class="primeri-card__img bez-slike" src="slike-primeri/form.jpg" alt="FORM — muški frizerski studio">
+        <img class="primeri-card__img" src="slike-primeri/form.jpg" alt="FORM — muški frizerski studio">
         <div class="primeri-card__body">
           <span class="mono" data-en="Men's barbershop">Muški frizerski studio</span>
           <h3>FORM</h3>
@@ -172,6 +197,10 @@
             <span class="tag" data-en="Online booking">Online zakazivanje</span>
             <span class="tag" data-en="Bold typography">Krupna tipografija</span>
             <span class="tag" data-en="One page">Jedna stranica</span>
+          </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://form.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">form.dannwebworkshop.rs</span>
           </div>
         </div>
       </div>
@@ -187,6 +216,10 @@
             <span class="tag" data-en="Dark palette">Tamna paleta</span>
             <span class="tag" data-en="One page">Jedna stranica</span>
           </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://pogon.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">pogon.dannwebworkshop.rs</span>
+          </div>
         </div>
       </div>
 
@@ -200,6 +233,10 @@
             <span class="tag" data-en="Contact form">Kontakt forma</span>
             <span class="tag" data-en="Illustration">Ilustracija</span>
             <span class="tag" data-en="One page">Jedna stranica</span>
+          </div>
+          <div class="demo-actions">
+            <a class="btn-secondary btn-demo" href="https://repibrk.dannwebworkshop.rs" target="_blank" rel="noopener" data-en="Open demo →">Otvorite demo →</a>
+            <span class="demo-url">repibrk.dannwebworkshop.rs</span>
           </div>
         </div>
       </div>
@@ -218,7 +255,7 @@
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
-    <div data-en="© 2026 DANN.web.workshop. Custom websites for small businesses and independent professionals.">© 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.</div>
+    <div data-en="© 2026 DANN.web.workshop. Custom websites for local businesses and entrepreneurs.">© 2026 DANN.web.workshop. Sajtovi po meri za lokalne biznise i preduzetnike.</div>
   </div>
 </footer>
 

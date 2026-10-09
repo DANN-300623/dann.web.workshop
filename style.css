@@ -46,7 +46,6 @@
     color: var(--text-soft);
   }
 
-  /* ---------- BRAND / LOGO ---------- */
   .brand {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
@@ -56,7 +55,6 @@
 
   .brand .dot { color: var(--accent); }
 
-  /* ---------- NAV ---------- */
  nav {
   position: sticky;
   top: 0;
@@ -121,8 +119,9 @@
     transition: border-color 0.2s ease, color 0.2s ease;
   }
   .btn-nav:hover { border-color: var(--accent); color: var(--accent) !important; }
+  .nav-links a.btn-nav { padding: 9px 18px; border: 1px solid var(--line-strong); }
+  .nav-links a.btn-nav:hover { border-color: var(--accent); }
 
-  /* ---------- HERO (asimetrican, blueprint uglovi) ---------- */
   .hero {
     padding: 130px 0 90px;
     border-bottom: 1px solid var(--line);
@@ -216,7 +215,6 @@
     max-width: 160px;
   }
 
-  /* ---------- SECTION HEAD ---------- */
   .section-head {
     margin-bottom: 56px;
     max-width: 560px;
@@ -233,7 +231,6 @@
   }
   .section-head p { color: var(--text-soft); font-size: 14px; }
 
-  /* ---------- PAGE TITLE (podstranice) ---------- */
   .page-title {
     padding: 140px 0 64px;
     border-bottom: 1px solid var(--line);
@@ -242,7 +239,6 @@
   .page-title h1 { font-size: clamp(34px, 5vw, 52px); max-width: 760px; }
   .page-title p { color: var(--text-soft); font-size: 15px; max-width: 560px; margin-top: 18px; }
 
-  /* ---------- USLUGE (teaser row na Početnoj) - bez kartica, samo hairline kolone ---------- */
   .services { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .teaser-row {
@@ -256,7 +252,7 @@
   }
   .teaser-cell:last-child { border-right: none; padding-right: 0; }
   .teaser-cell:not(:first-child) { padding-left: 26px; }
-  /* red od 3 kolone: svaka prva ćelija u redu bez levog uvlačenja, svaka treća bez desne linije, drugi red dobija gornju liniju */
+
   .teaser-row .teaser-cell:nth-child(3n+1) { padding-left: 0; }
   .teaser-row .teaser-cell:nth-child(3n) { border-right: none; padding-right: 0; }
   .teaser-row .teaser-cell:nth-child(n+4) { border-top: 1px solid var(--line); }
@@ -274,7 +270,6 @@
     margin-right: 8px;
   }
   .teaser-price .new { font-size: 20px; font-weight: 600; color: var(--accent); }
-  .teaser-price .new::before { content: 'od '; font-size: 12px; font-weight: 400; color: var(--text-soft); }
 
   .teaser-features {
     font-size: 12px;
@@ -303,7 +298,6 @@
   }
   .link-arrow:hover { color: var(--accent); border-color: var(--accent); }
 
-  /* ---------- PROCES teaser (Početna) - asimetrican, bez ikonica ---------- */
   .process { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .process-grid {
@@ -336,7 +330,6 @@
   .process-step h3 { font-size: 16px; margin-bottom: 8px; }
   .process-step p { font-size: 13px; color: var(--text-soft); }
 
-  /* ---------- PORTFOLIO teaser (Početna) ---------- */
   .portfolio { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .portfolio-card {
@@ -374,11 +367,8 @@
     color: var(--text-soft);
   }
 
-  /* ---------- ZA KOGA RADIMO (Početna) ---------- */
   .services-audience { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
-
-  /* ---------- CENOVNIK — LEDGER STIL, ne kartice ---------- */
   .price-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -386,8 +376,6 @@
   border-bottom: 1px solid var(--line-strong);
 }
 
-  /* Za sekcije sa samo jednim paketom (npr. Mini Booking) —
-     ista vizuelna porodica kao price-grid, ali bez praznih kolona */
   .price-grid-single {
     display: grid;
     grid-template-columns: minmax(0, 420px);
@@ -396,7 +384,6 @@
   }
   .price-grid-single .price-card { padding-right: 0; }
 
-  /* Istaknuta promo napomena iznad cenovnika */
   .promo-banner {
     font-size: 13px;
     color: var(--text-soft);
@@ -409,7 +396,7 @@
     flex-wrap: wrap;
   }
   .promo-banner .mono { color: var(--accent); }
-  /* Brojač promo mesta (vrednosti se podešavaju u script.js → DANN_PROMO) */
+
   .promo-counter {
     display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
     margin-top: 28px; font-size: 13px; color: var(--text-soft);
@@ -461,7 +448,6 @@
     color: var(--accent);
   }
 
-  /* ---------- CENOVNIK — DODACI (ledger tabela) ---------- */
   .addon-section { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .addon-table {
@@ -508,7 +494,6 @@
     margin-top: 2px;
   }
 
-  /* ---------- PROCES stranica — indeks, ne kartice ---------- */
   .timeline { padding: 100px 0; }
 
   .timeline-list {
@@ -534,7 +519,6 @@
   .timeline-content h3 { font-size: 19px; margin-bottom: 8px; font-weight: 500; }
   .timeline-content p { color: var(--text-soft); font-size: 14px; max-width: 520px; }
 
-  /* ---------- DEMO / PRIMERI ---------- */
   .demo-grid { padding: 90px 0; }
 
   .demo-card {
@@ -570,7 +554,6 @@
 .demo-stil span { color: #C9A66B; }
 .demo-sapica span { color: #9FC98A; }
 
-  /* ---------- O NAMA / ABOUT ---------- */
   .about { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .about-grid {
@@ -583,7 +566,6 @@
   .about h2 { font-size: 28px; margin-bottom: 18px; }
   .about-text p { font-size: 15px; color: var(--text-soft); margin-bottom: 16px; max-width: 560px; }
 
-  /* ---------- FAQ ---------- */
   .faq { padding: 90px 0; border-bottom: 1px solid var(--line); }
 
   .faq-list { border-top: 1px solid var(--line-strong); }
@@ -621,7 +603,6 @@
     max-width: 640px;
   }
 
-  /* ---------- KONTAKT ---------- */
   .contact { padding: 90px 0; }
 
   .contact-grid {
@@ -691,7 +672,6 @@
     color: var(--text-soft);
   }
 
-  /* ---------- FOOTER ---------- */
   footer {
     padding: 36px 0;
     background: var(--void);
@@ -700,10 +680,13 @@
     color: var(--text-soft);
   }
 
-  /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px) {
     .nav-links a:not(.btn-nav) { display: none; }
     .burger { display: flex; }
+    nav .container { padding: 16px 20px; gap: 12px; }
+    .brand { font-size: 16px; white-space: nowrap; }
+    .btn-nav, .nav-links a.btn-nav { white-space: nowrap; padding: 8px 12px; font-size: 11px; }
+    .nav-links { gap: 14px; }
     .price-grid { grid-template-columns: 1fr; }
     .price-card { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 30px; }
     .teaser-row { grid-template-columns: 1fr; }
@@ -722,14 +705,9 @@
     .hero-stats { flex-direction: column; }
     .hero-stats > div { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 16px; }
   }
-/* ---------- SVESNA SMENA TONOVA (ne automatska po klasi) ----------
-   Podrazumevana pozadina stranice je --ink (srednji graphite).
-   .section-surface svesno zatamnjuje pojedinu sekciju na --surface,
-   da bi se sekcije jasno smenjivale — dodaje se ručno u HTML-u,
-   naizmenično, ne svakoj sekciji određene klase. */
+
 .section-surface { background: var(--surface); }
 
-/* ---------- SCROLL REVEAL ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -737,8 +715,6 @@
 }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-/* Sekvencijalno pojavljivanje dece unutar iste grupe —
-   dodati klasu "stagger" na roditelja (grid/red), reveal na svako dete */
 .stagger > *:nth-child(1) { transition-delay: 0s; }
 .stagger > *:nth-child(2) { transition-delay: .08s; }
 .stagger > *:nth-child(3) { transition-delay: .16s; }
@@ -747,7 +723,6 @@
 .stagger > *:nth-child(6) { transition-delay: .40s; }
 .stagger > *:nth-child(7) { transition-delay: .48s; }
 
-/* Suptilan hover na logotip — mala, elegantna mikro-interakcija */
 .brand .dot {
   display: inline-block;
   transition: transform .3s var(--ease);
@@ -760,7 +735,7 @@
   .brand .dot { transition: none; }
   .hero .container { transform: none !important; }
 }
-/* ---------- MOBILE MENU OVERLAY ---------- */
+
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -806,7 +781,7 @@
   outline-offset: 2px;
 }
 
-.mobile-menu__book {
+.mobile-menu a.mobile-menu__book {
   margin-top: 28px;
   align-self: flex-start;
   display: inline-flex;
@@ -814,20 +789,20 @@
   background: none !important;
   border: 1px solid var(--accent) !important;
   color: var(--accent) !important;
-  border-radius: 24px;
+  border-radius: 0;
   padding: 12px 26px;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 600;
+  white-space: nowrap;
   transition: background .2s ease, color .2s ease;
 }
-.mobile-menu__book:active {
+.mobile-menu a.mobile-menu__book:active {
   background: var(--accent) !important;
   color: var(--void) !important;
   opacity: 1;
 }
 
-/* ---------- SKRIVEN DETALJ + POPUP (samo paketi.html) ---------- */
 .hidden-detail {
   position: fixed;
   right: 10px;
@@ -870,7 +845,7 @@
 .detail-modal__box {
   background: var(--surface);
   border: 1px solid var(--line-strong);
-  border-radius: 12px;
+  border-radius: 0;
   padding: 44px 36px;
   max-width: 400px;
   text-align: center;
@@ -918,4 +893,10 @@
 
 @media (max-width: 640px) {
   .hidden-detail { right: 4px; font-size: 9px; }
+}
+
+@media (max-width: 380px) {
+  .brand { font-size: 14px; }
+  .btn-nav, .nav-links a.btn-nav { padding: 7px 9px; font-size: 10.5px; }
+  nav .container { padding: 14px 16px; }
 }

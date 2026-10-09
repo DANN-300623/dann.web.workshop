@@ -3,6 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Tehnički vodič kroz kupovinu domena i hostinga: osnovni pojmovi, koraci i orijentacione cene pre nego što poručite.">
+<meta name="author" content="DANN.web.workshop">
+<meta name="theme-color" content="#17181A">
+<link rel="canonical" href="https://dannwebworkshop.rs/kupovina-domena-hostinga.html">
+<meta property="og:site_name" content="DANN.web.workshop">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kupovina domena i hostinga — vodič | DANN.web.workshop">
+<meta property="og:description" content="Šta su domen i hosting, čime se razlikuju i na šta paziti pri kupovini.">
+<meta property="og:url" content="https://dannwebworkshop.rs/kupovina-domena-hostinga.html">
+<meta property="og:image" content="https://dannwebworkshop.rs/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DANN.web.workshop — izrada sajtova za male biznise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kupovina domena i hostinga — vodič | DANN.web.workshop">
+<meta name="twitter:description" content="Šta su domen i hosting, čime se razlikuju i na šta paziti pri kupovini.">
+<meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html#stranica","url":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html","name":"Kupovina domena i hostinga — vodič | DANN.web.workshop","description":"Tehnički vodič kroz kupovinu domena i hostinga: osnovni pojmovi, koraci i orijentacione cene pre nego što poručite.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Kupovina domena i hostinga","item":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html"}]}]}</script>
 <title>Kupovina domena i hostinga — vodič | DANN.web.workshop</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +56,7 @@
   .section-head p { color: var(--ink-soft); font-size: 0.94rem; margin-top: 8px; max-width: 60ch; }
 
   .plain-box {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    background: var(--card); border: 1px solid var(--line); border-radius:0;
     padding: 26px 28px; font-size: 0.98rem;
   }
   .plain-box p { margin: 0 0 14px; }
@@ -45,7 +65,7 @@
 
   .term-list { display: flex; flex-direction: column; gap: 14px; }
   .term-card {
-    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); border: 1px solid var(--line); border-radius:0;
     padding: 20px 22px;
   }
   .term-name { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; display: block; }
@@ -54,14 +74,14 @@
 
   .price-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); border: 1px solid var(--line); border-radius:0;
     padding: 16px 20px; margin-bottom: 10px; font-size: 0.94rem;
   }
   .price-row .naziv { font-weight: 500; }
   .price-row .cena { font-family: 'Space Mono', monospace; color: var(--accent); white-space: nowrap; margin-left: 16px; }
   .price-note { font-size: 0.85rem; color: var(--ink-soft); margin-top: 14px; }
 
-  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.86rem; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 0.86rem; border: 1px solid var(--line); border-radius:0; overflow: hidden; }
   th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { background: var(--ink); color: var(--bg); font-weight: 500; font-size: 0.76rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .03em; }
   tr:last-child td { border-bottom: none; }
@@ -69,20 +89,20 @@
 
   .steps { counter-reset: step; display: flex; flex-direction: column; gap: 14px; }
   .step {
-    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); border: 1px solid var(--line); border-radius:0;
     padding: 18px 20px 18px 56px; position: relative; font-size: 0.94rem;
   }
   .step::before {
     counter-increment: step; content: counter(step);
     position: absolute; left: 18px; top: 18px;
-    width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: var(--bg);
+    width: 26px; height: 26px; border-radius:0; background: var(--ink); color: var(--bg);
     display: flex; align-items: center; justify-content: center;
     font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
   }
   .step h3 { font-size: 1rem; margin-bottom: 6px; }
   .step p { color: var(--ink-soft); margin: 0; }
 
-  .final-note { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
+  .final-note { background: var(--card); border: 1px solid var(--line); border-radius:0; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
   .final-note strong { color: var(--ink); }
 
   .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
@@ -96,10 +116,12 @@
     .price-row .cena { margin-left: 0; }
   }
 </style>
+<style>.dann-back{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 28px;font-family:"JetBrains Mono","Space Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.dann-back a{color:inherit;text-decoration:none;opacity:.75;border-bottom:1px solid transparent}.dann-back a:hover{opacity:1;border-bottom-color:currentColor}.dann-back a .s{color:#C1361E}.dann-cta{margin:40px 0 8px;font-size:15px}.dann-cta a{color:#C1361E;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}.dann-link{color:#C1361E;text-decoration:underline;text-underline-offset:3px}</style>
 </head>
 <body>
 
 <div class="page">
+<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
 
   <div class="doc-header">
     <div class="doc-kicker">DANN • Resursi</div>
@@ -259,8 +281,8 @@
 
   <div class="final-note">
     <strong>Poštena napomena:</strong> mi ne biramo umesto Vas, ali rado pomažemo u odluci — možemo da
-    Vas posavetujemo koji je najpametniji izbor za Vaš sajt. Ukoliko niste sigurni, pošaljite nam ponudu
-    provajdera, pa možemo zajedno da je zajedno analiziramo.
+    Vas posavetujemo koji je najpametniji izbor za Vaš sajt. Ukoliko niste sigurni, <a class="dann-link" href="kontakt.html">pošaljite nam ponudu
+    provajdera</a>, pa možemo zajedno da je analiziramo.
   </div>
 
 </div>
