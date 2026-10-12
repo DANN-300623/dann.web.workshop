@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Šta je dobro da ima sajt za auto servis, vulkanizera ili servis klime: spisak usluga, radno vreme, lokacija, brz poziv i upit za termin. Sa živim primerom.">
+<meta name="author" content="DANN.web.workshop">
+<meta name="theme-color" content="#17181A">
+<link rel="canonical" href="https://dannwebworkshop.rs/sajt-auto-servis.html">
+<meta property="og:site_name" content="DANN.web.workshop">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Izrada sajta za auto servis | DANN.web.workshop">
+<meta property="og:description" content="Šta je dobro da ima sajt za auto servis: usluge, radno vreme, lokacija i brz kontakt.">
+<meta property="og:url" content="https://dannwebworkshop.rs/sajt-auto-servis.html">
+<meta property="og:image" content="https://dannwebworkshop.rs/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DANN.web.workshop — izrada sajtova za male biznise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Izrada sajta za auto servis | DANN.web.workshop">
+<meta name="twitter:description" content="Šta je dobro da ima sajt za auto servis: usluge, radno vreme, lokacija i brz kontakt.">
+<meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/sajt-auto-servis.html#stranica","url":"https://dannwebworkshop.rs/sajt-auto-servis.html","name":"Izrada sajta za auto servis | DANN.web.workshop","description":"Šta je dobro da ima sajt za auto servis, vulkanizera ili servis klime: spisak usluga, radno vreme, lokacija, brz poziv i upit za termin. Sa živim primerom.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Resursi","item":"https://dannwebworkshop.rs/resursi.html"},{"@type":"ListItem","position":3,"name":"Izrada sajta za auto servis","item":"https://dannwebworkshop.rs/sajt-auto-servis.html"}]}]}</script>
+<title>Izrada sajta za auto servis | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --warn-bg: #FDF3EA;
+    --warn-line: #E0C9A6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 60px 28px 90px; }
+
+  .hero { text-align: center; margin-bottom: 56px; }
+  .hero .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 36px; margin-bottom: 14px; line-height: 1.2; }
+  .hero p { color: var(--ink-soft); font-size: 16px; max-width: 520px; margin: 0 auto; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius:0;
+    padding: 30px 32px;
+    margin-bottom: 22px;
+  }
+  .card h2 { font-size: 21px; margin-bottom: 16px; }
+  .card p { margin-bottom: 12px; font-size: 15px; color: #333; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .step-flow { display: flex; flex-direction: column; gap: 0; margin: 18px 0 0; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+  }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step:first-child { padding-top: 0; }
+  .step-num {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius:0;
+    background: var(--accent-soft); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px;
+  }
+  .step-text strong { display: block; margin-bottom: 3px; font-size: 15px; }
+  .step-text span { font-size: 14px; color: var(--ink-soft); }
+
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .benefit {
+    background: var(--bg);
+    border-radius:0;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: #333;
+  }
+  .benefit strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .needed-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .needed-item {
+    background: var(--bg);
+    border-radius:0;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #333;
+  }
+  .needed-item::before { content: "→"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+  .risk-item {
+    border-left: 3px solid var(--warn-line);
+    background: var(--warn-bg);
+    border-radius:0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .risk-item:last-child { margin-bottom: 0; }
+  .risk-item strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 14.5px; }
+
+  .obligation-item {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius:0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .obligation-item:last-child { margin-bottom: 0; }
+  .obligation-item strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .highlight-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius:0;
+    padding: 22px 26px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+  .highlight-box strong { color: var(--ink); }
+
+</style>
+<link rel="stylesheet" href="dann-shared.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+
+  <div class="hero">
+    <span class="eyebrow">Vodič za auto servise</span>
+    <h1>Sajt za auto servis</h1>
+    <p>Šta vozač traži kad mu treba servis, i kako da sajt odgovori na to pre nego što pozove neki drugi.</p>
+  </div>
+
+  <div class="card">
+    <h2>Šta sajt radi za auto servis</h2>
+    <p>Vozač kojem se pokvario auto ili mu treba redovan servis obično traži na telefonu: ko radi u mom kraju, da li radi danas i kako da ga pozovem. Što brže dobije odgovor, to je veća šansa da pozove baš Vas.</p>
+    <p>Izrada sajta za auto servis, vulkanizera ili servis klime svodi se na to da vozač odmah vidi šta radite i kako da Vas pozove.</p>
+    <p>Sajt je mesto gde su usluge, radno vreme, adresa i broj telefona uvek isti i tačni, bez listanja kroz društvene mreže.</p>
+  </div>
+  <div class="card">
+    <h2>Šta preporučujemo da sajt za auto servis ima</h2>
+<div class="needed-list"><div class="needed-item">Spisak usluga (mali i veliki servis, kočnice, klima, gume, dijagnostika, po potrebi)</div><div class="needed-item">Dugme „Pozovi” koje radi jednim dodirom na telefonu</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Adresa, mapa i parking, ako ga ima</div><div class="needed-item">Marke vozila sa kojima radite</div><div class="needed-item">Upit za termin preko forme</div><div class="needed-item">Fotografije radionice i tima</div><div class="needed-item">Kratko objašnjenje kako izgleda dolazak i prijem vozila</div></div>
+  </div>
+  <div class="card">
+    <h2>Kako to izgleda u praksi</h2>
+    <p><strong>POGON</strong> — demo sajt auto servisa sa kontakt formom. <a href="https://pogon.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+  </div>
+  <div class="card">
+    <h2>Najčešće greške</h2>
+<div class="risk-item"><strong>Nema liste usluga</strong>Ako vozač ne vidi da radite baš ono što mu treba (npr. klimu ili gume), pretpostaviće da ne radite.</div><div class="risk-item"><strong>Broj telefona je samo tekst</strong>Na telefonu je najbolje da se broj poziva jednim dodirom, bez prepisivanja.</div><div class="risk-item"><strong>Zastarelo radno vreme</strong>Netačno radno vreme je najbrži način da neko dođe pred zatvorena vrata. Radno vreme se menja na sajtu, a ne u objavi.</div><div class="risk-item"><strong>Obećane cene bez uslova</strong>Cena rada zavisi od vozila i kvara. Ako pišete cene, napišite na šta se odnose, a ako ne možete, napišite kako se dobija ponuda.</div>
+  </div>
+  <div class="card">
+    <h2>Kako dolazi do upita</h2>
+    <p>Najjednostavniji sistem je kontakt forma: klijent napiše marku vozila, šta se dešava i broj telefona, a Vi dobijete poruku na mejl. Kako forma radi i koje su Vaše obaveze kad prikupljate podatke, pročitajte u vodiču <a href="klijent-kontakt-forma.html">Kontakt forma — šta treba da znate</a>. Paketi i cene su na stranici <a href="paketi.html">Paketi</a>.</p>
+  </div>
+  <div class="card">
+    <h2>Šta nam treba od Vas</h2>
+<div class="needed-list"><div class="needed-item">Spisak usluga</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Adresa, telefon i Viber</div><div class="needed-item">Marke vozila sa kojima radite</div><div class="needed-item">Fotografije radionice</div><div class="needed-item">Email gde stižu upiti</div></div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Ukratko:</strong> Sajt za auto servis treba da omogući da Vas vozač nađe, vidi šta radite i pozove Vas jednim dodirom. Radimo iz Zrenjanina, a sa klijentima komuniciramo mejlom, Viberom i Instagramom, pa sajt možete da naručite iz bilo kog mesta u Srbiji.
+  </div>
+
+  <p class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
+
+  <footer class="guide-foot">
+  <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+  Web radionica za male biznise i velike ideje · © 2026 · <a href="privatnost.html">Politika privatnosti</a>
+</footer>
+
+</div>
+<button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
+<script src="dann-shared.js" defer></script>
+</body>
+</html>

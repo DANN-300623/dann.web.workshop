@@ -90,10 +90,6 @@
   .final-note { background: var(--card); border: 1px solid var(--line); border-radius:0; padding: 24px 26px; font-size: 0.92rem; color: var(--ink-soft); }
   .final-note strong { color: var(--ink); }
 
-  .dann-logo{font-family:'Space Grotesk',sans-serif;font-weight:600;color:#0a0a0a;font-size:16px;letter-spacing:.01em;}
-  .dann-logo .dot{color:var(--accent);font-weight:800;}
-  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--ink-soft); text-align: center; }
-  footer .dann-logo { display: block; margin-bottom: 8px; }
 
   @media (max-width: 780px) {
     table { font-size: 0.78rem; }
@@ -103,7 +99,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<style>@media (max-width:640px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}.dann-back{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 28px;font-family:"JetBrains Mono","Space Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.dann-back a{color:inherit;text-decoration:none;opacity:.75;border-bottom:1px solid transparent}.dann-back a:hover{opacity:1;border-bottom-color:currentColor}.dann-back a .s{color:#C1361E}.dann-cta{margin:40px 0 8px;font-size:15px}.dann-cta a{color:#C1361E;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}.dann-link{color:#C1361E;text-decoration:underline;text-underline-offset:3px}</style>
+<style>@media (max-width:640px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}</style><link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
 
@@ -324,13 +320,12 @@
 
 </div>
 
-<footer>
+<footer class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
-  Web radionica za male biznise i velike ideje · © 2026 · <a href="privatnost.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Politika privatnosti</a>
+  Web radionica za male biznise i velike ideje · © 2026 · <a href="privatnost.html">Politika privatnosti</a>
 </footer>
 
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
-<style>.dann-top{position:fixed;right:16px;bottom:16px;z-index:90;width:44px;height:44px;padding:0;border:1px solid rgba(242,240,235,.25);border-radius:0;background:#17181A;color:#F2F0EB;font:600 18px/1 "JetBrains Mono",monospace;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s,border-color .2s,color .2s}.dann-top.show{opacity:1;visibility:visible;transform:none}.dann-top:hover,.dann-top:focus-visible{border-color:#C1361E;color:#C1361E}@media (prefers-reduced-motion:reduce){.dann-top{transition:none}}</style>
-<script>(function(){var b=document.getElementById('dannTop');if(!b)return;function u(){b.classList.toggle('show',window.scrollY>600)}window.addEventListener('scroll',u,{passive:true});u();b.addEventListener('click',function(){var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:r?'auto':'smooth'})})})();</script>
+<script src="dann-shared.js" defer></script>
 </body>
 </html>

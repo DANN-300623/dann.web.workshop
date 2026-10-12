@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Šta je dobro da ima sajt za frizerski, kozmetički salon ili barber shop: usluge i cene, zakazivanje, galerija, lokacija i radno vreme. Sa živim primerima.">
+<meta name="author" content="DANN.web.workshop">
+<meta name="theme-color" content="#17181A">
+<link rel="canonical" href="https://dannwebworkshop.rs/sajt-saloni.html">
+<meta property="og:site_name" content="DANN.web.workshop">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Izrada sajta za frizerski i kozmetički salon | DANN.web.workshop">
+<meta property="og:description" content="Šta je dobro da ima sajt za salon: usluge, cene, zakazivanje, galerija i lokacija.">
+<meta property="og:url" content="https://dannwebworkshop.rs/sajt-saloni.html">
+<meta property="og:image" content="https://dannwebworkshop.rs/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DANN.web.workshop — izrada sajtova za male biznise">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Izrada sajta za frizerski i kozmetički salon | DANN.web.workshop">
+<meta name="twitter:description" content="Šta je dobro da ima sajt za salon: usluge, cene, zakazivanje, galerija i lokacija.">
+<meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/sajt-saloni.html#stranica","url":"https://dannwebworkshop.rs/sajt-saloni.html","name":"Izrada sajta za frizerski i kozmetički salon | DANN.web.workshop","description":"Šta je dobro da ima sajt za frizerski, kozmetički salon ili barber shop: usluge i cene, zakazivanje, galerija, lokacija i radno vreme. Sa živim primerima.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Resursi","item":"https://dannwebworkshop.rs/resursi.html"},{"@type":"ListItem","position":3,"name":"Izrada sajta za frizerski i kozmetički salon","item":"https://dannwebworkshop.rs/sajt-saloni.html"}]}]}</script>
+<title>Izrada sajta za frizerski i kozmetički salon | DANN.web.workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1C1C1A;
+    --ink-soft: #63615C;
+    --line: #E6E2D8;
+    --accent: #C1361E;
+    --accent-soft: #FBEAE5;
+    --warn-bg: #FDF3EA;
+    --warn-line: #E0C9A6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 60px 28px 90px; }
+
+  .hero { text-align: center; margin-bottom: 56px; }
+  .hero .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 36px; margin-bottom: 14px; line-height: 1.2; }
+  .hero p { color: var(--ink-soft); font-size: 16px; max-width: 520px; margin: 0 auto; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius:0;
+    padding: 30px 32px;
+    margin-bottom: 22px;
+  }
+  .card h2 { font-size: 21px; margin-bottom: 16px; }
+  .card p { margin-bottom: 12px; font-size: 15px; color: #333; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .step-flow { display: flex; flex-direction: column; gap: 0; margin: 18px 0 0; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+  }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step:first-child { padding-top: 0; }
+  .step-num {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius:0;
+    background: var(--accent-soft); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px;
+  }
+  .step-text strong { display: block; margin-bottom: 3px; font-size: 15px; }
+  .step-text span { font-size: 14px; color: var(--ink-soft); }
+
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .benefit {
+    background: var(--bg);
+    border-radius:0;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: #333;
+  }
+  .benefit strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .needed-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .needed-item {
+    background: var(--bg);
+    border-radius:0;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #333;
+  }
+  .needed-item::before { content: "→"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+  .risk-item {
+    border-left: 3px solid var(--warn-line);
+    background: var(--warn-bg);
+    border-radius:0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .risk-item:last-child { margin-bottom: 0; }
+  .risk-item strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 14.5px; }
+
+  .obligation-item {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius:0;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .obligation-item:last-child { margin-bottom: 0; }
+  .obligation-item strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 14.5px; }
+
+  .highlight-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius:0;
+    padding: 22px 26px;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+  .highlight-box strong { color: var(--ink); }
+
+</style>
+<link rel="stylesheet" href="dann-shared.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+
+  <div class="hero">
+    <span class="eyebrow">Vodič za salone</span>
+    <h1>Sajt za frizerski i kozmetički salon</h1>
+    <p>Šta ljudi traže pre nego što dođu u salon, šta sajt treba da im pokaže i koje greške se najčešće prave.</p>
+  </div>
+
+  <div class="card">
+    <h2>Šta sajt radi za salon</h2>
+    <p>Pre prvog dolaska ljudi žele da znaju nekoliko stvari: šta radite, koliko košta, gde se nalazite i kada mogu da dođu. Ako to ne nađu brzo, pozvaće drugi salon.</p>
+    <p>Izrada sajta za frizera, kozmetičara ili barbera svodi se na isto: da klijent na jednom mestu nađe usluge, cene i termin.</p>
+    <p>Instagram je dobar za pokazivanje radova, ali informacije se tamo gube u starim objavama. Sajt je mesto gde sve to stoji na jednom mestu, uvek ažurno, i gde klijent može da zakaže bez poziva.</p>
+  </div>
+  <div class="card">
+    <h2>Šta preporučujemo da sajt za salon ima</h2>
+<div class="needed-list"><div class="needed-item">Spisak usluga sa trajanjem i cenom</div><div class="needed-item">Online zakazivanje ili jasno dugme za poziv i Viber</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Adresa, mapa i kratko uputstvo kako do Vas</div><div class="needed-item">Galerija radova</div><div class="needed-item">Kratko o salonu i timu</div><div class="needed-item">Telefon, Viber i Instagram na vidnom mestu</div><div class="needed-item">Pregledan prikaz na telefonu</div></div>
+  </div>
+  <div class="card">
+    <h2>Kako to izgleda u praksi</h2>
+    <p><strong>FORM</strong> — muški frizerski studio sa online zakazivanjem termina. <a href="https://form.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+    <p><strong>STIL</strong> — beauty salon. <a href="https://stil.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+    <p><strong>ATELIER</strong> — beauty studio. <a href="https://atelier.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+  </div>
+  <div class="card">
+    <h2>Najčešće greške</h2>
+<div class="risk-item"><strong>Cenovnik kao slika ili PDF</strong>Na telefonu se teško čita, a Google tekst iz slike ne čita pouzdano. Cene treba da budu pisane kao tekst na stranici.</div><div class="risk-item"><strong>Samo Instagram, bez sajta</strong>Sve što je važno (cene, adresa, radno vreme) je razbacano po objavama, a klijent mora da Vam piše da bi saznao osnovne stvari.</div><div class="risk-item"><strong>Zakazivanje samo telefonom</strong>Mnogi ne zovu van Vašeg radnog vremena. Online zakazivanje radi i kad Vi ne možete da se javite.</div><div class="risk-item"><strong>Adresa samo na slici ili samo kao mapa</strong>Adresu napišite i tekstom, da je ljudi mogu da pročitaju, kopiraju i da je Google razume.</div>
+  </div>
+  <div class="card">
+    <h2>Koji paket obično dolazi u obzir</h2>
+    <p>Ako Vam treba samo prikaz salona i usluga, dovoljan je neki od manjih paketa. Ako želite da klijenti sami biraju termin, pogledajte paket <strong>Mini Booking</strong>. Šta tačno svaki donosi i kome je namenjen, vidite u vodiču <a href="koji-paket-je-za-vas.html">Koji paket je za Vas?</a>, a kako radi zakazivanje u vodiču <a href="online-zakazivanje-kako-radi.html">Online zakazivanje — kako radi</a>.</p>
+  </div>
+  <div class="card">
+    <h2>Šta nam treba od Vas</h2>
+<div class="needed-list"><div class="needed-item">Spisak usluga, trajanje i cene</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Fotografije salona i radova</div><div class="needed-item">Kratak tekst o Vama i timu</div><div class="needed-item">Adresa, telefon i društvene mreže</div><div class="needed-item">Email gde stižu obaveštenja o terminima</div></div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Ukratko:</strong> Sajt za salon treba da odgovori na pitanja šta, koliko, gde i kada, i da omogući zakazivanje bez poziva. Radimo iz Zrenjanina, a sa klijentima komuniciramo mejlom, Viberom i Instagramom, pa sajt možete da naručite iz bilo kog mesta u Srbiji.
+  </div>
+
+  <p class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
+
+  <footer class="guide-foot">
+  <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
+  Web radionica za male biznise i velike ideje · © 2026 · <a href="privatnost.html">Politika privatnosti</a>
+</footer>
+
+</div>
+<button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
+<script src="dann-shared.js" defer></script>
+</body>
+</html>
