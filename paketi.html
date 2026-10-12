@@ -28,8 +28,10 @@
 <meta name="apple-mobile-web-app-title" content="DANN">
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/home.css">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -112,6 +114,7 @@
   </div>
 </div>
 
+<main>
 <section class="page-title">
 
   <div class="container">
@@ -470,7 +473,7 @@
           <li data-en="Add and edit products yourself, photos included">Samostalan unos i izmena proizvoda, uključujući fotografije</li>
           <li data-en="Protection against double-selling the last item in stock">Zaštita od duplog prodavanja poslednjeg komada</li>
           <li data-en="Up to ~200 products">Do ~200 proizvoda</li>
-          <li data-en="Up to 33–100 orders per day (depends on account type)">Do 33-100 porudžbina dnevno (zavisi od tipa naloga)</li>
+          <li data-en="Up to 33–100 orders per day (depends on account type)">Do 33–100 porudžbina dnevno (zavisi od tipa naloga)</li>
           <li data-en="2 rounds of revisions">2 kruga izmena</li>
 
         </ul>
@@ -746,8 +749,8 @@
 
       <div class="addon-row addon-extra">
         <div>
-          <span class="naziv" data-en="Spam protection">Zaštita od spam-a</span>
-          <span class="opis" data-en="reCAPTCHA form protection">reCAPTCHA zaštita formi</span>
+          <span class="naziv" data-en="Spam protection">Zaštita od spama</span>
+          <span class="opis" data-en="Captcha form protection">Captcha zaštita formi</span>
         </div>
         <span class="ukljuceno" data-en="On request only">Samo na zahtev</span>
         <span class="cena" data-en="free">besplatno</span>
@@ -996,7 +999,7 @@
   </div>
 
 </section>
-
+</main>
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
