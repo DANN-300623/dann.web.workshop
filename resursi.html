@@ -28,10 +28,8 @@
 <meta name="apple-mobile-web-app-title" content="DANN">
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts/home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -52,10 +50,10 @@
     border-radius:0; padding:28px 26px; transition:border-color .2s ease, transform .2s ease;
   }
   .resursi-card:hover{border-color:var(--accent,#C1361E); transform:translateY(-2px);}
-  .resursi-card .num{font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-text); margin-bottom:10px; display:block;}
+  .resursi-card .num{font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent,#C1361E); margin-bottom:10px; display:block;}
   .resursi-card h3{font-family:'Space Grotesk',sans-serif; font-size:19px; margin:0 0 10px; color:var(--paper,#F2F0EB);}
   .resursi-card p{font-size:14px; color:rgba(242,240,235,.65); margin:0; line-height:1.6;}
-  .resursi-card .open{font-size:13px; color:var(--accent-text); margin-top:14px; display:block;}
+  .resursi-card .open{font-size:13px; color:var(--accent,#C1361E); margin-top:14px; display:block;}
   .lang-toggle{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid var(--line,#ddd);background:none;padding:6px 12px;border-radius:20px;cursor:pointer;margin-left:12px;color:inherit;}
   .lang-toggle:hover{border-color:var(--accent,#c1361e);color:var(--accent,#c1361e);}
 .mnav-lang{font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid rgba(255,255,255,.3);background:none;padding:8px 16px;border-radius:20px;cursor:pointer;color:inherit;margin-top:18px;}
@@ -86,8 +84,8 @@
 
       <a href="resursi.html" class="active" data-en="Resources">Resursi</a>
 
-      <a href="kontakt.html" class="btn-nav" data-en="Request a call">
-        Zatražite poziv
+      <a href="kontakt.html" class="btn-nav" data-en="Contact">
+        Kontakt
       </a>
 
       <span class="lang-toggle-wrap"><span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button></span>
@@ -107,14 +105,13 @@
   <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
-  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Request a call">Zatražite poziv</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Contact">Kontakt</a>
   <div class="mnav-lang-wrap">
     <span class="mono" style="font-size:12px;color:rgba(255,255,255,.5);display:block;margin-top:20px;" data-en="Choose language:">Izaberi jezik:</span>
     <button class="mnav-lang" id="langToggleMobile" onclick="prebaciJezik()">EN</button>
   </div>
 </div>
 
-<main>
 <section class="resursi-hero">
   <div class="container">
     <h1 data-en="Resources">Resursi</h1>
@@ -208,14 +205,20 @@
 
   </div>
 </div>
-</main>
+
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
     <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
       <span data-en="Web workshop for small businesses and big ideas · © 2026">Web radionica za male biznise i velike ideje · © 2026</span>
+      <a href="uslovi.html" data-en="Terms &amp; Conditions" style="color:var(--text-soft);font-size:12px;">Uslovi saradnje</a>
       <a href="privatnost.html" data-en="Privacy Policy" style="color:var(--text-soft);font-size:12px;">Politika privatnosti</a>
     </div>
+  </div>
+  <div class="container" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; margin-top:18px; padding-top:18px; padding-right:64px; border-top:1px solid var(--line);">
+    <a href="mailto:hello@dannwebworkshop.rs" style="color:var(--text-soft);font-size:12px;">hello@dannwebworkshop.rs</a>
+    <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener" style="color:var(--text-soft);font-size:12px;">Instagram</a>
+    <a href="viber://chat?number=%2B381677770623" rel="noopener" style="color:var(--text-soft);font-size:12px;">Viber</a>
   </div>
 </footer>
 

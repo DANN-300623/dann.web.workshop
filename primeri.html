@@ -25,10 +25,8 @@
 <meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/primeri.html#stranica","url":"https://dannwebworkshop.rs/primeri.html","name":"Primeri web sajtova | DANN.web.workshop","description":"Sedam demo sajtova za različite delatnosti: stomatološka ordinacija, saloni, frizer, prodavnica, auto servis i prodavnica za ljubimce. Otvorite ih uživo.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Primeri","item":"https://dannwebworkshop.rs/primeri.html"}]},{"@type":"ItemList","name":"Demo projekti","itemListElement":[{"@type":"ListItem","position":1,"url":"https://osmeh.dannwebworkshop.rs/","name":"OSMEH — demo sajt"},{"@type":"ListItem","position":2,"url":"https://stil.dannwebworkshop.rs/","name":"STIL — demo sajt"},{"@type":"ListItem","position":3,"url":"https://korak.dannwebworkshop.rs/","name":"KORAK — demo sajt"},{"@type":"ListItem","position":4,"url":"https://atelier.dannwebworkshop.rs/","name":"ATELIER — demo sajt"},{"@type":"ListItem","position":5,"url":"https://form.dannwebworkshop.rs/","name":"FORM — demo sajt"},{"@type":"ListItem","position":6,"url":"https://pogon.dannwebworkshop.rs/","name":"POGON — demo sajt"},{"@type":"ListItem","position":7,"url":"https://repibrk.dannwebworkshop.rs/","name":"Rep i Brk — demo sajt"}]}]}</script>
 <title>Primeri web sajtova | DANN.web.workshop</title>
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts/home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -54,7 +52,7 @@
       <a href="paketi.html" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
       <a href="primeri.html" class="active" data-en="Work">Primeri</a>
       <a href="resursi.html" data-en="Resources">Resursi</a>
-      <a href="kontakt.html" class="btn-nav" data-en="Request a call">Zatražite poziv</a>
+      <a href="kontakt.html" class="btn-nav" data-en="Contact">Kontakt</a>
       <span class="lang-toggle-wrap"><span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button></span>
       <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -69,14 +67,13 @@
   <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
-  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Request a call">Zatražite poziv</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Contact">Kontakt</a>
   <div class="mnav-lang-wrap">
     <span class="mono" style="font-size:12px;color:rgba(255,255,255,.5);display:block;margin-top:20px;" data-en="Choose language:">Izaberi jezik:</span>
     <button class="mnav-lang" id="langToggleMobile" onclick="prebaciJezik()">EN</button>
   </div>
 </div>
 
-<main>
 <section class="page-title">
   <div class="container">
     <span class="mono" data-en="Work">Primeri</span>
@@ -102,7 +99,7 @@
     color: var(--text-soft, #888); font-size: 13px; font-family: var(--mono, monospace);
   }
   .primeri-card__body{ padding: 26px 28px 28px; }
-  .primeri-card .mono{ font-family: var(--mono, monospace); font-size: 12px; color:var(--accent-text); letter-spacing: .03em; }
+  .primeri-card .mono{ font-family: var(--mono, monospace); font-size: 12px; color: var(--accent, #c1361e); letter-spacing: .03em; }
   .primeri-card h3{ font-size: 22px; margin: 8px 0 10px; }
   .primeri-card p.opis{ color: var(--text-soft, #666); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
   .primeri-card .tag-list{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
@@ -255,14 +252,20 @@
     <a href="kontakt.html" class="btn-primary" data-en="Let's talk about your site">Popričajmo o Vašem sajtu</a>
   </div>
 </section>
-</main>
+
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
     <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
       <span data-en="Web workshop for small businesses and big ideas · © 2026">Web radionica za male biznise i velike ideje · © 2026</span>
+      <a href="uslovi.html" data-en="Terms &amp; Conditions" style="color:var(--text-soft);font-size:12px;">Uslovi saradnje</a>
       <a href="privatnost.html" data-en="Privacy Policy" style="color:var(--text-soft);font-size:12px;">Politika privatnosti</a>
     </div>
+  </div>
+  <div class="container" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; margin-top:18px; padding-top:18px; padding-right:64px; border-top:1px solid var(--line);">
+    <a href="mailto:hello@dannwebworkshop.rs" style="color:var(--text-soft);font-size:12px;">hello@dannwebworkshop.rs</a>
+    <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener" style="color:var(--text-soft);font-size:12px;">Instagram</a>
+    <a href="viber://chat?number=%2B381677770623" rel="noopener" style="color:var(--text-soft);font-size:12px;">Viber</a>
   </div>
 </footer>
 

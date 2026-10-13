@@ -28,10 +28,8 @@
 <meta name="apple-mobile-web-app-title" content="DANN">
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jbmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts/home.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -86,8 +84,8 @@
 
       <a href="resursi.html" data-en="Resources">Resursi</a>
 
-      <a href="kontakt.html" class="btn-nav" data-en="Request a call">
-        Zatražite poziv
+      <a href="kontakt.html" class="btn-nav" data-en="Contact">
+        Kontakt
       </a>
 
       <span class="lang-toggle-wrap"><span class="mono" style="font-size:11px;color:var(--text-soft,#888);margin-left:14px;" data-en="Choose language:">Izaberi jezik:</span><button class="lang-toggle" id="langToggle" onclick="prebaciJezik()">EN</button></span>
@@ -107,14 +105,13 @@
   <a href="paketi.html" class="mnav-link" data-en="Packages &amp; Pricing">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link" data-en="Work">Primeri</a>
   <a href="resursi.html" class="mnav-link" data-en="Resources">Resursi</a>
-  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Request a call">Zatražite poziv</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link" data-en="Contact">Kontakt</a>
   <div class="mnav-lang-wrap">
     <span class="mono" style="font-size:12px;color:rgba(255,255,255,.5);display:block;margin-top:20px;" data-en="Choose language:">Izaberi jezik:</span>
     <button class="mnav-lang" id="langToggleMobile" onclick="prebaciJezik()">EN</button>
   </div>
 </div>
 
-<main>
 <section class="page-title">
 
   <div class="container">
@@ -416,6 +413,11 @@
 
         </ul>
 
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: up to one month, larger projects by agreement">Rok: do mesec dana, veći projekti po dogovoru</strong>
+        </p>
+
+
       </div>
 
     </div>
@@ -478,6 +480,11 @@
 
         </ul>
 
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: up to one month, larger projects by agreement">Rok: do mesec dana, veći projekti po dogovoru</strong>
+        </p>
+
+
       </div>
 
       <div class="price-card reveal" id="webshop-standard">
@@ -511,6 +518,11 @@
           <li data-en="2 rounds of revisions">2 kruga izmena</li>
 
         </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: up to one month, larger projects by agreement">Rok: do mesec dana, veći projekti po dogovoru</strong>
+        </p>
+
 
       </div>
 
@@ -546,6 +558,11 @@
           <li data-en="2 rounds of revisions">2 kruga izmena</li>
 
         </ul>
+
+        <p class="price-desc" style="margin-top:20px;">
+          <strong data-en="Timeline: up to one month, larger projects by agreement">Rok: do mesec dana, veći projekti po dogovoru</strong>
+        </p>
+
 
       </div>
 
@@ -926,7 +943,7 @@
 
       <details class="faq-item">
         <summary data-en="How long does building a site take?">Koliko traje izrada sajta?</summary>
-        <p data-en="For the Start–Exclusive packages, 3 to 20 business days, depending on the number of pages and features. For Mini Booking and Webshop, the timeline is agreed individually. The exact timeline is always agreed before work starts.">Za pakete Start–Exclusive od 3 do 20 radnih dana, u zavisnosti od broja stranica i funkcionalnosti. Za Mini Booking i Webshop rok se dogovara pojedinačno. Tačan rok se uvek dogovara pre početka rada.</p>
+        <p data-en="For the Start–Exclusive packages, 3 to 20 business days, depending on the number of pages and features. For Mini Booking and Webshop, up to one month, and larger projects by agreement. The timeline starts once we receive all the materials. More in our &lt;a href=&quot;uslovi.html&quot; style=&quot;text-decoration:underline;text-underline-offset:3px;&quot;&gt;Terms &amp;amp; Conditions&lt;/a&gt;.">Za pakete Start–Exclusive od 3 do 20 radnih dana, u zavisnosti od broja stranica i funkcionalnosti. Za Mini Booking i Webshop do mesec dana, a za veće projekte po dogovoru. Rok počinje kada dobijemo sav potreban materijal. Više u <a href="uslovi.html" style="text-decoration:underline;text-underline-offset:3px;">Uslovima saradnje</a>.</p>
       </details>
 
       <details class="faq-item">
@@ -999,14 +1016,20 @@
   </div>
 
 </section>
-</main>
+
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
     <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
       <span data-en="Web workshop for small businesses and big ideas · © 2026">Web radionica za male biznise i velike ideje · © 2026</span>
+      <a href="uslovi.html" data-en="Terms &amp; Conditions" style="color:var(--text-soft);font-size:12px;">Uslovi saradnje</a>
       <a href="privatnost.html" data-en="Privacy Policy" style="color:var(--text-soft);font-size:12px;">Politika privatnosti</a>
     </div>
+  </div>
+  <div class="container" style="display:flex; align-items:center; flex-wrap:wrap; gap:8px 24px; margin-top:18px; padding-top:18px; padding-right:64px; border-top:1px solid var(--line);">
+    <a href="mailto:hello@dannwebworkshop.rs" style="color:var(--text-soft);font-size:12px;">hello@dannwebworkshop.rs</a>
+    <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener" style="color:var(--text-soft);font-size:12px;">Instagram</a>
+    <a href="viber://chat?number=%2B381677770623" rel="noopener" style="color:var(--text-soft);font-size:12px;">Viber</a>
   </div>
 </footer>
 
