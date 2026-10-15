@@ -25,9 +25,10 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html#stranica","url":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html","name":"Kupovina domena i hostinga — vodič | DANN.web.workshop","description":"Tehnički vodič kroz kupovinu domena i hostinga: osnovni pojmovi, koraci i orijentacione cene pre nego što poručite.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Kupovina domena i hostinga","item":"https://dannwebworkshop.rs/kupovina-domena-hostinga.html"}]}]}</script>
 <title>Kupovina domena i hostinga — vodič | DANN.web.workshop</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -116,13 +117,13 @@
 </head>
 <body>
 
-<div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="page">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="doc-header">
-    <div class="doc-kicker">DANN • Resursi</div>
-    <h1>Kupovina domena i hostinga</h1>
-    <p class="doc-sub">
+    <div data-en="DANN • Resources" class="doc-kicker">DANN • Resursi</div>
+    <h1 data-en="Buying a domain and hosting">Kupovina domena i hostinga</h1>
+    <p data-en="A technical guide to what you should know before ordering a domain and hosting — terms, steps and indicative prices." class="doc-sub">
       Tehnički vodič kroz ono što treba da znate pre nego što poručite domen i hosting —
       pojmovi, koraci, i orijentacione cene.
     </p>
@@ -130,14 +131,14 @@
 
   <section>
     <div class="section-head">
-      <h2>Domen i hosting — osnovna razlika</h2>
+      <h2 data-en="Domain and hosting — the basic difference">Domen i hosting — osnovna razlika</h2>
     </div>
     <div class="plain-box">
-      <p>
+      <p data-en="A <strong>domain</strong> is your website's address (e.g. yourcompany.rs) — the name under which people find you. It's like a home address.">
         <strong>Domen</strong> je adresa Vašeg sajta (npr. vasfirma.rs) — ime pod kojim Vas ljudi pronalaze.
         To je kao kućna adresa.
       </p>
-      <p>
+      <p data-en="<strong>Hosting</strong> is space on a server where the website files actually &quot;live&quot; — like the house itself. A domain without hosting is an address without a house; hosting without a domain is a house without an address. You need both, usually from the same provider, but they can come from two different ones.">
         <strong>Hosting</strong> je prostor na serveru gde fajlovi sajta stvarno "žive" — kao kuća sama.
         Domen bez hostinga je adresa bez kuće; hosting bez domena je kuća bez adrese. Potrebna su Vam oba,
         obično od istog provajdera, ali mogu i od dva različita.
@@ -147,45 +148,45 @@
 
   <section>
     <div class="section-head">
-      <h2>Pojmovi koje ćete sretati</h2>
+      <h2 data-en="Terms you'll come across">Pojmovi koje ćete sretati</h2>
     </div>
 
     <div class="term-list">
 
       <div class="term-card">
-        <span class="term-name">cPanel</span>
-        <h3>Kontrolna tabla Vašeg hostinga</h3>
-        <p>Web ekran preko kog upravljate svime — postavljate fajlove sajta, pravite email naloge, instalirate SSL. Većina hosting provajdera ga nudi; njime ćemo mi (ili Vi) postavljati sajt.</p>
+        <span data-en="cPanel" class="term-name">cPanel</span>
+        <h3 data-en="The control panel of your hosting">Kontrolna tabla Vašeg hostinga</h3>
+        <p data-en="A web screen through which you manage everything — upload website files, create email accounts, install SSL. Most hosting providers offer it; we (or you) will use it to put the website online.">Web ekran preko kog upravljate svime — postavljate fajlove sajta, pravite email naloge, instalirate SSL. Većina hosting provajdera ga nudi; njime ćemo mi (ili Vi) postavljati sajt.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">DNS / Nameserver</span>
-        <h3>"Adresar" koji povezuje domen sa hostingom</h3>
-        <p>Kad kupite domen kod jednog provajdera a hosting kod drugog, DNS podešavanje je ono što im kaže da rade zajedno. Obično se podesi jednom, na početku, i posle se ne dira.</p>
+        <span data-en="DNS / Nameserver" class="term-name">DNS / Nameserver</span>
+        <h3 data-en="The &quot;address book&quot; that connects a domain to hosting">"Adresar" koji povezuje domen sa hostingom</h3>
+        <p data-en="When you buy a domain from one provider and hosting from another, the DNS setting is what tells them to work together. It's usually set once, at the start, and then left alone.">Kad kupite domen kod jednog provajdera a hosting kod drugog, DNS podešavanje je ono što im kaže da rade zajedno. Obično se podesi jednom, na početku, i posle se ne dira.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">SSL sertifikat</span>
-        <h3>Katanac pored adrese sajta (HTTPS)</h3>
-        <p>Šifruje konekciju između posetioca i sajta. Danas je standard, i kod većine hosting paketa dolazi besplatno i automatski — retko treba posebno da se plaća.</p>
+        <span data-en="SSL certificate" class="term-name">SSL sertifikat</span>
+        <h3 data-en="The padlock next to the website address (HTTPS)">Katanac pored adrese sajta (HTTPS)</h3>
+        <p data-en="Encrypts the connection between the visitor and the website. It's standard today, and with most hosting packages it comes free and automatically — rarely needs to be paid for separately.">Šifruje konekciju između posetioca i sajta. Danas je standard, i kod većine hosting paketa dolazi besplatno i automatski — retko treba posebno da se plaća.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Poddomen</span>
-        <h3>Dodatna adresa unutar istog domena</h3>
-        <p>Npr. <code>prodavnica.vasfirma.rs</code> — deo istog hosting naloga, bez dodatne kupovine. Koristan ako želite odvojen deo sajta (npr. webshop) na svojoj adresi.</p>
+        <span data-en="Subdomain" class="term-name">Poddomen</span>
+        <h3 data-en="An additional address within the same domain">Dodatna adresa unutar istog domena</h3>
+        <p data-en="E.g. <code>shop.yourcompany.rs</code> — part of the same hosting account, no extra purchase. Useful if you want a separate part of the website (e.g. a webshop) at its own address.">Npr. <code>prodavnica.vasfirma.rs</code> — deo istog hosting naloga, bez dodatne kupovine. Koristan ako želite odvojen deo sajta (npr. webshop) na svojoj adresi.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">MySQL baza</span>
-        <h3>Mesto gde se čuvaju podaci sajta</h3>
-        <p>Potrebno za sajtove koji imaju "pamćenje" — korisničke naloge, proizvode u prodavnici, porudžbine. Statičkim, jednostavnim sajtovima ovo obično ne treba.</p>
+        <span data-en="MySQL database" class="term-name">MySQL baza</span>
+        <h3 data-en="The place where the website's data is stored">Mesto gde se čuvaju podaci sajta</h3>
+        <p data-en="Needed for websites that have &quot;memory&quot; — user accounts, products in a shop, orders. Simple static websites usually don't need this.">Potrebno za sajtove koji imaju "pamćenje" — korisničke naloge, proizvode u prodavnici, porudžbine. Statičkim, jednostavnim sajtovima ovo obično ne treba.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Node.js podrška</span>
-        <h3>Posebna tehnička mogućnost servera</h3>
-        <p>Nemaju svi hosting paketi ovo uključeno — često samo viši paketi kod provajdera. Potrebno je za određene, naprednije tipove web prodavnica (videti tabelu ispod).</p>
+        <span data-en="Node.js support" class="term-name">Node.js podrška</span>
+        <h3 data-en="A special technical capability of the server">Posebna tehnička mogućnost servera</h3>
+        <p data-en="Not all hosting packages include this — often only the higher packages at a provider. It is needed for certain, more advanced types of web shops (see the table below).">Nemaju svi hosting paketi ovo uključeno — često samo viši paketi kod provajdera. Potrebno je za određene, naprednije tipove web prodavnica (videti tabelu ispod).</p>
       </div>
 
     </div>
@@ -193,97 +194,101 @@
 
   <section>
     <div class="section-head">
-      <h2>Koraci — kako to izgleda u praksi</h2>
+      <h2 data-en="Steps — what it looks like in practice">Koraci — kako to izgleda u praksi</h2>
     </div>
 
     <div class="steps">
       <div class="step">
-        <h3>1. Izaberite i proverite domen</h3>
-        <p>Proverite da li je željeno ime slobodno kod provajdera po izboru. Ako jeste, rezervišete ga (obično godišnja pretplata).</p>
+        <h3 data-en="1. Choose and check the domain">1. Izaberite i proverite domen</h3>
+        <p data-en="Check whether the name you want is free at the provider of your choice. If it is, you reserve it (usually an annual subscription).">Proverite da li je željeno ime slobodno kod provajdera po izboru. Ako jeste, rezervišete ga (obično godišnja pretplata).</p>
       </div>
       <div class="step">
-        <h3>2. Izaberite hosting paket</h3>
-        <p>Prema tome šta sajt treba da radi (videti preporuke ispod) — statički sajt, sajt sa formom, ili prodavnica.</p>
+        <h3 data-en="2. Choose a hosting package">2. Izaberite hosting paket</h3>
+        <p data-en="Depending on what the website needs to do (see the recommendations below) — a static website, a website with a form, or a shop.">Prema tome šta sajt treba da radi (videti preporuke ispod) — statički sajt, sajt sa formom, ili prodavnica.</p>
       </div>
       <div class="step">
-        <h3>3. Povežite domen i hosting (DNS)</h3>
-        <p>Ako su kod istog provajdera, ovo se često radi automatski. Ako su kod različitih, treba uneti nameserver podatke — provajder hostinga Vam ih daje, upisuju se kod provajdera domena.</p>
+        <h3 data-en="3. Connect the domain and hosting (DNS)">3. Povežite domen i hosting (DNS)</h3>
+        <p data-en="If they are with the same provider, this is often done automatically. If they are with different ones, you need to enter nameserver details — the hosting provider gives them to you, and they are entered at the domain provider.">Ako su kod istog provajdera, ovo se često radi automatski. Ako su kod različitih, treba uneti nameserver podatke — provajder hostinga Vam ih daje, upisuju se kod provajdera domena.</p>
       </div>
       <div class="step">
-        <h3>4. Postavite sajt (preko cPanel-a)</h3>
-        <p>Fajlovi sajta se prebace na hosting. Ovo mi radimo za Vas, ili Vam pokažemo kako, zavisno od dogovora.</p>
+        <h3 data-en="4. Put the website online (via cPanel)">4. Postavite sajt (preko cPanel-a)</h3>
+        <p data-en="The website files are transferred to the hosting. We do this for you, or show you how, depending on what we agree.">Fajlovi sajta se prebace na hosting. Ovo mi radimo za Vas, ili Vam pokažemo kako, zavisno od dogovora.</p>
       </div>
       <div class="step">
-        <h3>5. Proverite SSL</h3>
-        <p>Kod većine provajdera se uključi sam, u roku od par sati do 24h. Ako ne, aktivira se ručno kroz cPanel — jednostavan klik, ne zahteva tehničko znanje.</p>
+        <h3 data-en="5. Check SSL">5. Proverite SSL</h3>
+        <p data-en="With most providers it turns on by itself, within a few hours up to 24h. If not, it is activated manually through cPanel — a simple click, no technical knowledge required.">Kod većine provajdera se uključi sam, u roku od par sati do 24h. Ako ne, aktivira se ručno kroz cPanel — jednostavan klik, ne zahteva tehničko znanje.</p>
       </div>
     </div>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Orijentacione cene</h2>
-      <p>Stvarne cene zavise od provajdera, ekstenzije domena i izabranog paketa — ovo su realni okviri, ne fiksne cene.</p>
+      <h2 data-en="Indicative prices">Orijentacione cene</h2>
+      <p data-en="Actual prices depend on the provider, the domain extension and the chosen package — these are realistic ranges, not fixed prices.">Stvarne cene zavise od provajdera, ekstenzije domena i izabranog paketa — ovo su realni okviri, ne fiksne cene.</p>
     </div>
 
-    <div class="price-row"><span class="naziv">Domen (.rs)</span><span class="cena">~1.600 – 2.500 RSD / godišnje</span></div>
-    <div class="price-row"><span class="naziv">Domen (.com)</span><span class="cena">~1.200 – 1.800 RSD / godišnje</span></div>
-    <div class="price-row"><span class="naziv">Osnovni hosting (statički sajt)</span><span class="cena">~2.500 – 6.000 RSD / godišnje</span></div>
-    <div class="price-row"><span class="naziv">Hosting sa MySQL/PHP podrškom</span><span class="cena">~5.000 – 9.000 RSD / godišnje</span></div>
-    <div class="price-row"><span class="naziv">Hosting sa Node.js podrškom</span><span class="cena">~6.000 – 11.000 RSD / godišnje</span></div>
+    <div data-en="<span class=&quot;naziv&quot;>Domain (.rs)</span><span class=&quot;cena&quot;>~1,600 – 2,500 RSD / year</span>" class="price-row"><span class="naziv">Domen (.rs)</span><span class="cena">~1.600 – 2.500 RSD / godišnje</span></div>
+    <div data-en="<span class=&quot;naziv&quot;>Domain (.com)</span><span class=&quot;cena&quot;>~1,200 – 1,800 RSD / year</span>" class="price-row"><span class="naziv">Domen (.com)</span><span class="cena">~1.200 – 1.800 RSD / godišnje</span></div>
+    <div data-en="<span class=&quot;naziv&quot;>Basic hosting (static website)</span><span class=&quot;cena&quot;>~2,500 – 6,000 RSD / year</span>" class="price-row"><span class="naziv">Osnovni hosting (statički sajt)</span><span class="cena">~2.500 – 6.000 RSD / godišnje</span></div>
+    <div data-en="<span class=&quot;naziv&quot;>Hosting with MySQL/PHP support</span><span class=&quot;cena&quot;>~5,000 – 9,000 RSD / year</span>" class="price-row"><span class="naziv">Hosting sa MySQL/PHP podrškom</span><span class="cena">~5.000 – 9.000 RSD / godišnje</span></div>
+    <div data-en="<span class=&quot;naziv&quot;>Hosting with Node.js support</span><span class=&quot;cena&quot;>~6,000 – 11,000 RSD / year</span>" class="price-row"><span class="naziv">Hosting sa Node.js podrškom</span><span class="cena">~6.000 – 11.000 RSD / godišnje</span></div>
 
-    <p class="price-note">Mnogi provajderi nude nižu cenu za prvu godinu, sa poskupljenjem pri obnovi — vredi proveriti tu razliku pre kupovine, ne samo početnu cenu.</p>
-    <p class="price-note" style="margin-top:8px;"><strong style="color:var(--ink);">Napomena o cenama:</strong> ovo su okvirne vrednosti iz septembra 2026. Cene se menjaju, pa ih proverite kod provajdera pre kupovine.</p>
+    <p data-en="Many providers offer a lower price for the first year, with an increase at renewal — it's worth checking that difference before buying, not just the starting price." class="price-note">Mnogi provajderi nude nižu cenu za prvu godinu, sa poskupljenjem pri obnovi — vredi proveriti tu razliku pre kupovine, ne samo početnu cenu.</p>
+    <p data-en="<strong style=&quot;color:var(--ink);&quot;>A note on prices:</strong> these are indicative values from September 2026. Prices change, so check with the provider before buying." class="price-note" style="margin-top:8px;"><strong style="color:var(--ink);">Napomena o cenama:</strong> ovo su okvirne vrednosti iz septembra 2026. Cene se menjaju, pa ih proverite kod provajdera pre kupovine.</p>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Naši paketi — koji hosting je potreban</h2>
+      <h2 data-en="Our packages — which hosting is needed">Naši paketi — koji hosting je potreban</h2>
     </div>
 
     <table>
       <tr>
-        <th>Paket</th>
-        <th>Šta treba od hostinga</th>
-        <th>Napomena</th>
+        <th data-en="Package">Paket</th>
+        <th data-en="What you need from the hosting">Šta treba od hostinga</th>
+        <th data-en="Note">Napomena</th>
       </tr>
       <tr>
-        <td>Start, Comfort, Premium, Exclusive</td>
-        <td class="tag">Osnovni hosting</td>
-        <td>Statički sajt — bilo koji standardni paket radi, ništa posebno nije potrebno.</td>
+        <td data-en="Start, Comfort, Premium, Exclusive">Start, Comfort, Premium, Exclusive</td>
+        <td data-en="Basic hosting" class="tag">Osnovni hosting</td>
+        <td data-en="A static website — any standard package works, nothing special is needed.">Statički sajt — bilo koji standardni paket radi, ništa posebno nije potrebno.</td>
       </tr>
       <tr>
-        <td>Mini Booking</td>
-        <td class="tag">Osnovni hosting</td>
-        <td>Zakazivanje radi preko Google Apps Script-a (spolja) — hosting samo nosi obične stranice sajta.</td>
+        <td data-en="Mini Booking">Mini Booking</td>
+        <td data-en="Basic hosting" class="tag">Osnovni hosting</td>
+        <td data-en="Booking runs through Google Apps Script (externally) — the hosting only carries the regular pages of the website.">Zakazivanje radi preko Google Apps Script-a (spolja) — hosting samo nosi obične stranice sajta.</td>
       </tr>
       <tr>
-        <td>Start Webshop (Apps Script)</td>
-        <td class="tag">Osnovni hosting</td>
-        <td>Isto kao Mini Booking — prodavnica radi preko Google Apps Script-a, hosting ostaje jednostavan.</td>
+        <td data-en="Start Webshop (Apps Script)">Start Webshop (Apps Script)</td>
+        <td data-en="Basic hosting" class="tag">Osnovni hosting</td>
+        <td data-en="Same as Mini Booking — the shop runs through Google Apps Script, the hosting stays simple.">Isto kao Mini Booking — prodavnica radi preko Google Apps Script-a, hosting ostaje jednostavan.</td>
       </tr>
       <tr>
-        <td>Webshop Standard (PHP)</td>
-        <td class="tag">MySQL + PHP</td>
-        <td>Prava baza podataka na hostingu — potreban paket koji ovo uključuje (većina "srednjih" paketa kod provajdera ima).</td>
+        <td data-en="Webshop Standard (PHP)">Webshop Standard (PHP)</td>
+        <td data-en="MySQL + PHP" class="tag">MySQL + PHP</td>
+        <td data-en="A real database on the hosting — you need a package that includes this (most &quot;mid-range&quot; packages at providers do).">Prava baza podataka na hostingu — potreban paket koji ovo uključuje (većina "srednjih" paketa kod provajdera ima).</td>
       </tr>
       <tr>
-        <td>Webshop Premium (Node.js)</td>
-        <td class="tag">Node.js podrška</td>
-        <td>Ovo NEMAJU svi paketi — proverite eksplicitno pre kupovine da paket uključuje Node.js, obično viši/skuplji nivo kod provajdera.</td>
+        <td data-en="Webshop Premium (Node.js)">Webshop Premium (Node.js)</td>
+        <td data-en="Node.js support" class="tag">Node.js podrška</td>
+        <td data-en="NOT all packages have this — explicitly check before buying that the package includes Node.js, usually a higher/more expensive tier at the provider.">Ovo NEMAJU svi paketi — proverite eksplicitno pre kupovine da paket uključuje Node.js, obično viši/skuplji nivo kod provajdera.</td>
       </tr>
     </table>
   </section>
 
-  <div class="final-note">
+  <div data-en="<strong>An honest note:</strong> we don't choose for you, but we're happy to help with the decision — we can advise you on the smartest choice for your website. If you're not sure, <a class=&quot;dann-link&quot; href=&quot;kontakt.html&quot;>send us the provider's offer</a> and we can analyse it together." class="final-note">
     <strong>Poštena napomena:</strong> mi ne biramo umesto Vas, ali rado pomažemo u odluci — možemo da
     Vas posavetujemo koji je najpametniji izbor za Vaš sajt. Ukoliko niste sigurni, <a class="dann-link" href="kontakt.html">pošaljite nam ponudu
     provajdera</a>, pa možemo zajedno da je analiziramo.
   </div>
 
-</div>
+</main>
 
-<footer class="guide-foot">
+<footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
@@ -291,5 +296,40 @@
 
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

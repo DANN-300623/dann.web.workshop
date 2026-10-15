@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/sajt-auto-servis.html#stranica","url":"https://dannwebworkshop.rs/sajt-auto-servis.html","name":"Izrada sajta za auto servis | DANN.web.workshop","description":"Šta je dobro da ima sajt za auto servis, vulkanizera ili servis klime: spisak usluga, radno vreme, lokacija, brz poziv i upit za termin. Sa živim primerom.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Resursi","item":"https://dannwebworkshop.rs/resursi.html"},{"@type":"ListItem","position":3,"name":"Izrada sajta za auto servis","item":"https://dannwebworkshop.rs/sajt-auto-servis.html"}]}]}</script>
 <title>Izrada sajta za auto servis | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -154,56 +155,95 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="wrap">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="wrap">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="hero">
-    <span class="eyebrow">Vodič za auto servise</span>
-    <h1>Sajt za auto servis</h1>
-    <p>Šta vozač traži kad mu treba servis, i kako da sajt odgovori na to pre nego što pozove neki drugi.</p>
+    <span data-en="Guide for auto repair shops" class="eyebrow">Vodič za auto servise</span>
+    <h1 data-en="A website for an auto repair shop">Sajt za auto servis</h1>
+    <p data-en="What a driver looks for when they need a service, and how your website can answer that before they call someone else.">Šta vozač traži kad mu treba servis, i kako da sajt odgovori na to pre nego što pozove neki drugi.</p>
   </div>
 
   <div class="card">
-    <h2>Šta sajt radi za auto servis</h2>
-    <p>Vozač kojem se pokvario auto ili mu treba redovan servis obično traži na telefonu: ko radi u mom kraju, da li radi danas i kako da ga pozovem. Što brže dobije odgovor, to je veća šansa da pozove baš Vas.</p>
-    <p>Izrada sajta za auto servis, vulkanizera ili servis klime svodi se na to da vozač odmah vidi šta radite i kako da Vas pozove.</p>
-    <p>Sajt je mesto gde su usluge, radno vreme, adresa i broj telefona uvek isti i tačni, bez listanja kroz društvene mreže.</p>
+    <h2 data-en="What a website does for an auto repair shop">Šta sajt radi za auto servis</h2>
+    <p data-en="A driver whose car broke down or who needs a regular service usually searches on their phone: who works in my area, are they open today and how do I call them. The faster they get an answer, the greater the chance they call you.">Vozač kojem se pokvario auto ili mu treba redovan servis obično traži na telefonu: ko radi u mom kraju, da li radi danas i kako da ga pozovem. Što brže dobije odgovor, to je veća šansa da pozove baš Vas.</p>
+    <p data-en="Building a website for an auto repair shop, tyre shop or AC service comes down to the driver immediately seeing what you do and how to call you.">Izrada sajta za auto servis, vulkanizera ili servis klime svodi se na to da vozač odmah vidi šta radite i kako da Vas pozove.</p>
+    <p data-en="A website is the place where services, working hours, address and phone number are always the same and correct, without scrolling through social media.">Sajt je mesto gde su usluge, radno vreme, adresa i broj telefona uvek isti i tačni, bez listanja kroz društvene mreže.</p>
   </div>
   <div class="card">
-    <h2>Šta preporučujemo da sajt za auto servis ima</h2>
-<div class="needed-list"><div class="needed-item">Spisak usluga (mali i veliki servis, kočnice, klima, gume, dijagnostika, po potrebi)</div><div class="needed-item">Dugme „Pozovi” koje radi jednim dodirom na telefonu</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Adresa, mapa i parking, ako ga ima</div><div class="needed-item">Marke vozila sa kojima radite</div><div class="needed-item">Upit za termin preko forme</div><div class="needed-item">Fotografije radionice i tima</div><div class="needed-item">Kratko objašnjenje kako izgleda dolazak i prijem vozila</div></div>
+    <h2 data-en="What we recommend an auto repair shop website has">Šta preporučujemo da sajt za auto servis ima</h2>
+<div class="needed-list"><div data-en="A list of services (minor and major service, brakes, AC, tyres, diagnostics, as needed)" class="needed-item">Spisak usluga (mali i veliki servis, kočnice, klima, gume, dijagnostika, po potrebi)</div><div data-en="A “Call” button that works with one tap on a phone" class="needed-item">Dugme „Pozovi” koje radi jednim dodirom na telefonu</div><div data-en="Working hours and days off" class="needed-item">Radno vreme i neradni dani</div><div data-en="Address, map and parking, if there is any" class="needed-item">Adresa, mapa i parking, ako ga ima</div><div data-en="Vehicle brands you work with" class="needed-item">Marke vozila sa kojima radite</div><div data-en="An appointment inquiry through a form" class="needed-item">Upit za termin preko forme</div><div data-en="Photos of the workshop and the team" class="needed-item">Fotografije radionice i tima</div><div data-en="A short explanation of what arrival and vehicle intake look like" class="needed-item">Kratko objašnjenje kako izgleda dolazak i prijem vozila</div></div>
   </div>
   <div class="card">
-    <h2>Kako to izgleda u praksi</h2>
-    <p><strong>POGON</strong> — demo sajt auto servisa sa kontakt formom. <a href="https://pogon.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+    <h2 data-en="What it looks like in practice">Kako to izgleda u praksi</h2>
+    <p data-en="<strong>POGON</strong> — a demo website of an auto repair shop with a contact form. <a href=&quot;https://pogon.dannwebworkshop.rs&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Open the demo →</a>"><strong>POGON</strong> — demo sajt auto servisa sa kontakt formom. <a href="https://pogon.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
   </div>
   <div class="card">
-    <h2>Najčešće greške</h2>
-<div class="risk-item"><strong>Nema liste usluga</strong>Ako vozač ne vidi da radite baš ono što mu treba (npr. klimu ili gume), pretpostaviće da ne radite.</div><div class="risk-item"><strong>Broj telefona je samo tekst</strong>Na telefonu je najbolje da se broj poziva jednim dodirom, bez prepisivanja.</div><div class="risk-item"><strong>Zastarelo radno vreme</strong>Netačno radno vreme je najbrži način da neko dođe pred zatvorena vrata. Radno vreme se menja na sajtu, a ne u objavi.</div><div class="risk-item"><strong>Obećane cene bez uslova</strong>Cena rada zavisi od vozila i kvara. Ako pišete cene, napišite na šta se odnose, a ako ne možete, napišite kako se dobija ponuda.</div>
+    <h2 data-en="Most common mistakes">Najčešće greške</h2>
+<div data-en="<strong>No list of services</strong>If a driver doesn't see that you do exactly what they need (e.g. AC or tyres), they'll assume you don't." class="risk-item"><strong>Nema liste usluga</strong>Ako vozač ne vidi da radite baš ono što mu treba (npr. klimu ili gume), pretpostaviće da ne radite.</div><div data-en="<strong>The phone number is just text</strong>On a phone it's best for the number to be callable with one tap, without retyping." class="risk-item"><strong>Broj telefona je samo tekst</strong>Na telefonu je najbolje da se broj poziva jednim dodirom, bez prepisivanja.</div><div data-en="<strong>Outdated working hours</strong>Wrong working hours are the fastest way for someone to arrive at a closed door. Working hours are changed on the website, not in a post." class="risk-item"><strong>Zastarelo radno vreme</strong>Netačno radno vreme je najbrži način da neko dođe pred zatvorena vrata. Radno vreme se menja na sajtu, a ne u objavi.</div><div data-en="<strong>Promised prices without conditions</strong>The price of labour depends on the vehicle and the fault. If you list prices, say what they apply to, and if you can't, say how a quote is obtained." class="risk-item"><strong>Obećane cene bez uslova</strong>Cena rada zavisi od vozila i kvara. Ako pišete cene, napišite na šta se odnose, a ako ne možete, napišite kako se dobija ponuda.</div>
   </div>
   <div class="card">
-    <h2>Kako dolazi do upita</h2>
-    <p>Najjednostavniji sistem je kontakt forma: klijent napiše marku vozila, šta se dešava i broj telefona, a Vi dobijete poruku na mejl. Kako forma radi i koje su Vaše obaveze kad prikupljate podatke, pročitajte u vodiču <a href="klijent-kontakt-forma.html">Kontakt forma — šta treba da znate</a>. Paketi i cene su na stranici <a href="paketi.html">Paketi</a>.</p>
+    <h2 data-en="How inquiries come in">Kako dolazi do upita</h2>
+    <p data-en="The simplest system is a contact form: the client writes the vehicle brand, what is happening and a phone number, and you get a message by email. How the form works and what your obligations are when you collect data is in the guide <a href=&quot;klijent-kontakt-forma.html&quot;>Contact form — what you need to know</a>. Packages and prices are on the <a href=&quot;paketi.html&quot;>Packages</a> page.">Najjednostavniji sistem je kontakt forma: klijent napiše marku vozila, šta se dešava i broj telefona, a Vi dobijete poruku na mejl. Kako forma radi i koje su Vaše obaveze kad prikupljate podatke, pročitajte u vodiču <a href="klijent-kontakt-forma.html">Kontakt forma — šta treba da znate</a>. Paketi i cene su na stranici <a href="paketi.html">Paketi</a>.</p>
   </div>
   <div class="card">
-    <h2>Šta nam treba od Vas</h2>
-<div class="needed-list"><div class="needed-item">Spisak usluga</div><div class="needed-item">Radno vreme i neradni dani</div><div class="needed-item">Adresa, telefon i Viber</div><div class="needed-item">Marke vozila sa kojima radite</div><div class="needed-item">Fotografije radionice</div><div class="needed-item">Email gde stižu upiti</div></div>
+    <h2 data-en="What we need from you">Šta nam treba od Vas</h2>
+<div class="needed-list"><div data-en="List of services" class="needed-item">Spisak usluga</div><div data-en="Working hours and days off" class="needed-item">Radno vreme i neradni dani</div><div data-en="Address, phone and Viber" class="needed-item">Adresa, telefon i Viber</div><div data-en="Vehicle brands you work with" class="needed-item">Marke vozila sa kojima radite</div><div data-en="Photos of the workshop" class="needed-item">Fotografije radionice</div><div data-en="Email where inquiries arrive" class="needed-item">Email gde stižu upiti</div></div>
   </div>
 
-  <div class="highlight-box">
+  <div data-en="<strong>In short:</strong> An auto repair shop website should let the driver find you, see what you do and call you with one tap. We work from Zrenjanin and communicate with clients by email, Viber and Instagram, so you can order a website from anywhere in Serbia." class="highlight-box">
     <strong>Ukratko:</strong> Sajt za auto servis treba da omogući da Vas vozač nađe, vidi šta radite i pozove Vas jednim dodirom. Radimo iz Zrenjanina, a sa klijentima komuniciramo mejlom, Viberom i Instagramom, pa sajt možete da naručite iz bilo kog mesta u Srbiji.
   </div>
 
-  <p class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about a website for your business? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

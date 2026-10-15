@@ -30,8 +30,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/privatnost.html#stranica","url":"https://dannwebworkshop.rs/privatnost.html","name":"Politika privatnosti | DANN.web.workshop","description":"Politika privatnosti DANN.web.workshop: koje podatke prikupljamo preko kontakt forme, kako ih koristimo i kako možete zatražiti brisanje.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Politika privatnosti","item":"https://dannwebworkshop.rs/privatnost.html"}]}]}</script>
 <title>Politika privatnosti | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/priv.css">
 <style>
   :root { --bg:#FAF8F3; --card:#FFFFFF; --ink:#1C1C1A; --ink-soft:#63615C; --line:#E6E2D8; --accent:#C1361E; }
   * { box-sizing: border-box; }
@@ -50,59 +52,98 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a></nav>
+<main class="page">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
-  <h1>Politika privatnosti</h1>
-  <p class="datum">Poslednja izmena: oktobar 2026.</p>
+  <h1 data-en="Privacy Policy">Politika privatnosti</h1>
+  <p data-en="Last updated: October 2026" class="datum">Poslednja izmena: oktobar 2026.</p>
 
-  <p>DANN.web.workshop poštuje Vašu privatnost. Ova stranica objašnjava koje podatke prikupljamo preko kontakt forme i kako ih koristimo — jednostavno, bez pravnog žargona.</p>
+  <p data-en="DANN.web.workshop respects your privacy. This page explains which data we collect through the contact form and how we use it — simply, without legal jargon.">DANN.web.workshop poštuje Vašu privatnost. Ova stranica objašnjava koje podatke prikupljamo preko kontakt forme i kako ih koristimo — jednostavno, bez pravnog žargona.</p>
 
-  <h2>Ko je odgovoran za Vaše podatke</h2>
-  <p>Podatke prikuplja i obrađuje Ana Gogić, freelancer, koja pod nazivom DANN.web.workshop pruža usluge izrade sajtova. Kontakt: <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a>.</p>
+  <h2 data-en="Who is responsible for your data">Ko je odgovoran za Vaše podatke</h2>
+  <p data-en="The data is collected and processed by Ana Gogić, a freelancer, who provides website building services under the name DANN.web.workshop. Contact: <a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a>.">Podatke prikuplja i obrađuje Ana Gogić, freelancer, koja pod nazivom DANN.web.workshop pruža usluge izrade sajtova. Kontakt: <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a>.</p>
 
-  <h2>Koje podatke prikupljamo</h2>
-  <p>Kada popunite kontakt formu na ovom sajtu, prikupljamo samo ono što nam sami pošaljete:</p>
+  <h2 data-en="What data we collect">Koje podatke prikupljamo</h2>
+  <p data-en="When you fill in the contact form on this website, we collect only what you send us yourself:">Kada popunite kontakt formu na ovom sajtu, prikupljamo samo ono što nam sami pošaljete:</p>
   <ul>
-    <li>Ime</li>
-    <li>Email adresu</li>
-    <li>Telefon (ako ga unesete — nije obavezno)</li>
-    <li>Sadržaj poruke koju napišete</li>
+    <li data-en="Name">Ime</li>
+    <li data-en="Email address">Email adresu</li>
+    <li data-en="Phone (if you enter it — optional)">Telefon (ako ga unesete — nije obavezno)</li>
+    <li data-en="The content of the message you write">Sadržaj poruke koju napišete</li>
   </ul>
 
-  <h2>Kako koristimo Vaše podatke</h2>
-  <p>Vaš email i ostali podaci koriste se <strong>isključivo</strong> da bismo Vam odgovorili na upit koji ste poslali. To je sve.</p>
-  <p>Ne koristimo Vaš email za slanje reklama, newslettera, ili bilo šta osim direktnog odgovora na Vašu poruku. Ne prodajemo, ne iznajmljujemo, i ne delimo Vaše podatke sa trećim stranama.</p>
+  <h2 data-en="How we use your data">Kako koristimo Vaše podatke</h2>
+  <p data-en="Your email and other data are used <strong>exclusively</strong> to reply to the inquiry you sent. That's all.">Vaš email i ostali podaci koriste se <strong>isključivo</strong> da bismo Vam odgovorili na upit koji ste poslali. To je sve.</p>
+  <p data-en="We don't use your email to send ads, newsletters, or anything other than a direct reply to your message. We don't sell, rent or share your data with third parties.">Ne koristimo Vaš email za slanje reklama, newslettera, ili bilo šta osim direktnog odgovora na Vašu poruku. Ne prodajemo, ne iznajmljujemo, i ne delimo Vaše podatke sa trećim stranama.</p>
 
-  <h2>Gde se podaci čuvaju</h2>
-  <p>Poruke poslate preko kontakt forme stižu nam na email i čuvaju se u tabeli (Google Sheets) na našem Google nalogu, dostupnoj samo nama. Ne koristimo spoljne servise za marketing ili analitiku Vaših ličnih podataka.</p>
+  <h2 data-en="Where the data is stored">Gde se podaci čuvaju</h2>
+  <p data-en="Messages sent through the contact form reach us by email and are stored in a spreadsheet (Google Sheets) in our Google account, accessible only to us. We don't use external services for marketing or analytics of your personal data.">Poruke poslate preko kontakt forme stižu nam na email i čuvaju se u tabeli (Google Sheets) na našem Google nalogu, dostupnoj samo nama. Ne koristimo spoljne servise za marketing ili analitiku Vaših ličnih podataka.</p>
 
-  <h2>Koliko dugo čuvamo podatke</h2>
-  <p>Poruke čuvamo dok su relevantne za komunikaciju sa Vama. Ako želite da Vaši podaci budu obrisani, samo nam pošaljite zahtev — vidite kontakt ispod.</p>
+  <h2 data-en="How long we keep the data">Koliko dugo čuvamo podatke</h2>
+  <p data-en="We keep messages for as long as they are relevant to communication with you. If you want your data deleted, just send us a request — see the contact below.">Poruke čuvamo dok su relevantne za komunikaciju sa Vama. Ako želite da Vaši podaci budu obrisani, samo nam pošaljite zahtev — vidite kontakt ispod.</p>
 
-  <h2>Kolačići (cookies)</h2>
-  <p>Ovaj sajt ne koristi kolačiće za praćenje ili reklamiranje.</p>
+  <h2 data-en="Cookies">Kolačići (cookies)</h2>
+  <p data-en="This website does not use cookies for tracking or advertising.">Ovaj sajt ne koristi kolačiće za praćenje ili reklamiranje.</p>
 
-  <h2>Vaša prava</h2>
-  <p>U svakom trenutku možete da tražite:</p>
+  <h2 data-en="Your rights">Vaša prava</h2>
+  <p data-en="At any time you can request:">U svakom trenutku možete da tražite:</p>
   <ul>
-    <li>Uvid u podatke koje imamo o Vama</li>
-    <li>Ispravku netačnih podataka</li>
-    <li>Brisanje Vaših podataka</li>
+    <li data-en="Access to the data we hold about you">Uvid u podatke koje imamo o Vama</li>
+    <li data-en="Correction of inaccurate data">Ispravku netačnih podataka</li>
+    <li data-en="Deletion of your data">Brisanje Vaših podataka</li>
   </ul>
 
-  <div class="kontakt-box">
+  <div data-en="<strong>Questions about privacy?</strong><br/> Write to us at <a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> — we reply personally, without intermediaries." class="kontakt-box">
     <strong>Pitanja o privatnosti?</strong><br>
     Pišite nam na <a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> — odgovaramo lično, bez posrednika.
   </div>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

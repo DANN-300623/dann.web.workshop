@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/sajt-stomatolog.html#stranica","url":"https://dannwebworkshop.rs/sajt-stomatolog.html","name":"Izrada sajta za stomatološku ordinaciju | DANN.web.workshop","description":"Šta je dobro da ima sajt za stomatološku ordinaciju: usluge, radno vreme, tim, kontakt forma i zaštita podataka pacijenata. Sa živim primerom.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Resursi","item":"https://dannwebworkshop.rs/resursi.html"},{"@type":"ListItem","position":3,"name":"Izrada sajta za stomatološku ordinaciju","item":"https://dannwebworkshop.rs/sajt-stomatolog.html"}]}]}</script>
 <title>Izrada sajta za stomatološku ordinaciju | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -154,57 +155,96 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="wrap">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="wrap">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="hero">
-    <span class="eyebrow">Vodič za ordinacije</span>
-    <h1>Sajt za stomatološku ordinaciju</h1>
-    <p>Šta pacijenti traže pre prvog javljanja, kako da sajt bude jasan i na šta treba da pazite jer se radi o zdravstvenim podacima.</p>
+    <span data-en="Guide for dental practices" class="eyebrow">Vodič za ordinacije</span>
+    <h1 data-en="A website for a dental practice">Sajt za stomatološku ordinaciju</h1>
+    <p data-en="What patients look for before getting in touch for the first time, how to keep the website clear, and what to watch out for because health data is involved.">Šta pacijenti traže pre prvog javljanja, kako da sajt bude jasan i na šta treba da pazite jer se radi o zdravstvenim podacima.</p>
   </div>
 
   <div class="card">
-    <h2>Šta sajt radi za ordinaciju</h2>
-    <p>Mnogi se pre prvog poziva informišu na internetu: koje usluge radite, ko su doktori, kada radite i kako da se jave. Ljudi koji se plaše stomatologa često prvo žele da odgovore nađu sami, bez poziva.</p>
-    <p>Izrada sajta za stomatologa svodi se na jasne informacije: usluge, tim, radno vreme i kontakt.</p>
-    <p>Sajt je mesto gde ordinacija izgleda uredno, pouzdano i pristupačno, i gde pacijent može da Vas kontaktira kada mu odgovara.</p>
+    <h2 data-en="What a website does for a practice">Šta sajt radi za ordinaciju</h2>
+    <p data-en="Many people look things up online before the first call: which services you offer, who the doctors are, when you work and how to get in touch. People who are afraid of the dentist often want to find the answers themselves first, without calling.">Mnogi se pre prvog poziva informišu na internetu: koje usluge radite, ko su doktori, kada radite i kako da se jave. Ljudi koji se plaše stomatologa često prvo žele da odgovore nađu sami, bez poziva.</p>
+    <p data-en="Building a website for a dentist comes down to clear information: services, team, working hours and contact.">Izrada sajta za stomatologa svodi se na jasne informacije: usluge, tim, radno vreme i kontakt.</p>
+    <p data-en="A website is the place where the practice looks tidy, reliable and approachable, and where a patient can contact you when it suits them.">Sajt je mesto gde ordinacija izgleda uredno, pouzdano i pristupačno, i gde pacijent može da Vas kontaktira kada mu odgovara.</p>
   </div>
   <div class="card">
-    <h2>Šta preporučujemo da sajt za ordinaciju ima</h2>
-<div class="needed-list"><div class="needed-item">Spisak usluga, bez medicinskih obećanja</div><div class="needed-item">Doktori i tim sa kratkim opisom</div><div class="needed-item">Radno vreme i kako se postupa u hitnim slučajevima</div><div class="needed-item">Adresa, mapa i pristup (prizemlje, stepenice, parking)</div><div class="needed-item">Kontakt forma i broj telefona</div><div class="needed-item">Kratko objašnjenje šta se dešava na prvom pregledu</div><div class="needed-item">Fotografije ordinacije</div><div class="needed-item">Politika privatnosti</div></div>
+    <h2 data-en="What we recommend a practice website has">Šta preporučujemo da sajt za ordinaciju ima</h2>
+<div class="needed-list"><div data-en="A list of services, without medical promises" class="needed-item">Spisak usluga, bez medicinskih obećanja</div><div data-en="Doctors and team with a short description" class="needed-item">Doktori i tim sa kratkim opisom</div><div data-en="Working hours and how emergencies are handled" class="needed-item">Radno vreme i kako se postupa u hitnim slučajevima</div><div data-en="Address, map and access (ground floor, stairs, parking)" class="needed-item">Adresa, mapa i pristup (prizemlje, stepenice, parking)</div><div data-en="A contact form and phone number" class="needed-item">Kontakt forma i broj telefona</div><div data-en="A short explanation of what happens at the first check-up" class="needed-item">Kratko objašnjenje šta se dešava na prvom pregledu</div><div data-en="Photos of the practice" class="needed-item">Fotografije ordinacije</div><div data-en="Privacy policy" class="needed-item">Politika privatnosti</div></div>
   </div>
   <div class="card">
-    <h2>Kako to izgleda u praksi</h2>
-    <p><strong>OSMEH</strong> — demo sajt stomatološke ordinacije sa kontakt formom. <a href="https://osmeh.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
-    <p>Ovaj demo koristi kontakt formu, ne online zakazivanje. Pacijent ostavlja poruku i broj telefona, a ordinacija mu se javlja.</p>
+    <h2 data-en="What it looks like in practice">Kako to izgleda u praksi</h2>
+    <p data-en="<strong>OSMEH</strong> — a demo website of a dental practice with a contact form. <a href=&quot;https://osmeh.dannwebworkshop.rs&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Open the demo →</a>"><strong>OSMEH</strong> — demo sajt stomatološke ordinacije sa kontakt formom. <a href="https://osmeh.dannwebworkshop.rs" target="_blank" rel="noopener">Otvorite demo →</a></p>
+    <p data-en="This demo uses a contact form, not online booking. The patient leaves a message and a phone number, and the practice gets back to them.">Ovaj demo koristi kontakt formu, ne online zakazivanje. Pacijent ostavlja poruku i broj telefona, a ordinacija mu se javlja.</p>
   </div>
   <div class="card">
-    <h2>Na šta treba da pazite</h2>
-<div class="risk-item"><strong>Ne tražite zdravstvene podatke kroz formu</strong>Forma treba da traži samo ime, telefon i kratku poruku. Pacijent može sam da napiše šta ga muči, ali sajt ne treba da ga pita za dijagnoze ili istoriju lečenja.</div><div class="risk-item"><strong>Politika privatnosti nije ukras</strong>Ako sajt prikuplja podatke, morate da kažete koje, zašto i koliko dugo ih čuvate. Mi dajemo nacrt, a pregled i prilagođavanje su Vaša obaveza.</div><div class="risk-item"><strong>Pravila oglašavanja zdravstvenih usluga</strong>Ordinacije imaju posebna pravila o tome kako smeju da se oglašavaju. Pre objave tekstova o terapijama i rezultatima proverite ih kod komore ili pravnika. Mi ne pišemo medicinske tvrdnje.</div><div class="risk-item"><strong>Fotografije pacijenata</strong>Fotografije pacijenata (na primer „pre i posle”) objavljujte samo uz njihov pristanak i proverite pravila struke.</div>
+    <h2 data-en="What to watch out for">Na šta treba da pazite</h2>
+<div data-en="<strong>Don't ask for health data through the form</strong>The form should ask only for name, phone and a short message. A patient can write what is bothering them, but the website shouldn't ask about diagnoses or treatment history." class="risk-item"><strong>Ne tražite zdravstvene podatke kroz formu</strong>Forma treba da traži samo ime, telefon i kratku poruku. Pacijent može sam da napiše šta ga muči, ali sajt ne treba da ga pita za dijagnoze ili istoriju lečenja.</div><div data-en="<strong>A privacy policy is not decoration</strong>If the website collects data, you must say which data, why, and how long you keep it. We provide a draft, and reviewing and adapting it is your responsibility." class="risk-item"><strong>Politika privatnosti nije ukras</strong>Ako sajt prikuplja podatke, morate da kažete koje, zašto i koliko dugo ih čuvate. Mi dajemo nacrt, a pregled i prilagođavanje su Vaša obaveza.</div><div data-en="<strong>Rules for advertising health services</strong>Practices have special rules about how they may advertise. Before publishing texts about therapies and results, check them with the chamber or a lawyer. We don't write medical claims." class="risk-item"><strong>Pravila oglašavanja zdravstvenih usluga</strong>Ordinacije imaju posebna pravila o tome kako smeju da se oglašavaju. Pre objave tekstova o terapijama i rezultatima proverite ih kod komore ili pravnika. Mi ne pišemo medicinske tvrdnje.</div><div data-en="<strong>Patient photos</strong>Publish patient photos (for example “before and after”) only with their consent, and check the professional rules." class="risk-item"><strong>Fotografije pacijenata</strong>Fotografije pacijenata (na primer „pre i posle”) objavljujte samo uz njihov pristanak i proverite pravila struke.</div>
   </div>
   <div class="card">
-    <h2>Paketi i dalji koraci</h2>
-    <p>Većini ordinacija je dovoljan jednostavniji paket sa kontakt formom. Pregled paketa je u vodiču <a href="koji-paket-je-za-vas.html">Koji paket je za Vas?</a>, a pojedinosti o formi i obavezama u vodiču <a href="klijent-kontakt-forma.html">Kontakt forma — šta treba da znate</a>.</p>
+    <h2 data-en="Packages and next steps">Paketi i dalji koraci</h2>
+    <p data-en="For most practices a simpler package with a contact form is enough. An overview of packages is in the guide <a href=&quot;koji-paket-je-za-vas.html&quot;>Which package is right for you?</a>, and details about the form and obligations in the guide <a href=&quot;klijent-kontakt-forma.html&quot;>Contact form — what you need to know</a>.">Većini ordinacija je dovoljan jednostavniji paket sa kontakt formom. Pregled paketa je u vodiču <a href="koji-paket-je-za-vas.html">Koji paket je za Vas?</a>, a pojedinosti o formi i obavezama u vodiču <a href="klijent-kontakt-forma.html">Kontakt forma — šta treba da znate</a>.</p>
   </div>
   <div class="card">
-    <h2>Šta nam treba od Vas</h2>
-<div class="needed-list"><div class="needed-item">Spisak usluga</div><div class="needed-item">Radno vreme i hitni slučajevi</div><div class="needed-item">Podaci i kratak opis doktora</div><div class="needed-item">Fotografije ordinacije i tima</div><div class="needed-item">Adresa, telefon i email</div><div class="needed-item">Politika privatnosti koju će pregledati Vi ili Vaš pravnik</div></div>
+    <h2 data-en="What we need from you">Šta nam treba od Vas</h2>
+<div class="needed-list"><div data-en="List of services" class="needed-item">Spisak usluga</div><div data-en="Working hours and emergencies" class="needed-item">Radno vreme i hitni slučajevi</div><div data-en="Details and a short description of the doctors" class="needed-item">Podaci i kratak opis doktora</div><div data-en="Photos of the practice and team" class="needed-item">Fotografije ordinacije i tima</div><div data-en="Address, phone and email" class="needed-item">Adresa, telefon i email</div><div data-en="A privacy policy to be reviewed by you or your lawyer" class="needed-item">Politika privatnosti koju će pregledati Vi ili Vaš pravnik</div></div>
   </div>
 
-  <div class="highlight-box">
+  <div data-en="<strong>In short:</strong> A practice website should be clear, calm and reliable, and patient data needs to be handled carefully. We work from Zrenjanin and communicate with clients by email, Viber and Instagram, so you can order a website from anywhere in Serbia." class="highlight-box">
     <strong>Ukratko:</strong> Sajt za ordinaciju treba da bude jasan, miran i pouzdan, a podatke pacijenata je potrebno pažljivo čuvati. Radimo iz Zrenjanina, a sa klijentima komuniciramo mejlom, Viberom i Instagramom, pa sajt možete da naručite iz bilo kog mesta u Srbiji.
   </div>
 
-  <p class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about a website for your business? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

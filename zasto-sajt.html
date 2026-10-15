@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/zasto-sajt.html#stranica","url":"https://dannwebworkshop.rs/zasto-sajt.html","name":"Zašto Vam treba sajt za mali biznis | DANN.web.workshop","description":"Da li malom biznisu treba sajt ako ima Instagram? Kako sajt pomaže da Vas nađu novi klijenti, šta ne obećava i šta se dešava bez njega.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Resursi","item":"https://dannwebworkshop.rs/resursi.html"},{"@type":"ListItem","position":3,"name":"Zašto Vam treba sajt","item":"https://dannwebworkshop.rs/zasto-sajt.html"}]}]}</script>
 <title>Zašto Vam treba sajt za mali biznis | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -154,72 +155,111 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="wrap">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="wrap">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="hero">
-    <span class="eyebrow">Vodič</span>
-    <h1>Zašto Vam treba sajt</h1>
-    <p>Kako sajt pomaže malom biznisu da ga ljudi nađu i da dođe do novih klijenata, šta sajt ne može da obeća, i šta se dešava bez njega.</p>
+    <span data-en="Guide" class="eyebrow">Vodič</span>
+    <h1 data-en="Why you need a website">Zašto Vam treba sajt</h1>
+    <p data-en="How a website helps a small business get found and reach new clients, what it can't promise, and what happens without one.">Kako sajt pomaže malom biznisu da ga ljudi nađu i da dođe do novih klijenata, šta sajt ne može da obeća, i šta se dešava bez njega.</p>
   </div>
 
   <div class="card">
-    <h2>Da li mi treba sajt ako imam Instagram?</h2>
-    <p>Instagram je dobar za pokazivanje onoga što radite. Ali on je tuđa platforma: pravila, izgled i način prikazivanja menjaju se bez Vašeg pitanja, a stare objave se gube kako dolaze nove.</p>
-    <p>Sajt je jedino mesto koje je Vaše. Tu stoje usluge, cene, adresa, radno vreme i kontakt, na jednom mestu i uvek isti. Ne mora da zameni Instagram. Najbolje rade zajedno: Instagram pokazuje, a sajt odgovara na pitanja.</p>
+    <h2 data-en="Do I need a website if I have Instagram?">Da li mi treba sajt ako imam Instagram?</h2>
+    <p data-en="Instagram is great for showing what you do. But it's someone else's platform: the rules, the look and the way content is displayed change without asking you, and old posts get buried as new ones come in.">Instagram je dobar za pokazivanje onoga što radite. Ali on je tuđa platforma: pravila, izgled i način prikazivanja menjaju se bez Vašeg pitanja, a stare objave se gube kako dolaze nove.</p>
+    <p data-en="A website is the one place that is yours. Your services, prices, address, working hours and contact details sit in one place and always say the same thing. It doesn't have to replace Instagram. They work best together: Instagram shows, the website answers questions.">Sajt je jedino mesto koje je Vaše. Tu stoje usluge, cene, adresa, radno vreme i kontakt, na jednom mestu i uvek isti. Ne mora da zameni Instagram. Najbolje rade zajedno: Instagram pokazuje, a sajt odgovara na pitanja.</p>
   </div>
 
   <div class="card">
-    <h2>Šta sajt radi za Vaš biznis</h2>
-    <p>Kad neko čuje za Vas ili Vas traži na telefonu, obično želi nekoliko stvari: šta radite, koliko košta, gde ste i kako da Vas pozove. Sajt na ta pitanja odgovara svakog dana, i kad Vi niste dostupni.</p>
-<div class="needed-list"><div class="needed-item">Ljudi Vas nalaze kad traže uslugu ili Vaše ime</div><div class="needed-item">Usluge i cene su na jednom mestu, bez dopisivanja</div><div class="needed-item">Adresa i radno vreme uvek važe, jer se menjaju na sajtu</div><div class="needed-item">Klijent Vas kontaktira kad njemu odgovara, i van radnog vremena</div><div class="needed-item">Izgledate uredno i pouzdano pre prvog susreta</div><div class="needed-item">Možete da dodate zakazivanje, formu ili prodavnicu kad Vam zatrebaju</div></div>
+    <h2 data-en="What a website does for your business">Šta sajt radi za Vaš biznis</h2>
+    <p data-en="When someone hears about you or looks you up on their phone, they usually want a few things: what you do, how much it costs, where you are and how to reach you. A website answers those questions every day, even when you're not available.">Kad neko čuje za Vas ili Vas traži na telefonu, obično želi nekoliko stvari: šta radite, koliko košta, gde ste i kako da Vas pozove. Sajt na ta pitanja odgovara svakog dana, i kad Vi niste dostupni.</p>
+<div class="needed-list"><div data-en="People find you when they search for a service or your name" class="needed-item">Ljudi Vas nalaze kad traže uslugu ili Vaše ime</div><div data-en="Services and prices in one place, no back-and-forth messages" class="needed-item">Usluge i cene su na jednom mestu, bez dopisivanja</div><div data-en="Address and working hours are always correct, because you update them on the site" class="needed-item">Adresa i radno vreme uvek važe, jer se menjaju na sajtu</div><div data-en="Clients can contact you when it suits them, even outside working hours" class="needed-item">Klijent Vas kontaktira kad njemu odgovara, i van radnog vremena</div><div data-en="You look tidy and reliable before the first meeting" class="needed-item">Izgledate uredno i pouzdano pre prvog susreta</div><div data-en="You can add booking, a form or a shop when you need them" class="needed-item">Možete da dodate zakazivanje, formu ili prodavnicu kad Vam zatrebaju</div></div>
   </div>
 
   <div class="card">
-    <h2>Kako sajt pomaže da dođete do novih klijenata</h2>
-    <p>Ljudi koji Vas ne poznaju Vas ne traže po imenu. Traže uslugu i mesto, na primer „frizer Zrenjanin“ ili „servis klime“. Bez sajta Vam je teže da se uopšte pojavite u takvoj pretrazi, jer Google ima šta da prikaže samo kad postoji stranica koja odgovara na to pitanje.</p>
-<div class="needed-list"><div class="needed-item">Nove ljude koji traže uslugu u Vašem mestu možete da dočekate, ne samo one koji Vas već prate</div><div class="needed-item">Google profil firme, oglasi i reklame imaju kuda da vode ljude</div><div class="needed-item">Preporuka postaje jednostavna: „pogledaj njihov sajt“ umesto „potraži ih na Instagramu“</div><div class="needed-item">Svaka nova usluga, cena ili stranica daje još jedan razlog da Vas neko nađe</div><div class="needed-item">Možete da vidite koliko ljudi zaista dolazi i šta traže, pa da odlučujete na osnovu toga</div></div>
-    <p>Ovo je prilika, ne garancija. Koliko će ljudi doći zavisi od Vaše delatnosti, mesta, konkurencije i toga koliko sajt gradite i promovišete. Sajt je osnova na kojoj se rast gradi, i bez te osnove sve ostalo je teže.</p>
+    <h2 data-en="How a website helps you reach new clients">Kako sajt pomaže da dođete do novih klijenata</h2>
+    <p data-en="People who don't know you don't search for you by name. They search for a service and a place, for example “hairdresser Zrenjanin” or “AC service”. Without a website it's harder to show up in such a search at all, because Google only has something to display when there is a page that answers the question.">Ljudi koji Vas ne poznaju Vas ne traže po imenu. Traže uslugu i mesto, na primer „frizer Zrenjanin“ ili „servis klime“. Bez sajta Vam je teže da se uopšte pojavite u takvoj pretrazi, jer Google ima šta da prikaže samo kad postoji stranica koja odgovara na to pitanje.</p>
+<div class="needed-list"><div data-en="You can welcome new people looking for a service in your town, not only those who already follow you" class="needed-item">Nove ljude koji traže uslugu u Vašem mestu možete da dočekate, ne samo one koji Vas već prate</div><div data-en="Google Business Profile, ads and promotions have somewhere to send people" class="needed-item">Google profil firme, oglasi i reklame imaju kuda da vode ljude</div><div data-en="Recommending you becomes simple: “check out their website” instead of “look them up on Instagram”" class="needed-item">Preporuka postaje jednostavna: „pogledaj njihov sajt“ umesto „potraži ih na Instagramu“</div><div data-en="Every new service, price or page gives someone one more reason to find you" class="needed-item">Svaka nova usluga, cena ili stranica daje još jedan razlog da Vas neko nađe</div><div data-en="You can see how many people actually visit and what they look for, and decide based on that" class="needed-item">Možete da vidite koliko ljudi zaista dolazi i šta traže, pa da odlučujete na osnovu toga</div></div>
+    <p data-en="This is an opportunity, not a guarantee. How many people come depends on your line of work, your town, your competition and how much you build and promote the site. A website is the foundation growth is built on, and without it everything else is harder.">Ovo je prilika, ne garancija. Koliko će ljudi doći zavisi od Vaše delatnosti, mesta, konkurencije i toga koliko sajt gradite i promovišete. Sajt je osnova na kojoj se rast gradi, i bez te osnove sve ostalo je teže.</p>
   </div>
 
   <div class="card">
-    <h2>Šta dobijate, a šta ne</h2>
-    <p>Da budemo iskreni: sajt sam po sebi ne donosi klijente. Gotov sajt je kao uređen lokal. Lepo izgleda i sve je na svom mestu, ali ljudi moraju da saznaju da postoji.</p>
-<div class="risk-item"><strong>Šta dobijate</strong>Mesto koje Vam pripada, jasne informacije, profesionalan utisak i osnovu za pretragu, društvene mreže i preporuke.</div><div class="risk-item"><strong>Šta ne dobijate</strong>Garantovan broj poseta ili klijenata, niti mesto na prvoj strani Google-a. Pretraga zavisi od mnogo stvari na koje niko ne može da obeća uticaj, a rezultati dolaze postepeno.</div><div class="risk-item"><strong>Šta ostaje Vaš posao</strong>Da sajt delite (Instagram, vizit karta, preporuke), da ga održavate tačnim i da odgovarate na upite.</div>
+    <h2 data-en="What you get and what you don't">Šta dobijate, a šta ne</h2>
+    <p data-en="To be honest: a website on its own doesn't bring clients. A finished website is like a well-kept shop. It looks good and everything is in its place, but people still have to find out it exists.">Da budemo iskreni: sajt sam po sebi ne donosi klijente. Gotov sajt je kao uređen lokal. Lepo izgleda i sve je na svom mestu, ali ljudi moraju da saznaju da postoji.</p>
+<div data-en="<strong>What you get</strong>A place that belongs to you, clear information, a professional impression and a foundation for search, social media and recommendations." class="risk-item"><strong>Šta dobijate</strong>Mesto koje Vam pripada, jasne informacije, profesionalan utisak i osnovu za pretragu, društvene mreže i preporuke.</div><div data-en="<strong>What you don't get</strong>A guaranteed number of visits or clients, or a spot on the first page of Google. Search depends on many things nobody can promise to influence, and results come gradually." class="risk-item"><strong>Šta ne dobijate</strong>Garantovan broj poseta ili klijenata, niti mesto na prvoj strani Google-a. Pretraga zavisi od mnogo stvari na koje niko ne može da obeća uticaj, a rezultati dolaze postepeno.</div><div data-en="<strong>What stays your job</strong>Sharing the website (Instagram, business card, recommendations), keeping it accurate and answering inquiries." class="risk-item"><strong>Šta ostaje Vaš posao</strong>Da sajt delite (Instagram, vizit karta, preporuke), da ga održavate tačnim i da odgovarate na upite.</div>
   </div>
 
   <div class="card">
-    <h2>Šta se dešava bez sajta</h2>
-    <p>Bez sajta posao ne staje, mnogi uspešni biznisi rade samo preko preporuka i društvenih mreža. Ali Vi ne vidite one koji su došli do Vas, pogledali, nisu našli ono što su tražili i otišli. Takvi ne pišu poruku, jednostavno prelaze na sledeći profil ili sajt.</p>
-<div class="risk-item"><strong>Ne nalaze sve usluge i cene</strong>Cene su u jednoj objavi, usluge u drugoj, a radno vreme u priči koja je nestala posle 24 sata. Mnogi neće da listaju i pitaju, otići će kod onoga ko ima sve na jednom mestu.</div><div class="risk-item"><strong>Klijent mora da Vam piše za osnovne stvari</strong>Svako pitanje o ceni ili terminu je poruka na koju treba odgovoriti. Neki odustanu pre nego što je pošalju, a Vi to nikad ne saznate.</div><div class="risk-item"><strong>Ne pojavljujete se kad ljudi traže uslugu</strong>Ko traži uslugu u Vašem mestu, vidi one koji imaju sajt. Profil na društvenoj mreži se retko pojavljuje u takvoj pretrazi.</div><div class="risk-item"><strong>Kad neko proveri Vaše ime, nema šta da vidi</strong>Ljudi često proveravaju biznis pre nego što ga kontaktiraju. Bez sajta ostaju im samo profili i komentari.</div><div class="risk-item"><strong>Zavisite od jedne platforme</strong>Ako nalog nestane ili se pravila promene, gubite i publiku i sve što ste objavili.</div>
+    <h2 data-en="What happens without a website">Šta se dešava bez sajta</h2>
+    <p data-en="Without a website your business doesn't stop; many successful businesses run only on recommendations and social media. But you don't see the people who found you, looked around, didn't find what they were after and left. They don't send a message, they simply move on to the next profile or website.">Bez sajta posao ne staje, mnogi uspešni biznisi rade samo preko preporuka i društvenih mreža. Ali Vi ne vidite one koji su došli do Vas, pogledali, nisu našli ono što su tražili i otišli. Takvi ne pišu poruku, jednostavno prelaze na sledeći profil ili sajt.</p>
+<div data-en="<strong>They can't find all services and prices</strong>Prices are in one post, services in another, and working hours in a story that disappeared after 24 hours. Many won't scroll and ask; they'll go to whoever has everything in one place." class="risk-item"><strong>Ne nalaze sve usluge i cene</strong>Cene su u jednoj objavi, usluge u drugoj, a radno vreme u priči koja je nestala posle 24 sata. Mnogi neće da listaju i pitaju, otići će kod onoga ko ima sve na jednom mestu.</div><div data-en="<strong>Clients have to message you for basic things</strong>Every question about a price or an appointment is a message you have to answer. Some give up before sending it, and you never find out." class="risk-item"><strong>Klijent mora da Vam piše za osnovne stvari</strong>Svako pitanje o ceni ili terminu je poruka na koju treba odgovoriti. Neki odustanu pre nego što je pošalju, a Vi to nikad ne saznate.</div><div data-en="<strong>You don't appear when people search for a service</strong>Whoever searches for a service in your town sees those who have a website. A social media profile rarely shows up in such a search." class="risk-item"><strong>Ne pojavljujete se kad ljudi traže uslugu</strong>Ko traži uslugu u Vašem mestu, vidi one koji imaju sajt. Profil na društvenoj mreži se retko pojavljuje u takvoj pretrazi.</div><div data-en="<strong>When someone checks your name, there is nothing to see</strong>People often check a business before contacting it. Without a website, all they have left are profiles and comments." class="risk-item"><strong>Kad neko proveri Vaše ime, nema šta da vidi</strong>Ljudi često proveravaju biznis pre nego što ga kontaktiraju. Bez sajta ostaju im samo profili i komentari.</div><div data-en="<strong>You depend on a single platform</strong>If the account disappears or the rules change, you lose both your audience and everything you've posted." class="risk-item"><strong>Zavisite od jedne platforme</strong>Ako nalog nestane ili se pravila promene, gubite i publiku i sve što ste objavili.</div>
   </div>
 
   <div class="card">
-    <h2>Kada je pravi trenutak</h2>
-    <p>Sajt se najviše isplati kad već imate šta da ponudite i kad želite da do Vas dođe više ljudi nego što Vas sada zna. Ako tek počinjete, ne morate odmah da pravite veliki sajt. Možete da počnete sa jednostavnim sajtom na jednoj stranici, a da ga kasnije proširite kad posao krene.</p>
-    <p>Ako niste sigurni šta Vam treba, javite se. Zajedno ćemo da procenimo šta je za Vaš posao dovoljno za početak.</p>
+    <h2 data-en="When is the right time">Kada je pravi trenutak</h2>
+    <p data-en="A website pays off most when you already have something to offer and want more people to find you than know you now. If you're just starting out, you don't need to build a big site right away. You can start with a simple one-page website and expand it later once business picks up.">Sajt se najviše isplati kad već imate šta da ponudite i kad želite da do Vas dođe više ljudi nego što Vas sada zna. Ako tek počinjete, ne morate odmah da pravite veliki sajt. Možete da počnete sa jednostavnim sajtom na jednoj stranici, a da ga kasnije proširite kad posao krene.</p>
+    <p data-en="If you're not sure what you need, get in touch. Together we'll work out what is enough to start with for your business.">Ako niste sigurni šta Vam treba, javite se. Zajedno ćemo da procenimo šta je za Vaš posao dovoljno za početak.</p>
   </div>
 
   <div class="card">
-    <h2>Kako počinjemo</h2>
-    <p>Prvo ćemo da se dogovorimo šta Vam sajt treba da radi, a tek onda biramo paket. Pregled paketa i cena je na stranici <a href="paketi.html">Paketi</a>, a šta tačno svaki donosi i kome je namenjen, vidite u vodiču <a href="koji-paket-je-za-vas.html">Koji paket je za Vas?</a>.</p>
-    <p>Za neke delatnosti imamo i posebne vodiče: <a href="sajt-saloni.html">saloni</a>, <a href="sajt-auto-servis.html">auto servisi</a> i <a href="sajt-stomatolog.html">ordinacije</a>.</p>
+    <h2 data-en="How we start">Kako počinjemo</h2>
+    <p data-en="First we agree on what the website should do for you, and only then do we choose a package. An overview of packages and prices is on the <a href=&quot;paketi.html&quot;>Packages</a> page, and what exactly each one includes and who it's for is in the guide <a href=&quot;koji-paket-je-za-vas.html&quot;>Which package is right for you?</a>.">Prvo ćemo da se dogovorimo šta Vam sajt treba da radi, a tek onda biramo paket. Pregled paketa i cena je na stranici <a href="paketi.html">Paketi</a>, a šta tačno svaki donosi i kome je namenjen, vidite u vodiču <a href="koji-paket-je-za-vas.html">Koji paket je za Vas?</a>.</p>
+    <p data-en="We also have dedicated guides for some industries: <a href=&quot;sajt-saloni.html&quot;>salons</a>, <a href=&quot;sajt-auto-servis.html&quot;>auto repair shops</a> and <a href=&quot;sajt-stomatolog.html&quot;>dental practices</a>.">Za neke delatnosti imamo i posebne vodiče: <a href="sajt-saloni.html">saloni</a>, <a href="sajt-auto-servis.html">auto servisi</a> i <a href="sajt-stomatolog.html">ordinacije</a>.</p>
   </div>
 
-  <div class="highlight-box">
+  <div data-en="<strong>In short:</strong> A website is your place on the internet, where all the important information is in one spot. It doesn't promise clients by itself, but it's the foundation for new people to find, understand and contact you. We work from Zrenjanin and communicate with clients by email, Viber and Instagram, so you can order a website from anywhere in Serbia." class="highlight-box">
     <strong>Ukratko:</strong> Sajt je Vaše mesto na internetu, gde su sve važne informacije na jednom mestu. Ne obećava klijente sam od sebe, ali je osnova da Vas novi ljudi nađu, razumeju i kontaktiraju. Radimo iz Zrenjanina, a sa klijentima komuniciramo mejlom, Viberom i Instagramom, pa sajt možete da naručite iz bilo kog mesta u Srbiji.
   </div>
 
-  <p class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about a website for your business? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o sajtu za Vaš posao? <a href="kontakt.html">Pišite nam →</a></p>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/klijent-kontakt-forma.html#stranica","url":"https://dannwebworkshop.rs/klijent-kontakt-forma.html","name":"Kontakt forma na Vašem sajtu | DANN.web.workshop","description":"Vodič za klijente: šta dobijate sa kontakt formom, na šta obratiti pažnju i koje su obaveze vlasnika sajta koji prikuplja podatke.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Kontakt forma na Vašem sajtu","item":"https://dannwebworkshop.rs/klijent-kontakt-forma.html"}]}]}</script>
 <title>Kontakt forma na Vašem sajtu — šta treba da znate | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root{
     --ink:#1C1C1A; --sub:#63615c; --line:#e6e2d8; --bg:#faf8f3;
@@ -85,38 +86,38 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="wrap">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="wrap">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <header class="top">
     <span class="eyebrow">DANN.web.workshop</span>
-    <h1>Kontakt forma na Vašem sajtu — šta treba da znate</h1>
-    <p class="lead">Kratak vodič o tome šta dobijate, na šta treba da obratite pažnju i koje su Vaše obaveze kao vlasnika sajta koji prikuplja podatke posetilaca.</p>
+    <h1 data-en="The contact form on your website — what you need to know">Kontakt forma na Vašem sajtu — šta treba da znate</h1>
+    <p data-en="A short guide to what you get, what to pay attention to, and what your responsibilities are as the owner of a website that collects visitors' data." class="lead">Kratak vodič o tome šta dobijate, na šta treba da obratite pažnju i koje su Vaše obaveze kao vlasnika sajta koji prikuplja podatke posetilaca.</p>
   </header>
 
   <section class="blok">
-    <h2>Šta je kontakt forma</h2>
+    <h2 data-en="What a contact form is">Šta je kontakt forma</h2>
 
-    <p>Kontakt forma je kratak obrazac na Vašem sajtu preko kog posetilac može direktno da Vam pošalje poruku, bez otvaranja mejla i bez traženja Vašeg broja telefona. Posetilac popuni nekoliko polja, klikne na „Pošalji“, a poruka Vam stiže na mejl.</p>
+    <p data-en="A contact form is a short form on your website through which a visitor can send you a message directly, without opening their email or looking for your phone number. The visitor fills in a few fields, clicks “Send”, and the message arrives in your email.">Kontakt forma je kratak obrazac na Vašem sajtu preko kog posetilac može direktno da Vam pošalje poruku, bez otvaranja mejla i bez traženja Vašeg broja telefona. Posetilac popuni nekoliko polja, klikne na „Pošalji“, a poruka Vam stiže na mejl.</p>
 
     <div class="mockup">
-      <div class="field"><label>Ime i prezime</label><div class="val">Ime Prezime</div></div>
-      <div class="field"><label>Email ili telefon</label><div class="val">ime@primer.com</div></div>
-      <div class="field"><label>Poruka</label><div class="val">Zanima me termin za sledeću nedelju...</div></div>
-      <div class="btn">Pošalji upit</div>
+      <div class="field"><label data-en="Full name">Ime i prezime</label><div data-en="First Last" class="val">Ime Prezime</div></div>
+      <div class="field"><label data-en="Email or phone">Email ili telefon</label><div data-en="name@example.com" class="val">ime@primer.com</div></div>
+      <div class="field"><label data-en="Message">Poruka</label><div data-en="I'm interested in an appointment next week..." class="val">Zanima me termin za sledeću nedelju...</div></div>
+      <div data-en="Send inquiry" class="btn">Pošalji upit</div>
     </div>
 
-    <p>To je celo iskustvo za posetioca: jednostavno i brzo, bez napuštanja sajta. Za Vas to znači da poruke stižu direktno na mejl, spremne za odgovor.</p>
+    <p data-en="That's the whole experience for the visitor: simple and quick, without leaving the website. For you it means messages arrive straight in your email, ready to be answered.">To je celo iskustvo za posetioca: jednostavno i brzo, bez napuštanja sajta. Za Vas to znači da poruke stižu direktno na mejl, spremne za odgovor.</p>
   </section>
 
   <hr class="divider">
 
   <section class="blok">
-    <h2>Zašto je važno da se podaci čuvaju pažljivo</h2>
+    <h2 data-en="Why it matters to handle data carefully">Zašto je važno da se podaci čuvaju pažljivo</h2>
 
-    <p>Kad neko popuni formu, ostavlja Vam svoje <strong>lične podatke</strong> — ime, kontakt, a ponekad i detalje o tome šta traži. To nisu samo slova na ekranu, već podaci stvarne osobe, i zakon ih tretira ozbiljno, bez obzira na to koliko je Vaš sajt mali ili posao lokalan.</p>
+    <p data-en="When someone fills in the form, they leave you their <strong>personal data</strong> — name, contact details, and sometimes details about what they are looking for. These aren't just letters on a screen, they are a real person's data, and the law treats them seriously, no matter how small your website or how local your business.">Kad neko popuni formu, ostavlja Vam svoje <strong>lične podatke</strong> — ime, kontakt, a ponekad i detalje o tome šta traži. To nisu samo slova na ekranu, već podaci stvarne osobe, i zakon ih tretira ozbiljno, bez obzira na to koliko je Vaš sajt mali ili posao lokalan.</p>
 
-    <div class="warn">
+    <div data-en="<strong>Good to know</strong> As soon as you collect visitors' name, email or phone — whether through the contact form or appointment booking — you, as the owner of the website and the business, decide what is collected, who has access and how long it is kept. That is why looking after that data is in your hands. The good news is that with a few simple habits it isn't complicated." class="warn">
       <strong>Dobro je znati</strong>
       Čim prikupljate ime, mejl ili telefon posetilaca — bilo preko kontakt forme, bilo preko zakazivanja termina — Vi, kao vlasnik sajta i biznisa, odlučujete šta se prikuplja, ko ima pristup i koliko dugo se čuva. Zato je i briga o tim podacima u Vašim rukama. Dobra vest je da uz nekoliko jednostavnih navika to nije komplikovano.
     </div>
@@ -125,42 +126,42 @@
   <hr class="divider">
 
   <section class="blok">
-    <h2>Na šta treba da obratite pažnju</h2>
+    <h2 data-en="What to pay attention to">Na šta treba da obratite pažnju</h2>
 
-    <h3>Spam poruke</h3>
-    <p>Povremeno će stići besmislena ili reklamna poruka od automatizovanog bota, a ne od stvarne osobe. To je uobičajena pojava na internetu i ne znači da nešto ne radi kako treba.</p>
+    <h3 data-en="Spam messages">Spam poruke</h3>
+    <p data-en="Every now and then a meaningless or promotional message will arrive from an automated bot rather than a real person. This is common on the internet and doesn't mean something isn't working properly.">Povremeno će stići besmislena ili reklamna poruka od automatizovanog bota, a ne od stvarne osobe. To je uobičajena pojava na internetu i ne znači da nešto ne radi kako treba.</p>
 
-    <h3>Ko ima pristup podacima</h3>
-    <p>Poruke i podaci koje prikupite obično stižu na Vaš mejl i/ili u tabelu (npr. Google Sheet) koju Vi kontrolišete. Zato je važno da pristup imaju samo oni kojima je zaista potreban: koristite jaku lozinku i ne delite nalog bez razloga.</p>
+    <h3 data-en="Who has access to the data">Ko ima pristup podacima</h3>
+    <p data-en="Messages and data you collect usually arrive in your email and/or in a spreadsheet (e.g. a Google Sheet) that you control. That's why it matters that only those who really need it have access: use a strong password and don't share the account without a reason.">Poruke i podaci koje prikupite obično stižu na Vaš mejl i/ili u tabelu (npr. Google Sheet) koju Vi kontrolišete. Zato je važno da pristup imaju samo oni kojima je zaista potreban: koristite jaku lozinku i ne delite nalog bez razloga.</p>
 
-    <h3>Nijedan sistem nije potpuno bezbedan</h3>
-    <p>Nijedan sistem nije 100% otporan na greške ili zloupotrebu. Ono na šta možete da utičete jeste da ne prikupljate više podataka nego što Vam je zaista potrebno i da ih ne čuvate duže nego što ima smisla.</p>
+    <h3 data-en="No system is completely secure">Nijedan sistem nije potpuno bezbedan</h3>
+    <p data-en="No system is 100% resistant to errors or misuse. What you can influence is not collecting more data than you really need and not keeping it longer than makes sense.">Nijedan sistem nije 100% otporan na greške ili zloupotrebu. Ono na šta možete da utičete jeste da ne prikupljate više podataka nego što Vam je zaista potrebno i da ih ne čuvate duže nego što ima smisla.</p>
 
-    <h3>Ljudi imaju pravo da pitaju</h3>
-    <p>Osoba koja Vam je ostavila podatke ima pravo da pita šta ste sačuvali o njoj i da zatraži brisanje. To je potpuno uobičajen zahtev, pa je dobro unapred znati da može stići.</p>
+    <h3 data-en="People have the right to ask">Ljudi imaju pravo da pitaju</h3>
+    <p data-en="A person who left you their data has the right to ask what you have stored about them and to request deletion. That is a perfectly ordinary request, so it's good to know in advance that it may come.">Osoba koja Vam je ostavila podatke ima pravo da pita šta ste sačuvali o njoj i da zatraži brisanje. To je potpuno uobičajen zahtev, pa je dobro unapred znati da može stići.</p>
   </section>
 
   <hr class="divider">
 
   <section class="blok">
-    <h2>Politika privatnosti — šta zakon predviđa</h2>
+    <h2 data-en="Privacy policy — what the law requires">Politika privatnosti — šta zakon predviđa</h2>
 
-    <p>U Srbiji važi <strong>Zakon o zaštiti podataka o ličnosti</strong> („Sl. glasnik RS“, br. 87/2018), napravljen po uzoru na evropski GDPR. Ukratko: <strong>svaki sajt koji prikuplja lične podatke posetilaca mora da ima jasno vidljivu Politiku privatnosti</strong>, bez obzira na veličinu biznisa.</p>
+    <p data-en="In Serbia the <strong>Law on Personal Data Protection</strong> (“Official Gazette of RS”, no. 87/2018) applies, modelled on the European GDPR. In short: <strong>every website that collects visitors' personal data must have a clearly visible Privacy Policy</strong>, regardless of the size of the business.">U Srbiji važi <strong>Zakon o zaštiti podataka o ličnosti</strong> („Sl. glasnik RS“, br. 87/2018), napravljen po uzoru na evropski GDPR. Ukratko: <strong>svaki sajt koji prikuplja lične podatke posetilaca mora da ima jasno vidljivu Politiku privatnosti</strong>, bez obzira na veličinu biznisa.</p>
 
-    <p>Ta stranica na sajtu treba jednostavnim jezikom da objasni:</p>
+    <p data-en="That page on the website should explain, in plain language:">Ta stranica na sajtu treba jednostavnim jezikom da objasni:</p>
     <ul>
-      <li>koje podatke prikupljate (ime, mejl, telefon...)</li>
-      <li>zašto ih prikupljate (npr. da biste odgovorili na upit ili potvrdili termin)</li>
-      <li>koliko dugo ih čuvate</li>
-      <li>kako neko može da zatraži uvid ili brisanje svojih podataka</li>
+      <li data-en="which data you collect (name, email, phone...)">koje podatke prikupljate (ime, mejl, telefon...)</li>
+      <li data-en="why you collect it (e.g. to reply to an inquiry or confirm an appointment)">zašto ih prikupljate (npr. da biste odgovorili na upit ili potvrdili termin)</li>
+      <li data-en="how long you keep it">koliko dugo ih čuvate</li>
+      <li data-en="how someone can request access to or deletion of their data">kako neko može da zatraži uvid ili brisanje svojih podataka</li>
     </ul>
 
-    <div class="legal">
+    <div data-en="<strong>Note: we are not lawyers</strong> This document is a general notice that this obligation exists. It is not legal advice and does not replace consulting a lawyer. For the exact text of a Privacy Policy tailored to your business, we recommend contacting a lawyer or an accountant, especially if you plan to work with clients from abroad (EU), where the GDPR also applies." class="legal">
       <strong>Napomena: mi nismo advokati</strong>
       Ovaj dokument je opšte obaveštenje da ova obaveza postoji. Nije pravni savet i ne zamenjuje konsultaciju sa advokatom. Za tačan tekst Politike privatnosti prilagođen Vašem biznisu preporučujemo da se obratite advokatu ili knjigovođi, posebno ako planirate da radite i sa klijentima iz inostranstva (EU), gde dodatno važi GDPR.
     </div>
 
-    <div class="ok">
+    <div data-en="<strong>How we can help</strong> We can prepare a basic, generic Privacy Policy as part of building the website (agreed separately). It is a starting point that you should review, adapt to your business and, ideally, confirm with someone who works in this legal area before publishing." class="ok">
       <strong>Kako možemo da pomognemo</strong>
       Možemo da pripremimo osnovnu, generičku Politiku privatnosti kao deo izrade sajta (dogovara se posebno). To je polazna tačka koju treba da pregledate, prilagodite svom poslovanju i, idealno, potvrdite sa nekim ko se pravno bavi ovom oblašću pre objavljivanja.
     </div>
@@ -169,20 +170,59 @@
   <hr class="divider">
 
   <section class="blok">
-    <h2>Ukratko</h2>
-    <p>Kontakt forma je jednostavna i korisna funkcija, a uz nju dolazi i odgovornost, jer radite sa tuđim ličnim podacima. To ne treba da Vas brine: kao vlasnik sajta Vi odlučujete kako se podaci koriste, a uz malo pažnje (jaka lozinka, prikupljanje samo onoga što je potrebno, jasna Politika privatnosti) to je potpuno uobičajen i bezbedan deo vođenja sajta.</p>
+    <h2 data-en="In short">Ukratko</h2>
+    <p data-en="A contact form is a simple and useful feature, and it comes with responsibility, because you work with other people's personal data. That shouldn't worry you: as the owner of the website, you decide how data is used, and with a little care (a strong password, collecting only what is needed, a clear Privacy Policy) it is a perfectly normal and safe part of running a website.">Kontakt forma je jednostavna i korisna funkcija, a uz nju dolazi i odgovornost, jer radite sa tuđim ličnim podacima. To ne treba da Vas brine: kao vlasnik sajta Vi odlučujete kako se podaci koriste, a uz malo pažnje (jaka lozinka, prikupljanje samo onoga što je potrebno, jasna Politika privatnosti) to je potpuno uobičajen i bezbedan deo vođenja sajta.</p>
   </section>
 
-  <p class="dann-cta">Imate pitanje o svom sajtu? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about your website? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o svom sajtu? <a href="kontakt.html">Pišite nam →</a></p>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

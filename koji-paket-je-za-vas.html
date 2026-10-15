@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/koji-paket-je-za-vas.html#stranica","url":"https://dannwebworkshop.rs/koji-paket-je-za-vas.html","name":"Koji paket je za Vas? | DANN.web.workshop","description":"Vodič za izbor paketa za sajt: Start, Comfort, Premium, Exclusive i Mini Booking — za koga je koji nivo i šta nosi.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Koji paket je za Vas?","item":"https://dannwebworkshop.rs/koji-paket-je-za-vas.html"}]}]}</script>
 <title>Koji paket je za Vas? | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3; --card: #FFFFFF; --ink: #1C1C1A; --ink-soft: #63615C;
@@ -89,68 +90,107 @@
 <style>@media (max-width:640px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}</style><link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="page">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="doc-header">
-    <div class="doc-kicker">Izbor paketa</div>
-    <h1>Koji paket je za Vas?</h1>
-    <p class="doc-sub">Pet nivoa, od jednostavnog predstavljanja do potpuno prilagođenog sajta sa dubokim SEO-om. Ovaj vodič Vam pomaže da brzo prepoznate koji nivo odgovara Vašem biznisu.</p>
+    <div data-en="Choosing a package" class="doc-kicker">Izbor paketa</div>
+    <h1 data-en="Which package is right for you?">Koji paket je za Vas?</h1>
+    <p data-en="Five levels, from a simple presentation to a fully customised website with deep SEO. This guide helps you quickly recognise which level fits your business." class="doc-sub">Pet nivoa, od jednostavnog predstavljanja do potpuno prilagođenog sajta sa dubokim SEO-om. Ovaj vodič Vam pomaže da brzo prepoznate koji nivo odgovara Vašem biznisu.</p>
   </div>
 
   <div class="guide-list">
-    <div class="guide-row"><span class="pkg">Start</span><span class="who">Biznis kome je dovoljna jedna dobro složena stranica sa svim osnovnim informacijama.</span></div>
-    <div class="guide-row"><span class="pkg">Comfort</span><span class="who">Saloni, restorani, apartmani, zanatlije i firme kojima treba više prostora i prava kontakt forma.</span></div>
-    <div class="guide-row"><span class="pkg">Premium</span><span class="who">Ozbiljnije online prisustvo — napredniji tehnički SEO, veći broj stranica, praćenje poseta.</span></div>
-    <div class="guide-row"><span class="pkg">Exclusive</span><span class="who">Kompletno, custom rešenje — duboka struktura, mikro-interakcije, admin panel za samostalno uređivanje.</span></div>
-    <div class="guide-row"><span class="pkg">Mini Booking</span><span class="who">Salon ili uslužni biznis kome je online zakazivanje ključan deo sajta, od samog starta.</span></div>
+    <div data-en="<span class=&quot;pkg&quot;>Start</span><span class=&quot;who&quot;>A business for which one well-composed page with all the basic information is enough.</span>" class="guide-row"><span class="pkg">Start</span><span class="who">Biznis kome je dovoljna jedna dobro složena stranica sa svim osnovnim informacijama.</span></div>
+    <div data-en="<span class=&quot;pkg&quot;>Comfort</span><span class=&quot;who&quot;>Salons, restaurants, apartments, craftsmen and companies that need more space and a real contact form.</span>" class="guide-row"><span class="pkg">Comfort</span><span class="who">Saloni, restorani, apartmani, zanatlije i firme kojima treba više prostora i prava kontakt forma.</span></div>
+    <div data-en="<span class=&quot;pkg&quot;>Premium</span><span class=&quot;who&quot;>A more serious online presence — more advanced technical SEO, more pages, visitor tracking.</span>" class="guide-row"><span class="pkg">Premium</span><span class="who">Ozbiljnije online prisustvo — napredniji tehnički SEO, veći broj stranica, praćenje poseta.</span></div>
+    <div data-en="<span class=&quot;pkg&quot;>Exclusive</span><span class=&quot;who&quot;>A complete, custom solution — deep structure, micro-interactions, an admin panel for editing on your own.</span>" class="guide-row"><span class="pkg">Exclusive</span><span class="who">Kompletno, custom rešenje — duboka struktura, mikro-interakcije, admin panel za samostalno uređivanje.</span></div>
+    <div data-en="<span class=&quot;pkg&quot;>Mini Booking</span><span class=&quot;who&quot;>A salon or service business for which online booking is a key part of the website, from the very start.</span>" class="guide-row"><span class="pkg">Mini Booking</span><span class="who">Salon ili uslužni biznis kome je online zakazivanje ključan deo sajta, od samog starta.</span></div>
   </div>
 
   <section>
     <div class="section-head">
-      <h2>Uporedna tabela</h2>
-      <p>Šta tačno dobijate na svakom nivou.</p>
+      <h2 data-en="Comparison table">Uporedna tabela</h2>
+      <p data-en="What exactly you get at each level.">Šta tačno dobijate na svakom nivou.</p>
     </div>
     <table>
-      <thead><tr><th>Kriterijum</th><th>Start</th><th>Comfort</th><th>Premium</th><th>Exclusive</th></tr></thead>
+      <thead><tr><th data-en="Criterion">Kriterijum</th><th data-en="Start">Start</th><th data-en="Comfort">Comfort</th><th data-en="Premium">Premium</th><th data-en="Exclusive">Exclusive</th></tr></thead>
       <tbody>
-        <tr><td>Broj stranica</td><td>1</td><td>Do 5</td><td>Do 8</td><td>Do 15</td></tr>
-        <tr><td>Fotografije</td><td>5</td><td>10</td><td>30</td><td>50</td></tr>
-        <tr><td>Kontakt forma</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-        <tr><td>FAQ sekcija</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Sitemap i Robots.txt</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Search Console i Analytics</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Mikro-interakcije</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
-        <tr><td>Admin panel za sadržaj</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
-        <tr><td>Krugova izmena</td><td>1</td><td>2</td><td>2</td><td>3</td></tr>
-        <tr><td>Rok izrade</td><td>3–5 radnih dana</td><td>5–8 radnih dana</td><td>7–14 radnih dana</td><td>10–20 radnih dana</td></tr>
+        <tr><td data-en="Number of pages">Broj stranica</td><td>1</td><td data-en="Up to 5">Do 5</td><td data-en="Up to 8">Do 8</td><td data-en="Up to 15">Do 15</td></tr>
+        <tr><td data-en="Photos">Fotografije</td><td>5</td><td>10</td><td>30</td><td>50</td></tr>
+        <tr><td data-en="Contact form">Kontakt forma</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+        <tr><td data-en="FAQ section">FAQ sekcija</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+        <tr><td data-en="Sitemap and Robots.txt">Sitemap i Robots.txt</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+        <tr><td data-en="Search Console and Analytics">Search Console i Analytics</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+        <tr><td data-en="Micro-interactions">Mikro-interakcije</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+        <tr><td data-en="Admin panel for content">Admin panel za sadržaj</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+        <tr><td data-en="Rounds of revisions">Krugova izmena</td><td>1</td><td>2</td><td>2</td><td>3</td></tr>
+        <tr><td data-en="Timeline">Rok izrade</td><td data-en="3–5 working days">3–5 radnih dana</td><td data-en="5–8 working days">5–8 radnih dana</td><td data-en="7–14 working days">7–14 radnih dana</td><td data-en="10–20 working days">10–20 radnih dana</td></tr>
       </tbody>
     </table>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Mini Booking — posebna opcija</h2>
-      <p>Ne uklapa se u istu lestvicu kao ostali paketi, jer je fokusiran na jednu stvar.</p>
+      <h2 data-en="Mini Booking — a special option">Mini Booking — posebna opcija</h2>
+      <p data-en="It doesn't fit the same ladder as the other packages, because it is focused on one thing.">Ne uklapa se u istu lestvicu kao ostali paketi, jer je fokusiran na jednu stvar.</p>
     </div>
     <div class="mini-box">
-      <h3>Mini Booking</h3>
-      <p>Mali, custom sajt (do 3 stranice) sa online zakazivanjem ugrađenim od starta — izbor usluge, provera slobodnih termina, admin panel za radno vreme. Najbolji izbor ako Vam je zakazivanje termina centralna funkcija sajta, ne dodatak.</p>
+      <h3 data-en="Mini Booking">Mini Booking</h3>
+      <p data-en="A small, custom website (up to 3 pages) with online booking built in from the start — choice of service, checking free slots, an admin panel for working hours. The best choice if booking appointments is the central function of your website, not an add-on.">Mali, custom sajt (do 3 stranice) sa online zakazivanjem ugrađenim od starta — izbor usluge, provera slobodnih termina, admin panel za radno vreme. Najbolji izbor ako Vam je zakazivanje termina centralna funkcija sajta, ne dodatak.</p>
     </div>
   </section>
 
-  <div class="final-note">
+  <div data-en="<strong>Note:</strong> If you need an online shop (not just a presentation of your business), see the separate guide — <a class=&quot;dann-link&quot; href=&quot;koji-sistem-odgovara.html&quot;>“Which system suits your business”</a> — which explains the three levels of Webshop solutions. Not sure which level suits you? <a class=&quot;dann-link&quot; href=&quot;kontakt.html&quot;>Get in touch</a> — we'll gladly go through your needs together." class="final-note">
     <strong>Napomena:</strong> Ako Vam je potrebna online prodavnica (ne samo predstavljanje biznisa), pogledajte poseban vodič — <a class="dann-link" href="koji-sistem-odgovara.html">„Koji sistem odgovara Vašem biznisu“</a> — koji objašnjava tri nivoa Webshop rešenja. Nesigurni ste koji nivo Vam odgovara? <a class="dann-link" href="kontakt.html">Javite se</a> — rado ćemo zajedno proći kroz Vaše potrebe.
   </div>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

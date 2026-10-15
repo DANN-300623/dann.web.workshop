@@ -24,9 +24,10 @@
 <meta name="twitter:image" content="https://dannwebworkshop.rs/og-image.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/seo-objasnjeno.html#stranica","url":"https://dannwebworkshop.rs/seo-objasnjeno.html","name":"Šta je SEO i kako ga uvodimo? | DANN.web.workshop","description":"Šta je tehnički SEO i šta se podešava jednom, pri izradi sajta: naslovi, opisi, sitemap, brzina, mobilni prikaz i druga osnovna podešavanja.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Tehnički SEO","item":"https://dannwebworkshop.rs/seo-objasnjeno.html"}]}]}</script>
 <title>Šta je SEO i kako ga uvodimo? | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -103,13 +104,13 @@
 </head>
 <body>
 
-<div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="page">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="doc-header">
-    <div class="doc-kicker">DANN • Resursi</div>
-    <h1>Tehnički SEO — šta radimo pri izradi sajta</h1>
-    <p class="doc-sub">
+    <div data-en="DANN • Resources" class="doc-kicker">DANN • Resursi</div>
+    <h1 data-en="Technical SEO — what we do when building a website">Tehnički SEO — šta radimo pri izradi sajta</h1>
+    <p data-en="SEO has two sides. This page covers only one — the technical settings that are done ONCE, when the website is built, and are part of what we deliver." class="doc-sub">
       SEO ima dve strane. Ova stranica pokriva samo jednu — tehnička podešavanja
       koja se rade JEDNOM, pri izradi sajta, i deo su onoga što isporučujemo.
     </p>
@@ -117,13 +118,13 @@
 
   <section>
     <div class="plain-box">
-      <p>
+      <p data-en="<strong>Technical SEO</strong> is everything that is set up on the website itself, once, and stays that way. It differs from <strong>ongoing SEO</strong> (a regular blog, keyword tracking, gathering links from other websites) — that is monthly marketing work, not part of building a website, and we don't offer it.">
         <strong>Tehnički SEO</strong> je sve ono što se podesi na samom sajtu, jednom, i ostaje tako.
         Razlikuje se od <strong>kontinuiranog SEO-a</strong> (redovan blog, praćenje ključnih reči,
         prikupljanje linkova sa drugih sajtova) — to je mesečni marketinški rad, ne deo izrade sajta,
         i mi ga ne nudimo.
       </p>
-      <p>
+      <p data-en="Below is every technical item we build in, explained simply.">
         Ispod je svaka tehnička stavka koju ugrađujemo, objašnjena jednostavno.
       </p>
     </div>
@@ -131,129 +132,129 @@
 
   <section>
     <div class="section-head">
-      <h2>Šta tačno radimo</h2>
+      <h2 data-en="What exactly we do">Šta tačno radimo</h2>
     </div>
 
     <div class="term-list">
 
       <div class="term-card">
-        <span class="term-name">Meta naslov</span>
-        <h3>Naslov koji se vidi u Google rezultatu</h3>
-        <p>Plavi tekst koji se prvi vidi kad neko pretraži nešto povezano sa Vašim poslom.</p>
+        <span data-en="Meta title" class="term-name">Meta naslov</span>
+        <h3 data-en="The title shown in the Google result">Naslov koji se vidi u Google rezultatu</h3>
+        <p data-en="The blue text people see first when they search for something related to your business.">Plavi tekst koji se prvi vidi kad neko pretraži nešto povezano sa Vašim poslom.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Meta opis</span>
-        <h3>Rečenica ispod naslova u rezultatu</h3>
-        <p>Kratak opis koji objašnjava o čemu je stranica, pre nego što neko klikne.</p>
+        <span data-en="Meta description" class="term-name">Meta opis</span>
+        <h3 data-en="The sentence under the title in the result">Rečenica ispod naslova u rezultatu</h3>
+        <p data-en="A short description explaining what the page is about, before anyone clicks.">Kratak opis koji objašnjava o čemu je stranica, pre nego što neko klikne.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Struktura naslova (H1-H6)</span>
-        <h3>Logičan redosled naslova na stranici</h3>
-        <p>Jedan glavni naslov, pa podnaslovi ispod njega — ne haotičan raspored teksta.</p>
+        <span data-en="Heading structure (H1-H6)" class="term-name">Struktura naslova (H1-H6)</span>
+        <h3 data-en="A logical order of headings on the page">Logičan redosled naslova na stranici</h3>
+        <p data-en="One main heading, then subheadings below it — not a chaotic arrangement of text.">Jedan glavni naslov, pa podnaslovi ispod njega — ne haotičan raspored teksta.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Alt tekst</span>
-        <h3>Opis uz svaku sliku</h3>
-        <p>Kratak tekst koji kaže šta je na slici — čita ga Google, i čitač ekrana za slepe korisnike.</p>
+        <span data-en="Alt text" class="term-name">Alt tekst</span>
+        <h3 data-en="A description for every image">Opis uz svaku sliku</h3>
+        <p data-en="A short text saying what is in the image — read by Google, and by screen readers for blind users.">Kratak tekst koji kaže šta je na slici — čita ga Google, i čitač ekrana za slepe korisnike.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Čitljivi URL-ovi</span>
-        <h3>Jasne adrese stranica</h3>
-        <p>Na primer <code>/usluge</code>, umesto <code>/page?id=384</code>.</p>
+        <span data-en="Readable URLs" class="term-name">Čitljivi URL-ovi</span>
+        <h3 data-en="Clear page addresses">Jasne adrese stranica</h3>
+        <p data-en="For example <code>/usluge</code>, instead of <code>/page?id=384</code>.">Na primer <code>/usluge</code>, umesto <code>/page?id=384</code>.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Favicon</span>
-        <h3>Mala ikonica sajta</h3>
-        <p>Ona koju vidite u tabu browsera — pojavljuje se i u Google rezultatima na telefonu.</p>
+        <span data-en="Favicon" class="term-name">Favicon</span>
+        <h3 data-en="The small icon of the website">Mala ikonica sajta</h3>
+        <p data-en="The one you see in the browser tab — it also appears in Google results on phones.">Ona koju vidite u tabu browsera — pojavljuje se i u Google rezultatima na telefonu.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Sitemap</span>
-        <h3>Popis svih stranica sajta, za Google</h3>
-        <p>Olakšava Google-u da pronađe sve stranice odjednom, umesto da ih traži klikanjem.</p>
+        <span data-en="Sitemap" class="term-name">Sitemap</span>
+        <h3 data-en="A list of all pages on the website, for Google">Popis svih stranica sajta, za Google</h3>
+        <p data-en="Makes it easier for Google to find all pages at once, instead of looking for them by clicking around.">Olakšava Google-u da pronađe sve stranice odjednom, umesto da ih traži klikanjem.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Robots.txt</span>
-        <h3>Uputstvo šta Google sme da pregleda</h3>
-        <p>Kaže robotima koje delove sajta da preskoče (npr. admin panel).</p>
+        <span data-en="Robots.txt" class="term-name">Robots.txt</span>
+        <h3 data-en="Instructions on what Google may crawl">Uputstvo šta Google sme da pregleda</h3>
+        <p data-en="Tells robots which parts of the website to skip (e.g. the admin panel).">Kaže robotima koje delove sajta da preskoče (npr. admin panel).</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">HTTPS/SSL</span>
-        <h3>Bezbedna konekcija</h3>
-        <p>Katanac u adresnoj traci — Google favorizuje sajtove koji ga imaju. Zavisi od hostinga, ne od samog sajta — pomažemo pri odabiru hostinga koji ovu zaštitu uključuje u paket.</p>
+        <span data-en="HTTPS/SSL" class="term-name">HTTPS/SSL</span>
+        <h3 data-en="A secure connection">Bezbedna konekcija</h3>
+        <p data-en="The padlock in the address bar — Google favours websites that have it. It depends on the hosting, not on the website itself — we help you choose hosting that includes this protection in the package.">Katanac u adresnoj traci — Google favorizuje sajtove koji ga imaju. Zavisi od hostinga, ne od samog sajta — pomažemo pri odabiru hostinga koji ovu zaštitu uključuje u paket.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Mobile-friendly dizajn</span>
-        <h3>Sajt radi ispravno na telefonu</h3>
-        <p>Ne samo da izgleda dobro — dugmad i tekst rade kako treba na manjem ekranu.</p>
+        <span data-en="Mobile-friendly design" class="term-name">Mobile-friendly dizajn</span>
+        <h3 data-en="The website works properly on a phone">Sajt radi ispravno na telefonu</h3>
+        <p data-en="Not only does it look good — buttons and text work properly on a smaller screen.">Ne samo da izgleda dobro — dugmad i tekst rade kako treba na manjem ekranu.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Brzina učitavanja</span>
-        <h3>Koliko brzo se sajt otvara</h3>
-        <p>Rešava se pri samoj izradi — kompresovane slike, čist kod, bez nepotrebnih dodataka.</p>
+        <span data-en="Loading speed" class="term-name">Brzina učitavanja</span>
+        <h3 data-en="How quickly the website opens">Koliko brzo se sajt otvara</h3>
+        <p data-en="Solved during the build itself — compressed images, clean code, no unnecessary add-ons.">Rešava se pri samoj izradi — kompresovane slike, čist kod, bez nepotrebnih dodataka.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Interno linkovanje</span>
-        <h3>Stranice sajta povezane kroz sadržaj</h3>
-        <p>Prirodni linkovi između stranica (npr. sa Usluga ka Kontaktu), ne izolovane celine.</p>
+        <span data-en="Internal linking" class="term-name">Interno linkovanje</span>
+        <h3 data-en="Website pages connected through content">Stranice sajta povezane kroz sadržaj</h3>
+        <p data-en="Natural links between pages (e.g. from Services to Contact), not isolated pieces.">Prirodni linkovi između stranica (npr. sa Usluga ka Kontaktu), ne izolovane celine.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">404 stranica</span>
-        <h3>Šta se prikazuje kad adresa ne postoji</h3>
-        <p>Umesto praznog ekrana, jasna poruka i link nazad na početnu.</p>
+        <span data-en="404 page" class="term-name">404 stranica</span>
+        <h3 data-en="What is shown when an address doesn't exist">Šta se prikazuje kad adresa ne postoji</h3>
+        <p data-en="Instead of a blank screen, a clear message and a link back to the home page.">Umesto praznog ekrana, jasna poruka i link nazad na početnu.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Canonical oznaka</span>
-        <h3>Koja je "prava" verzija stranice</h3>
-        <p>Sprečava da Google zabuni istu stranicu dostupnu na dve adrese kao dva različita sajta.</p>
+        <span data-en="Canonical tag" class="term-name">Canonical oznaka</span>
+        <h3 data-en="Which is the &quot;real&quot; version of a page">Koja je "prava" verzija stranice</h3>
+        <p data-en="Prevents Google from mistaking the same page available at two addresses for two different websites.">Sprečava da Google zabuni istu stranicu dostupnu na dve adrese kao dva različita sajta.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Open Graph</span>
-        <h3>Izgled linka kad se podeli</h3>
-        <p>Da li se, kad pošaljete link na Viber ili Facebook, pojavljuje lepa slika i naslov, ili goli tekst.</p>
+        <span data-en="Open Graph" class="term-name">Open Graph</span>
+        <h3 data-en="How a link looks when shared">Izgled linka kad se podeli</h3>
+        <p data-en="Whether a nice image and title appear when you send the link on Viber or Facebook, or just bare text.">Da li se, kad pošaljete link na Viber ili Facebook, pojavljuje lepa slika i naslov, ili goli tekst.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Schema oznake</span>
-        <h3>Dodatni podaci direktno u Google rezultatu</h3>
-        <p>Omogućava da se pre klika vide stvari poput radnog vremena ili ocena, gde ima smisla.</p>
+        <span data-en="Schema markup" class="term-name">Schema oznake</span>
+        <h3 data-en="Extra data directly in the Google result">Dodatni podaci direktno u Google rezultatu</h3>
+        <p data-en="Lets things like working hours or ratings be seen before the click, where it makes sense.">Omogućava da se pre klika vide stvari poput radnog vremena ili ocena, gde ima smisla.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Google Business profil</span>
-        <h3>Kartica na Google mapama i pretrazi</h3>
-        <p>Pomažemo da se pravilno postavi; u Exclusive paketu posvećujemo mu dodatnu pažnju.</p>
+        <span data-en="Google Business Profile" class="term-name">Google Business profil</span>
+        <h3 data-en="The card on Google Maps and search">Kartica na Google mapama i pretrazi</h3>
+        <p data-en="We help set it up properly; in the Exclusive package we give it extra attention.">Pomažemo da se pravilno postavi; u Exclusive paketu posvećujemo mu dodatnu pažnju.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Google Search Console</span>
-        <h3>Alat koji pokazuje kako Vas Google vidi</h3>
-        <p>Pokazuje koliko ljudi vidi sajt u pretrazi, i da li postoji tehnički problem.</p>
+        <span data-en="Google Search Console" class="term-name">Google Search Console</span>
+        <h3 data-en="A tool that shows how Google sees you">Alat koji pokazuje kako Vas Google vidi</h3>
+        <p data-en="Shows how many people see the website in search, and whether there is a technical problem.">Pokazuje koliko ljudi vidi sajt u pretrazi, i da li postoji tehnički problem.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Google Analytics</span>
-        <h3>Broji posetioce sajta</h3>
-        <p>Koliko ljudi dolazi, sa kog uređaja, koje stranice gledaju.</p>
+        <span data-en="Google Analytics" class="term-name">Google Analytics</span>
+        <h3 data-en="Counts website visitors">Broji posetioce sajta</h3>
+        <p data-en="How many people come, from which device, which pages they view.">Koliko ljudi dolazi, sa kog uređaja, koje stranice gledaju.</p>
       </div>
 
       <div class="term-card">
-        <span class="term-name">Ključne reči u tekstu</span>
-        <h3>Sadržaj piše se stvarnim rečima Vaše usluge</h3>
-        <p>Tekst prirodno sadrži ono što ljudi zaista pretražuju (npr. "šišanje", ne apstraktne zamene).</p>
+        <span data-en="Keywords in the text" class="term-name">Ključne reči u tekstu</span>
+        <h3 data-en="Content is written in the real words of your service">Sadržaj piše se stvarnim rečima Vaše usluge</h3>
+        <p data-en="The text naturally contains what people actually search for (e.g. &quot;haircut&quot;, not abstract substitutes).">Tekst prirodno sadrži ono što ljudi zaista pretražuju (npr. "šišanje", ne apstraktne zamene).</p>
       </div>
 
     </div>
@@ -261,47 +262,47 @@
 
   <section>
     <div class="section-head">
-      <h2>Po paketima</h2>
+      <h2 data-en="By package">Po paketima</h2>
     </div>
 
     <table>
       <tr>
-        <th>Stavka</th>
-        <th>Start</th>
-        <th>Comfort</th>
-        <th>Premium</th>
-        <th>Exclusive</th>
+        <th data-en="Item">Stavka</th>
+        <th data-en="Start">Start</th>
+        <th data-en="Comfort">Comfort</th>
+        <th data-en="Premium">Premium</th>
+        <th data-en="Exclusive">Exclusive</th>
       </tr>
       <tr>
-        <td>Osnovna tehnička podešavanja (meta naslov i opis, naslovi, alt tekst, URL-ovi, favicon, HTTPS, mobilni prikaz, brzina, interno linkovanje, 404, ključne reči)</td>
+        <td data-en="Basic technical settings (meta title and description, headings, alt text, URLs, favicon, HTTPS, mobile view, speed, internal linking, 404, keywords)">Osnovna tehnička podešavanja (meta naslov i opis, naslovi, alt tekst, URL-ovi, favicon, HTTPS, mobilni prikaz, brzina, interno linkovanje, 404, ključne reči)</td>
         <td class="check">✓</td>
         <td class="check">✓</td>
-        <td class="check">✓</td>
-        <td class="check">✓</td>
-      </tr>
-      <tr>
-        <td>Sitemap, Robots.txt, Search Console, Analytics</td>
-        <td class="dash">—</td>
-        <td class="dash">—</td>
         <td class="check">✓</td>
         <td class="check">✓</td>
       </tr>
       <tr>
-        <td>Pomoć oko Google Business profila</td>
+        <td data-en="Sitemap, Robots.txt, Search Console, Analytics">Sitemap, Robots.txt, Search Console, Analytics</td>
         <td class="dash">—</td>
         <td class="dash">—</td>
         <td class="check">✓</td>
         <td class="check">✓</td>
       </tr>
       <tr>
-        <td>Canonical, Open Graph, Schema oznake</td>
+        <td data-en="Help with Google Business Profile">Pomoć oko Google Business profila</td>
+        <td class="dash">—</td>
+        <td class="dash">—</td>
+        <td class="check">✓</td>
+        <td class="check">✓</td>
+      </tr>
+      <tr>
+        <td data-en="Canonical, Open Graph, Schema markup">Canonical, Open Graph, Schema oznake</td>
         <td class="dash">—</td>
         <td class="dash">—</td>
         <td class="dash">—</td>
         <td class="check">✓</td>
       </tr>
       <tr>
-        <td>Dodatna pažnja na Google Business profil</td>
+        <td data-en="Extra attention to Google Business Profile">Dodatna pažnja na Google Business profil</td>
         <td class="dash">—</td>
         <td class="dash">—</td>
         <td class="dash">—</td>
@@ -310,17 +311,21 @@
     </table>
   </section>
 
-  <div class="final-note">
+  <div data-en="<strong>What this does NOT cover:</strong> a regular blog, keyword research, gathering links from other websites, review management. That is ongoing marketing work, not part of building a website — it requires monthly commitment, not a one-off build." class="final-note">
     <strong>Šta ovo NE pokriva:</strong> redovan blog, istraživanje ključnih reči, prikupljanje linkova
     sa drugih sajtova, upravljanje recenzijama. To je kontinuiran marketinški rad, ne deo izrade sajta —
     zahteva mesečno angažovanje, ne jednokratnu izradu.
   </div>
 
-  <p class="dann-cta">Imate pitanje o svom sajtu? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about your website? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o svom sajtu? <a href="kontakt.html">Pišite nam →</a></p>
 
-</div>
+</main>
 
-<footer class="guide-foot">
+<footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
@@ -328,5 +333,40 @@
 
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

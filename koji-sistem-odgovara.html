@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/koji-sistem-odgovara.html#stranica","url":"https://dannwebworkshop.rs/koji-sistem-odgovara.html","name":"Koji sistem odgovara Vašem biznisu? | DANN.web.workshop","description":"Tri rešenja za online prodaju — od najjednostavnije prodavnice do potpuno prilagođenog sistema. Razlike, prednosti i ograničenja.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Koji sistem odgovara Vašem biznisu?","item":"https://dannwebworkshop.rs/koji-sistem-odgovara.html"}]}]}</script>
 <title>Koji sistem odgovara Vašem biznisu? | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -105,133 +106,172 @@
 <style>@media (max-width:640px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}</style><link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="page">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="page">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="doc-header">
-    <div class="doc-kicker">Tri nivoa online prodavnice</div>
-    <h1>Koji sistem odgovara Vašem biznisu?</h1>
-    <p class="doc-sub">Nudimo tri različita rešenja za online prodaju — od najjednostavnijeg do potpuno prilagođenog sistema. Ovaj pregled objašnjava razlike, prednosti i ograničenja svakog, da biste izabrali ono što odgovara obimu i planovima Vašeg posla.</p>
+    <div data-en="Three levels of online shop" class="doc-kicker">Tri nivoa online prodavnice</div>
+    <h1 data-en="Which system suits your business?">Koji sistem odgovara Vašem biznisu?</h1>
+    <p data-en="We offer three different solutions for online sales — from the simplest to a fully custom system. This overview explains the differences, advantages and limitations of each, so you can choose what fits the size and plans of your business." class="doc-sub">Nudimo tri različita rešenja za online prodaju — od najjednostavnijeg do potpuno prilagođenog sistema. Ovaj pregled objašnjava razlike, prednosti i ograničenja svakog, da biste izabrali ono što odgovara obimu i planovima Vašeg posla.</p>
   </div>
 
   <div class="cards">
 
     <div class="card">
-      <div class="tier">Paket 1</div>
-      <h3>Webshop Start</h3>
-      <p class="desc">Prodavnica koja u pozadini koristi Google tabelu kao bazu — Vi upravljate SVIM (proizvodi, porudžbine, zalihe, statistika) preko posebnog admin panela, ne direktnim uređivanjem tabele. Dovoljan je osnovni hosting, bez posebne baze podataka.</p>
+      <div data-en="Package 1" class="tier">Paket 1</div>
+      <h3 data-en="Webshop Start">Webshop Start</h3>
+      <p data-en="A shop that uses a Google Sheet as its database behind the scenes — you manage EVERYTHING (products, orders, stock, statistics) through a dedicated admin panel, not by editing the sheet directly. Basic hosting is enough, no separate database needed." class="desc">Prodavnica koja u pozadini koristi Google tabelu kao bazu — Vi upravljate SVIM (proizvodi, porudžbine, zalihe, statistika) preko posebnog admin panela, ne direktnim uređivanjem tabele. Dovoljan je osnovni hosting, bez posebne baze podataka.</p>
 
-      <div class="pm-label">Prednosti</div>
+      <div data-en="Advantages" class="pm-label">Prednosti</div>
       <ul class="pm-list plus">
-        <li>Bez baze i skupljeg hostinga — podaci su na Vašem Google nalogu</li>
-        <li>Pun admin panel — proizvodi, porudžbine, zalihe, statistika</li>
-        <li>Najbrže se pokreće</li>
+        <li data-en="No database and no pricier hosting — the data lives in your Google account">Bez baze i skupljeg hostinga — podaci su na Vašem Google nalogu</li>
+        <li data-en="Full admin panel — products, orders, stock, statistics">Pun admin panel — proizvodi, porudžbine, zalihe, statistika</li>
+        <li data-en="Fastest to launch">Najbrže se pokreće</li>
       </ul>
-      <div class="pm-label">Ograničenja</div>
+      <div data-en="Limitations" class="pm-label">Ograničenja</div>
       <ul class="pm-list minus">
-        <li>Praktičan plafon pre nego što postane nepregledno</li>
-        <li>Dnevni limit porudžbina (besplatan Google nalog)</li>
+        <li data-en="A practical ceiling before it becomes unwieldy">Praktičan plafon pre nego što postane nepregledno</li>
+        <li data-en="Daily order limit (free Google account)">Dnevni limit porudžbina (besplatan Google nalog)</li>
       </ul>
-      <div class="recommend-box">Preporuka: prodavci koji tek kreću, testiranje ideje, umeren dnevni obim porudžbina.</div>
-      <div class="limit-box">Praktičan okvir: do ~200 proizvoda, 33-100 porudžbina dnevno (zavisi od tipa Google naloga).</div>
+      <div data-en="Recommended for: sellers just starting out, testing an idea, moderate daily order volume." class="recommend-box">Preporuka: prodavci koji tek kreću, testiranje ideje, umeren dnevni obim porudžbina.</div>
+      <div data-en="Practical range: up to ~200 products, 33-100 orders per day (depends on the type of Google account)." class="limit-box">Praktičan okvir: do ~200 proizvoda, 33-100 porudžbina dnevno (zavisi od tipa Google naloga).</div>
     </div>
 
     <div class="card">
-      <div class="tier">Paket 2</div>
-      <h3>Standard</h3>
-      <p class="desc">Prava, samostalna online prodavnica sa punom bazom podataka i admin panelom — radi na gotovo bilo kom standardnom hosting paketu.</p>
+      <div data-en="Package 2" class="tier">Paket 2</div>
+      <h3 data-en="Standard">Standard</h3>
+      <p data-en="A real, standalone online shop with a full database and admin panel — runs on almost any standard hosting package." class="desc">Prava, samostalna online prodavnica sa punom bazom podataka i admin panelom — radi na gotovo bilo kom standardnom hosting paketu.</p>
 
-      <div class="pm-label">Prednosti</div>
+      <div data-en="Advantages" class="pm-label">Prednosti</div>
       <ul class="pm-list plus">
-        <li>Prava baza — bezbedna zaštita zaliha</li>
-        <li>Radi na širokom izboru hosting paketa</li>
-        <li>Pun admin panel: proizvodi, porudžbine, statistika</li>
-        <li>Bez mesečne pretplate na platformu</li>
+        <li data-en="A real database — safe protection of stock levels">Prava baza — bezbedna zaštita zaliha</li>
+        <li data-en="Runs on a wide choice of hosting packages">Radi na širokom izboru hosting paketa</li>
+        <li data-en="Full admin panel: products, orders, statistics">Pun admin panel: proizvodi, porudžbine, statistika</li>
+        <li data-en="No monthly platform subscription">Bez mesečne pretplate na platformu</li>
       </ul>
-      <div class="pm-label">Ograničenja</div>
+      <div data-en="Limitations" class="pm-label">Ograničenja</div>
       <ul class="pm-list minus">
-        <li>Zahteva hosting sa bazom podataka</li>
-        <li>Manje pogodno za vrlo specifičnu poslovnu logiku</li>
+        <li data-en="Requires hosting with a database">Zahteva hosting sa bazom podataka</li>
+        <li data-en="Less suited to very specific business logic">Manje pogodno za vrlo specifičnu poslovnu logiku</li>
       </ul>
-      <div class="recommend-box">Preporuka: male i srednje prodavnice koje žele profesionalan sajt bez visokih troškova.</div>
-      <div class="limit-box">Praktičan okvir: stotine do nekoliko hiljada proizvoda, desetine porudžbina dnevno bez problema.</div>
+      <div data-en="Recommended for: small and medium shops that want a professional website without high costs." class="recommend-box">Preporuka: male i srednje prodavnice koje žele profesionalan sajt bez visokih troškova.</div>
+      <div data-en="Practical range: hundreds to a few thousand products, dozens of orders per day without problems." class="limit-box">Praktičan okvir: stotine do nekoliko hiljada proizvoda, desetine porudžbina dnevno bez problema.</div>
     </div>
 
     <div class="card">
-      <div class="tier">Paket 3</div>
-      <h3>Webshop Premium</h3>
-      <p class="desc">Potpuno prilagođen sistem pisan po meri, za prodavnice sa specifičnim zahtevima koje standardna rešenja teško pokrivaju.</p>
+      <div data-en="Package 3" class="tier">Paket 3</div>
+      <h3 data-en="Webshop Premium">Webshop Premium</h3>
+      <p data-en="A fully customised, purpose-built system for shops with specific requirements that standard solutions struggle to cover." class="desc">Potpuno prilagođen sistem pisan po meri, za prodavnice sa specifičnim zahtevima koje standardna rešenja teško pokrivaju.</p>
 
-      <div class="pm-label">Prednosti</div>
+      <div data-en="Advantages" class="pm-label">Prednosti</div>
       <ul class="pm-list plus">
-        <li>Potpuno prilagodljiva poslovna logika</li>
-        <li>Moderna tehnologija, brz odziv</li>
-        <li>Najbolje se skalira uz rast biznisa</li>
-        <li>Lako se povezuje sa budućim spoljnim servisima</li>
+        <li data-en="Fully customisable business logic">Potpuno prilagodljiva poslovna logika</li>
+        <li data-en="Modern technology, fast response">Moderna tehnologija, brz odziv</li>
+        <li data-en="Scales best as the business grows">Najbolje se skalira uz rast biznisa</li>
+        <li data-en="Easy to connect to future external services">Lako se povezuje sa budućim spoljnim servisima</li>
       </ul>
-      <div class="pm-label">Ograničenja</div>
+      <div data-en="Limitations" class="pm-label">Ograničenja</div>
       <ul class="pm-list minus">
-        <li>Zahteva poseban tip hostinga (manje ponuđača)</li>
-        <li>Duže vreme izrade za custom logiku</li>
-        <li>Teže se nalazi zamenski programer za održavanje</li>
+        <li data-en="Requires a special type of hosting (fewer providers)">Zahteva poseban tip hostinga (manje ponuđača)</li>
+        <li data-en="Longer build time for custom logic">Duže vreme izrade za custom logiku</li>
+        <li data-en="Harder to find a replacement developer for maintenance">Teže se nalazi zamenski programer za održavanje</li>
       </ul>
-      <div class="recommend-box">Preporuka: specifičan poslovni model ili plan ozbiljnog rasta od starta.</div>
-      <div class="limit-box">Praktičan okvir: bez realnih ograničenja — skalira najbolje od sva tri.</div>
+      <div data-en="Recommended for: a specific business model or serious growth plans from the start." class="recommend-box">Preporuka: specifičan poslovni model ili plan ozbiljnog rasta od starta.</div>
+      <div data-en="Practical range: no real limits — scales best of all three." class="limit-box">Praktičan okvir: bez realnih ograničenja — skalira najbolje od sva tri.</div>
     </div>
 
   </div>
 
   <section>
     <div class="section-head">
-      <h2>Uporedna tabela</h2>
-      <p>Tehnički i praktični detalji jedno pored drugog.</p>
+      <h2 data-en="Comparison table">Uporedna tabela</h2>
+      <p data-en="Technical and practical details side by side.">Tehnički i praktični detalji jedno pored drugog.</p>
     </div>
     <table>
-      <thead><tr><th>Kriterijum</th><th>Start</th><th>Standard</th><th>Premium</th></tr></thead>
+      <thead><tr><th data-en="Criterion">Kriterijum</th><th data-en="Start">Start</th><th data-en="Standard">Standard</th><th data-en="Premium">Premium</th></tr></thead>
       <tbody>
-        <tr><td>Tehnologija</td><td>Google Sheets</td><td>PHP + baza podataka</td><td>Custom sistem po meri</td></tr>
-        <tr><td>Hosting</td><td>Osnovni — bilo koji provajder</td><td>Bilo koji standardni hosting — ne zavisi koji provajder izaberete</td><td>Poseban tip hostinga</td></tr>
-        <tr><td>Zaštita zaliha pri istovremenim porudžbinama</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
-        <tr><td>Broj proizvoda bez problema</td><td>Do ~200</td><td>Stotine – hiljade</td><td>Bez limita</td></tr>
-        <tr><td>Dnevni limit porudžbina</td><td class="partial">33-100</td><td class="check">Nema</td><td class="check">Nema</td></tr>
-        <tr><td>Admin panel (dashboard, statistika)</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
-        <tr><td>Email obaveštenja</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
-        <tr><td>Filteri (pol, boja, veličina, kategorija)</td><td class="check">Da</td><td class="check">Da</td><td class="check">Da</td></tr>
-        <tr><td>Prilagođena poslovna logika</td><td class="partial">Osnovna</td><td class="partial">Solidna</td><td class="check">Potpuno</td></tr>
-        <tr><td>Vreme izrade</td><td>Najkraće</td><td>Srednje</td><td>Najduže</td></tr>
-        <tr><td>Dalje održavanje (dostupnost programera)</td><td>Jednostavno</td><td>Lako se nalazi</td><td>Zahtevnije</td></tr>
+        <tr><td data-en="Technology">Tehnologija</td><td data-en="Google Sheets">Google Sheets</td><td data-en="PHP + database">PHP + baza podataka</td><td data-en="Custom-built system">Custom sistem po meri</td></tr>
+        <tr><td data-en="Hosting">Hosting</td><td data-en="Basic — any provider">Osnovni — bilo koji provajder</td><td data-en="Any standard hosting — doesn't depend on which provider you choose">Bilo koji standardni hosting — ne zavisi koji provajder izaberete</td><td data-en="Special type of hosting">Poseban tip hostinga</td></tr>
+        <tr><td data-en="Stock protection with simultaneous orders">Zaštita zaliha pri istovremenim porudžbinama</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td></tr>
+        <tr><td data-en="Number of products without problems">Broj proizvoda bez problema</td><td data-en="Up to ~200">Do ~200</td><td data-en="Hundreds – thousands">Stotine – hiljade</td><td data-en="No limit">Bez limita</td></tr>
+        <tr><td data-en="Daily order limit">Dnevni limit porudžbina</td><td class="partial">33-100</td><td data-en="None" class="check">Nema</td><td data-en="None" class="check">Nema</td></tr>
+        <tr><td data-en="Admin panel (dashboard, statistics)">Admin panel (dashboard, statistika)</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td></tr>
+        <tr><td data-en="Email notifications">Email obaveštenja</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td></tr>
+        <tr><td data-en="Filters (gender, colour, size, category)">Filteri (pol, boja, veličina, kategorija)</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td><td data-en="Yes" class="check">Da</td></tr>
+        <tr><td data-en="Custom business logic">Prilagođena poslovna logika</td><td data-en="Basic" class="partial">Osnovna</td><td data-en="Solid" class="partial">Solidna</td><td data-en="Full" class="check">Potpuno</td></tr>
+        <tr><td data-en="Build time">Vreme izrade</td><td data-en="Shortest">Najkraće</td><td data-en="Medium">Srednje</td><td data-en="Longest">Najduže</td></tr>
+        <tr><td data-en="Ongoing maintenance (developer availability)">Dalje održavanje (dostupnost programera)</td><td data-en="Simple">Jednostavno</td><td data-en="Easy to find">Lako se nalazi</td><td data-en="More demanding">Zahtevnije</td></tr>
       </tbody>
     </table>
   </section>
 
   <section>
     <div class="section-head">
-      <h2>Šta je uključeno u svaki paket</h2>
-      <p>Bez obzira na izabrani nivo, svaka prodavnica dolazi sa osnovnim stranicama potrebnim za profesionalno poslovanje.</p>
+      <h2 data-en="What's included in every package">Šta je uključeno u svaki paket</h2>
+      <p data-en="Whichever level you choose, every shop comes with the basic pages needed to operate professionally.">Bez obzira na izabrani nivo, svaka prodavnica dolazi sa osnovnim stranicama potrebnim za profesionalno poslovanje.</p>
     </div>
     <table class="pages-table">
-      <thead><tr><th>Stranica</th><th>Start</th><th>Standard</th><th>Premium</th></tr></thead>
+      <thead><tr><th data-en="Page">Stranica</th><th data-en="Start">Start</th><th data-en="Standard">Standard</th><th data-en="Premium">Premium</th></tr></thead>
       <tbody>
-        <tr><td>Početna</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-        <tr><td>O nama</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-        <tr><td>Kontakt</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-        <tr><td>Prodavnica / Naručivanje</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td data-en="Home">Početna</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td data-en="About us">O nama</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td data-en="Contact">Kontakt</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td data-en="Shop / Ordering">Prodavnica / Naručivanje</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
       </tbody>
     </table>
   </section>
 
-  <div class="final-note">
+  <div data-en="<strong>Note:</strong> All three systems cover the basic needs of online sales — the difference is in how large the shop can grow, how well it is protected from technical problems as it grows, and how flexibly it can follow the specific needs of your business. We'll gladly go through your specific needs together and suggest the best choice. <a class=&quot;dann-link&quot; href=&quot;kontakt.html&quot;>Write to us →</a>" class="final-note">
     <strong>Napomena:</strong> Sva tri sistema pokrivaju osnovne potrebe online prodaje — razlika je u tome koliko prodavnica može da naraste, koliko je zaštićena od tehničkih problema pri rastu, i koliko fleksibilno može da prati specifične potrebe Vašeg poslovanja. Rado ćemo zajedno proći kroz Vaše konkretne potrebe i predložiti najbolji izbor. <a class="dann-link" href="kontakt.html">Pišite nam →</a>
   </div>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>

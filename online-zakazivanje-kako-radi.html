@@ -29,9 +29,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dannwebworkshop.rs/online-zakazivanje-kako-radi.html#stranica","url":"https://dannwebworkshop.rs/online-zakazivanje-kako-radi.html","name":"Online zakazivanje — kako radi | DANN.web.workshop","description":"Kako funkcioniše online zakazivanje termina za salone i radnje: šta sistem radi, šta se podešava i na šta treba obratiti pažnju.","inLanguage":"sr","isPartOf":{"@id":"https://dannwebworkshop.rs/#sajt"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://dannwebworkshop.rs/"},{"@type":"ListItem","position":2,"name":"Online zakazivanje — kako radi","item":"https://dannwebworkshop.rs/online-zakazivanje-kako-radi.html"}]}]}</script>
 <title>Online zakazivanje — kako radi | DANN.web.workshop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacegrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/vodic.css">
 <style>
   :root {
     --bg: #FAF8F3;
@@ -154,48 +155,48 @@
 <link rel="stylesheet" href="dann-shared.css">
 </head>
 <body>
-<div class="wrap">
-<nav class="dann-back" aria-label="Navigacija"><a href="/"><span class="s">←</span> Nazad na sajt</a><a href="resursi.html">Svi resursi</a></nav>
+<main class="wrap">
+<nav class="dann-back" aria-label="Navigacija / Navigation"><a data-en="<span class=&quot;s&quot;>←</span> Back to site" href="/"><span class="s">←</span> Nazad na sajt</a><a data-en="All resources" href="resursi.html">Svi resursi</a><button type="button" class="dann-lang" id="langToggle" onclick="prebaciJezik()" aria-label="Switch language / Promeni jezik">EN</button></nav>
 
   <div class="hero">
-    <span class="eyebrow">Kako radi</span>
-    <h1>Online zakazivanje — kako radi</h1>
-    <p>Kratak pregled šta ovaj sistem tačno radi, šta je potrebno da se podesi za Vaš salon, i na šta treba da obratite pažnju.</p>
+    <span data-en="How it works" class="eyebrow">Kako radi</span>
+    <h1 data-en="Online booking — how it works">Online zakazivanje — kako radi</h1>
+    <p data-en="A short overview of what this system does, what needs to be set up for your salon, and what to keep an eye on.">Kratak pregled šta ovaj sistem tačno radi, šta je potrebno da se podesi za Vaš salon, i na šta treba da obratite pažnju.</p>
   </div>
 
   <div class="card">
-    <h2>Šta ovo zapravo jeste</h2>
-    <p>Sistem koji klijentima omogućava da zakazuju termine online, 24 sata dnevno — bez telefonskih poziva, bez čekanja da neko odgovori. Svaki zahtev prvo dolazi Vama na odobrenje, tako da Vi imate potpunu kontrolu nad kalendarom.</p>
-    <p>Sve živi u Vašem <strong>sopstvenom, privatnom Google nalogu</strong> — podaci klijenata ne prolaze kroz nas, već su sačuvani u Vašem Google nalogu.</p>
+    <h2 data-en="What this actually is">Šta ovo zapravo jeste</h2>
+    <p data-en="A system that lets clients book appointments online, 24 hours a day — no phone calls, no waiting for someone to pick up. Every request comes to you for approval first, so you keep full control of your calendar.">Sistem koji klijentima omogućava da zakazuju termine online, 24 sata dnevno — bez telefonskih poziva, bez čekanja da neko odgovori. Svaki zahtev prvo dolazi Vama na odobrenje, tako da Vi imate potpunu kontrolu nad kalendarom.</p>
+    <p data-en="Everything lives in your <strong>own, private Google account</strong> — client data doesn't pass through us, it's stored in your Google account.">Sve živi u Vašem <strong>sopstvenom, privatnom Google nalogu</strong> — podaci klijenata ne prolaze kroz nas, već su sačuvani u Vašem Google nalogu.</p>
   </div>
 
   <div class="card">
-    <h2>Kako izgleda ceo proces</h2>
+    <h2 data-en="What the whole process looks like">Kako izgleda ceo proces</h2>
     <div class="step-flow">
       <div class="step">
         <div class="step-num">1</div>
-        <div class="step-text">
+        <div data-en="<strong>The client fills in a form on the website</strong> <span>Name, phone, email, service, preferred date and time. The website immediately shows which slots are already taken.</span>" class="step-text">
           <strong>Klijent popuni formu na sajtu</strong>
           <span>Ime, telefon, email, usluga, željeni datum i vreme. Sajt mu odmah pokazuje koji su termini već zauzeti.</span>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <div class="step-text">
+        <div data-en="<strong>You get an email with the request</strong> <span>With three buttons: Confirm, Suggest another time, or Decline — all with one click, no need to log in anywhere.</span>" class="step-text">
           <strong>Vi dobijate mail sa zahtevom</strong>
           <span>Sa tri dugmeta: Potvrdi, Predloži drugo vreme, ili Odbij — sve jednim klikom, bez ulaska bilo gde.</span>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <div class="step-text">
+        <div data-en="<strong>The client gets a response</strong> <span>If you confirm, they receive a calendar invitation. If you suggest another time, they get an email with the new proposal and can accept or decline it.</span>" class="step-text">
           <strong>Klijent dobija odgovor</strong>
           <span>Ako potvrdite — dobija kalendarsku pozivnicu. Ako predložite drugi termin — dobija mail sa novim predlogom i može da ga prihvati ili odbije.</span>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <div class="step-text">
+        <div data-en="<strong>The appointment is in your calendar</strong> <span>You see all bookings directly in Google Calendar, and in a dedicated panel built for you.</span>" class="step-text">
           <strong>Termin je u Vašem kalendaru</strong>
           <span>Vidite sve rezervacije direktno u Google Kalendaru, i u posebnom panelu napravljenom za Vas.</span>
         </div>
@@ -204,21 +205,21 @@
   </div>
 
   <div class="card">
-    <h2>Prednosti sistema</h2>
+    <h2 data-en="Advantages of the system">Prednosti sistema</h2>
     <div class="benefit-grid">
-      <div class="benefit">
+      <div data-en="<strong>Double booking is impossible</strong> If two people try to book the same slot at the same moment, the system lets only one through — the other immediately gets a message that the slot is taken." class="benefit">
         <strong>Nemoguće duplo zakazivanje</strong>
         Ako dvoje ljudi pokušaju da zakažu isti termin u istom trenutku, sistem automatski propušta samo jednog — drugi odmah dobija poruku da je termin zauzet.
       </div>
-      <div class="benefit">
+      <div data-en="<strong>You always have the final say</strong> No appointment is confirmed automatically — each one goes through you." class="benefit">
         <strong>Vi uvek imate poslednju reč</strong>
         Nijedan termin se ne potvrđuje automatski — svaki prolazi kroz Vas.
       </div>
-      <div class="benefit">
+      <div data-en="<strong>Works outside working hours too</strong> Clients can book at any time of day, and you reply when it suits you." class="benefit">
         <strong>Radi i van radnog vremena</strong>
         Klijenti mogu da zakažu u bilo koje doba dana, Vi odgovarate kad Vama odgovara.
       </div>
-      <div class="benefit">
+      <div data-en="<strong>A dedicated panel for you</strong> Calendar, working hours, days off — you change everything yourself, without anyone's help." class="benefit">
         <strong>Poseban panel za Vas</strong>
         Kalendar, radno vreme, neradni dani — sve menjate sami, bez tuđe pomoći.
       </div>
@@ -226,69 +227,108 @@
   </div>
 
   <div class="card">
-    <h2>Šta nam je potrebno od Vas da bismo ovo podesili za Vaš salon</h2>
+    <h2 data-en="What we need from you to set this up for your salon">Šta nam je potrebno od Vas da bismo ovo podesili za Vaš salon</h2>
     <div class="needed-list">
-      <div class="needed-item">Spisak usluga i trajanje svake (npr. šišanje — 45 min)</div>
-      <div class="needed-item">Radno vreme (uključujući pauzu, ako postoji)</div>
-      <div class="needed-item">Neradni dani</div>
-      <div class="needed-item">Email adresa gde da stižu obaveštenja</div>
-      <div class="needed-item">Telefon i adresa za sajt</div>
-      <div class="needed-item">Google nalog (postojeći ili novi, samo za ovaj sistem)</div>
-      <div class="needed-item">Fotografije, ako želite galeriju</div>
-      <div class="needed-item">Kratak tekst o Vama, za "O nama" stranicu</div>
+      <div data-en="List of services and the duration of each (e.g. haircut — 45 min)" class="needed-item">Spisak usluga i trajanje svake (npr. šišanje — 45 min)</div>
+      <div data-en="Working hours (including a break, if there is one)" class="needed-item">Radno vreme (uključujući pauzu, ako postoji)</div>
+      <div data-en="Days off" class="needed-item">Neradni dani</div>
+      <div data-en="Email address where notifications should go" class="needed-item">Email adresa gde da stižu obaveštenja</div>
+      <div data-en="Phone number and address for the website" class="needed-item">Telefon i adresa za sajt</div>
+      <div data-en="Google account (existing or new, just for this system)" class="needed-item">Google nalog (postojeći ili novi, samo za ovaj sistem)</div>
+      <div data-en="Photos, if you want a gallery" class="needed-item">Fotografije, ako želite galeriju</div>
+      <div data-en="A short text about you, for the &quot;About us&quot; page" class="needed-item">Kratak tekst o Vama, za "O nama" stranicu</div>
     </div>
   </div>
 
   <div class="card">
-    <h2>Vaše obaveze</h2>
-    <div class="obligation-item">
+    <h2 data-en="Your responsibilities">Vaše obaveze</h2>
+    <div data-en="<strong>Privacy policy</strong> The website includes a DRAFT privacy policy (it explains to clients which data is collected and why). It is a draft, not a legal document — it is your responsibility to review it, adapt it to your business, and consult someone with legal knowledge if needed before officially publishing the site." class="obligation-item">
       <strong>Politika privatnosti</strong>
       Sajt uključuje NACRT politike privatnosti (objašnjava klijentima koji se podaci prikupljaju i zašto). Ovo je nacrt, ne pravni dokument — Vaša je obaveza da ga pregledate, prilagodite svom poslovanju, i po potrebi konsultujete nekog sa pravnim znanjem pre zvaničnog objavljivanja sajta.
     </div>
-    <div class="obligation-item">
+    <div data-en="<strong>Regular checks</strong> We recommend checking your email and the bookings sheet at least once a day, so no request goes unanswered." class="obligation-item">
       <strong>Redovna provera</strong>
       Preporučuje se da mail i tabelu sa rezervacijama proveravate makar jednom dnevno, da nijedan zahtev ne ostane bez odgovora.
     </div>
-    <div class="obligation-item">
+    <div data-en="<strong>Keeping the admin panel password safe</strong> You change the password yourself from the panel — keep it somewhere safe, because it isn't shown again after the change." class="obligation-item">
       <strong>Čuvanje lozinke admin panela</strong>
       Lozinku menjate sami iz panela — čuvajte je na sigurnom mestu, jer se ne prikazuje ponovo posle promene.
     </div>
   </div>
 
   <div class="card">
-    <h2>Realna ograničenja sistema (iskreno, bez ulepšavanja)</h2>
-    <div class="risk-item">
+    <h2 data-en="Real limitations of the system (honestly, no sugarcoating)">Realna ograničenja sistema (iskreno, bez ulepšavanja)</h2>
+    <div data-en="<strong>Daily limit of a free Google account</strong> Around 30-35 bookings per day before the free email-sending limit is used up. For a small salon this will almost never be a problem — if you do grow, upgrading is simple and cheap." class="risk-item">
       <strong>Dnevni limit besplatnog Google naloga</strong>
       Oko 30-35 rezervacija dnevno pre nego što se potroši besplatan limit za slanje mejlova. Za mali salon ovo gotovo nikad neće biti problem — ako ipak porastete, nadogradnja je jednostavna i jeftina.
     </div>
-    <div class="risk-item">
+    <div data-en="<strong>Dependence on a single Google account</strong> If the account gets locked (e.g. due to unusual activity) or you change the password, the system stops working temporarily until it's resolved." class="risk-item">
       <strong>Zavisnost od jednog Google naloga</strong>
       Ako se nalog zaključa (npr. zbog neuobičajene aktivnosti) ili promenite lozinku, sistem privremeno prestaje da radi dok se to ne reši.
     </div>
-    <div class="risk-item">
+    <div data-en="<strong>Email is the only channel</strong> There are no SMS notifications — if a client enters the wrong email or doesn't check it, they can't know the status without calling directly." class="risk-item">
       <strong>Samo email kao kanal</strong>
       Nema SMS obaveštenja — ako klijent pogrešno unese email ili ga ne proveri, ne zna status bez direktnog poziva.
     </div>
-    <div class="risk-item">
+    <div data-en="<strong>Protection against automated requests (bots)</strong> It is switched on when the website is published on your domain, because this protection is tied to its address." class="risk-item">
       <strong>Zaštita od automatizovanih zahteva (botova)</strong>
       Uključuje se kada sajt bude objavljen na Vašem domenu, jer se ova zaštita vezuje za njegovu adresu.
     </div>
   </div>
 
-  <div class="highlight-box">
+  <div data-en="<strong>In short:</strong> this is a system that works seriously and reliably for a small to medium volume of bookings, with full control in your hands at all times. The limitations above are real, but none of them stand in the way of everyday use — they are just things that are good to know in advance." class="highlight-box">
     <strong>Ukratko:</strong> ovo je sistem koji radi ozbiljno i pouzdano za mali do srednji obim rezervacija, sa punom kontrolom u Vašim rukama u svakom trenutku. Ograničenja iznad su realna, ali nijedno od njih nije prepreka za svakodnevno korišćenje — samo stvari koje je dobro da znate unapred.
   </div>
 
-  <p class="dann-cta">Imate pitanje o online zakazivanju? <a href="kontakt.html">Pišite nam →</a></p>
+  <p data-en="Have a question about online booking? <a href=&quot;kontakt.html&quot;>Write to us →</a>" class="dann-cta">Imate pitanje o online zakazivanju? <a href="kontakt.html">Pišite nam →</a></p>
 
-  <footer class="guide-foot">
+  <footer data-en="
+<span class=&quot;dann-logo&quot;>DΛNN<span class=&quot;dot&quot;>.</span>web<span class=&quot;dot&quot;>.</span>workshop</span>
+  Web workshop for small businesses and big ideas · © 2026 · <a href=&quot;uslovi.html&quot;>Terms &amp; Conditions</a> · <a href=&quot;privatnost.html&quot;>Privacy Policy</a>
+<span style=&quot;display:block;margin-top:8px;&quot;><a href=&quot;mailto:hello@dannwebworkshop.rs&quot;>hello@dannwebworkshop.rs</a> · <a href=&quot;https://www.instagram.com/dann_webworkshop/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;>Instagram</a> · <a href=&quot;viber://chat?number=%2B381677770623&quot; rel=&quot;noopener&quot;>Viber</a></span>
+" class="guide-foot">
   <span class="dann-logo">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</span>
   Web radionica za male biznise i velike ideje · © 2026 · <a href="uslovi.html">Uslovi saradnje</a> · <a href="privatnost.html">Politika privatnosti</a>
   <span style="display:block;margin-top:8px;"><a href="mailto:hello@dannwebworkshop.rs">hello@dannwebworkshop.rs</a> · <a href="https://www.instagram.com/dann_webworkshop/" target="_blank" rel="noopener">Instagram</a> · <a href="viber://chat?number=%2B381677770623" rel="noopener">Viber</a></span>
 </footer>
 
-</div>
+</main>
 <button class="dann-top" id="dannTop" type="button" aria-label="Nazad na vrh" title="Nazad na vrh">↑</button>
 <script src="dann-shared.js" defer></script>
+<script>
+(function(){
+  var jezik='sr';
+  try{jezik=localStorage.getItem('dann_jezik')||'sr';}catch(e){}
+  function gradiReci(el,tekst,vidljivo){
+    el.innerHTML=tekst.split(' ').map(function(w,i){
+      return '<span class="word'+(vidljivo?' is-visible':'')+'" style="transition-delay:'+(i*0.09)+'s">'+w+'</span>';
+    }).join(' ');
+  }
+  function primeniJezik(j){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      if(j==='en'){
+        if(el.dataset.sr===undefined)el.dataset.sr=el.innerHTML;
+        el.innerHTML=el.dataset.en;
+      }else if(el.dataset.sr!==undefined){
+        el.innerHTML=el.dataset.sr;
+      }
+    });
+    document.querySelectorAll('[data-en-split]').forEach(function(el){
+      if(el.dataset.srSplit===undefined)el.dataset.srSplit=el.textContent.trim();
+      var vidljivo=!!el.querySelector('.word.is-visible');
+      gradiReci(el,j==='en'?el.dataset.enSplit:el.dataset.srSplit,vidljivo);
+    });
+    var b=document.getElementById('langToggle');
+    if(b)b.textContent=j==='sr'?'EN':'SR';
+    document.documentElement.lang=j;
+  }
+  window.prebaciJezik=function(){
+    jezik=jezik==='sr'?'en':'sr';
+    try{localStorage.setItem('dann_jezik',jezik);}catch(e){}
+    primeniJezik(jezik);
+  };
+  if(jezik==='en')primeniJezik('en');
+})();
+</script>
 </body>
 </html>
