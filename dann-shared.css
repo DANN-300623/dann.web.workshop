@@ -13,3 +13,5 @@ footer.guide-foot{margin-top:56px;padding-top:20px;border-top:1px solid rgba(128
 footer.guide-foot .dann-logo{display:block;margin-bottom:6px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--ink,#1C1C1A)}
 footer.guide-foot .dann-logo .dot{color:#C1361E;font-weight:800}
 footer.guide-foot a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.dann-back .dann-lang{margin-left:auto;font:inherit;letter-spacing:inherit;text-transform:uppercase;color:inherit;background:none;border:1px solid currentColor;border-radius:0;padding:1px 10px;cursor:pointer;opacity:.75;line-height:1.6}
+.dann-back .dann-lang:hover,.dann-back .dann-lang:focus-visible{opacity:1}

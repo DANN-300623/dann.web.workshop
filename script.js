@@ -1,4 +1,4 @@
-  /* ---------- MOBILE MENU ---------- */
+
   const burgerBtn = document.getElementById('burgerBtn');
   const closeMenuBtn = document.getElementById('closeMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -21,7 +21,6 @@
     });
   }
 
-  /* ---------- LOGO — vraca na vrh ako smo vec na pocetnoj ---------- */
   const brandLink = document.querySelector('.brand');
   if (brandLink) {
     brandLink.addEventListener('click', function(e){
@@ -34,7 +33,6 @@
     });
   }
 
-  /* ---------- SCROLL REVEAL + SEKVENCIJALNO POJAVLJIVANJE ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const revealEls = document.querySelectorAll('.reveal');
@@ -52,7 +50,6 @@
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
-  /* ---------- SUPTILAN PARALLAX NA HERO SADRŽAJU ---------- */
   const heroInner = document.querySelector('.hero .container');
   if (heroInner && !prefersReducedMotion) {
     window.addEventListener('scroll', function(){
@@ -63,30 +60,18 @@
     }, { passive: true });
   }
 
-  /* ---------- KONTAKT FORMA ---------- */
   const formCheck = document.getElementById('contactForm');
   if (formCheck) {
     const form = document.getElementById('contactForm');
     const confirmationMsg = document.getElementById('confirmationMsg');
 
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyn-ujb4_pZN8jwIIe19Qg7LhHT4OOr_9Jiidc1QTemHuXfGq17aYoPXnrHHb9wzGed/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjI54hyzpgX-xsr0dy3_dhiklNf8MLcfS3MIAg56UBXrQCbU4QK2EbfdAB_IwBPblTyQ/exec';
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
       const honeypotEl = document.getElementById('hp_field');
       if (honeypotEl && honeypotEl.value) {
-        return;
-      }
-
-      const jeEngleski = document.documentElement.lang === 'en';
-      const tokenEl = form.querySelector('[name="cf-turnstile-response"]');
-      const token = tokenEl ? tokenEl.value : '';
-      if (!token) {
-        confirmationMsg.textContent = jeEngleski
-          ? 'Please wait a moment for the security check to finish, then send again. If it does not work, email us at hello@dannwebworkshop.rs'
-          : 'Sačekajte trenutak da se završi sigurnosna provera pa pošaljite ponovo. Ako ne uspe, pišite na hello@dannwebworkshop.rs';
-        confirmationMsg.style.display = 'block';
         return;
       }
 
@@ -98,48 +83,27 @@
       fd.append('message', document.getElementById('poruka').value);
       fd.append('hp_field', honeypotEl ? honeypotEl.value : '');
       fd.append('lang', document.documentElement.lang || 'sr');
-      fd.append('cf_token', token);
-
-      const greska = function(tekst){
-        confirmationMsg.textContent = tekst;
-        confirmationMsg.style.display = 'block';
-        if (window.turnstile) { window.turnstile.reset(); }
-      };
 
       fetch(SCRIPT_URL, { method: 'POST', body: fd })
-        .then(function(r){
-          return r.json().catch(function(){ return { result: 'success' }; });
-        })
-        .then(function(d){
-          if (d && d.result === 'rejected') {
-            greska(jeEngleski
-              ? 'The security check did not pass. Please try again or email us at hello@dannwebworkshop.rs'
-              : 'Sigurnosna provera nije prošla. Pokušajte ponovo ili pišite na hello@dannwebworkshop.rs');
-            return;
-          }
-          if (d && d.result === 'error') {
-            greska(jeEngleski
-              ? 'Something went wrong — please try again or email us directly at hello@dannwebworkshop.rs'
-              : 'Došlo je do greške — probajte ponovo ili pišite direktno na hello@dannwebworkshop.rs');
-            return;
-          }
+        .then(function(){
+          var jeEngleski = document.documentElement.lang === 'en';
           confirmationMsg.textContent = jeEngleski
             ? "Thanks for your message! We'll get back to you shortly at the contact you provided."
             : 'Hvala na poruci! Javljamo se uskoro na naveden kontakt.';
           confirmationMsg.style.display = 'block';
           form.reset();
-          if (window.turnstile) { window.turnstile.reset(); }
           confirmationMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         })
         .catch(function(){
-          greska(jeEngleski
+          var jeEngleski = document.documentElement.lang === 'en';
+          confirmationMsg.textContent = jeEngleski
             ? 'Something went wrong — please try again or email us directly at hello@dannwebworkshop.rs'
-            : 'Došlo je do greške — probajte ponovo ili pišite direktno na hello@dannwebworkshop.rs');
+            : 'Došlo je do greške — probajte ponovo ili pišite direktno na hello@dannwebworkshop.rs';
+          confirmationMsg.style.display = 'block';
         });
     });
   }
 
-  /* ---------- SKRIVEN DETALJ (samo paketi.html) ---------- */
   const hiddenDetailBtn = document.getElementById('hiddenDetail');
   const detailModal = document.getElementById('detailModal');
   const closeDetailModalBtn = document.getElementById('closeDetailModal');
@@ -161,7 +125,6 @@
     });
   }
 
-  /* ---------- KOD ZA POPUST IZ URL-a (samo kontakt.html) ---------- */
   const poljePoruka = document.getElementById('poruka');
   if (poljePoruka) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -173,9 +136,6 @@
     }
   }
 
-/* ---------- PROMO BROJAČ ----------
-   JEDINO mesto koje menjaš: "zavrseno" = broj STVARNIH plaćenih projekata.
-   Na sajtu se prikazuje (ukupno - zavrseno) / ukupno, na svim stranicama. */
 const DANN_PROMO = { ukupno: 5, zavrseno: 0 };
 
 (function(){
